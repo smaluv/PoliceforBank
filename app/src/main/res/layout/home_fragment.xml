@@ -20,6 +20,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
             <ImageView
+                android:id="@+id/beian"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/beian"
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"/>
             <ImageView
+                android:id="@+id/jiancha"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/jiancha"
@@ -43,6 +45,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
             <ImageView
+                android:id="@+id/pinggu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/pinggu"
@@ -53,6 +56,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
+                android:id="@+id/zhenggai"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"

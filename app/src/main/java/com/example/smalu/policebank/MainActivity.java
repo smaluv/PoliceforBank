@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 selected();
                 tabDeal.setSelected(true);
                 if(f1==null){
-                    f1 = new HomeFragment();
+                    f1 = new HomeFragment(this);
                     transaction.add(R.id.fragment_container,f1);
                 }else{
                     transaction.show(f1);
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 selected();
                 tabPoi.setSelected(true);
                 if(f3==null){
-                    f2 = new LinkFragment();
+                    f2 = new LinkFragment(this);
                     transaction.add(R.id.fragment_container,f2);
                 }else{
                     transaction.show(f2);
