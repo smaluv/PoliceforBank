@@ -46,7 +46,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.beian:
-
+                //跳转备案
                 break;
             case R.id.jiancha:
 
