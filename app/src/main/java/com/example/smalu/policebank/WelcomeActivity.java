@@ -9,7 +9,7 @@ import android.view.Window;
  * Created by KL on 2016/11/12 0012.
  */
 
-public class Welcome extends Activity{
+public class WelcomeActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class Welcome extends Activity{
         setContentView(R.layout.activity_welcome);
         //
 
-        Intent intent = new Intent(Welcome.this,SigninActivity.class);
+        Intent intent = new Intent(WelcomeActivity.this,SigninActivity.class);
         startActivity(intent);
         finish();
     }

@@ -7,5 +7,11 @@
     <color name="colorGray">#8a8a8a</color>
     <color name="colorWitch">#f7f6f6</color>
     <color name="colorTitle">#2f91e4</color>
+    <color name="colorIconGray">#777777</color>
+    <color name="colorButtonBg">#2ecd32</color>
+    <color name="colorTextPwd">#fa8211</color>
+    <color name="dimgray">#696969</color><!--暗灰色 -->
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="lime">#00FF00</color><!--酸橙色 -->
 
 </resources>
