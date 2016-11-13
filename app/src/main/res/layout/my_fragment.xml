@@ -4,20 +4,54 @@
     android:layout_height="match_parent"
     android:background="@color/colorWitch">
 
-    <ImageView
+    <LinearLayout
+        android:background="@mipmap/backgroundxuhua"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginLeft="1dp"
-        android:background="@mipmap/jingguantong"/>
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <TextView
-        android:id="@+id/txt_content"
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/police_icon"
+            android:layout_width="85dp"
+            android:layout_height="32dp"
+            android:layout_weight="0.40" />
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@drawable/button_bg"
+                android:text="登录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="88dp"
+                android:layout_marginStart="88dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:background="@drawable/button_bg"
+                android:text="注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="88dp"
+                android:layout_marginEnd="88dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/my_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="我的"
-        android:textColor="@color/colorGray"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

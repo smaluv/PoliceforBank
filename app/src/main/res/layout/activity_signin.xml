@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorWitch"
+android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:background="@mipmap/police_logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/edit_user_num"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@mipmap/user_icon"
+        android:textColorHint="@color/colorIconGray"
+        android:hint="请输入会员名/手机号"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_user_pwd"
+        android:textColor="@color/black"
+        android:drawableLeft="@mipmap/pwd_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="@color/colorIconGray"
+        android:hint="请输入密码"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_marginTop="50dp"
+    android:layout_gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="80dp">
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_sign_findpwd"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:textColor="@color/colorTextPwd"-->
+        <!--android:text="忘记密码"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_alignParentRight="true"
+        android:text="还没注册?去注册"
+        android:textColor="@color/dimgray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_sign"
+        android:text="登录"
+        android:background="@drawable/button_bg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+
+
+
+</LinearLayout>
