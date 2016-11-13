@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.example.smalu.policebank.JianchaActivity;
 import com.example.smalu.policebank.R;
+import com.example.smalu.policebank.activity.BeianActivity;
 
 /**
  * Created by Smalu on 2016/11/11.
@@ -32,8 +33,15 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment,container,false);
-//        jiancha=(ImageView)view.findViewById(R.id.jiancha);
-//        beian=(ImageView)view.findViewById(R.id.beian);
+        jiancha=(ImageView)view.findViewById(R.id.jiancha);
+        beian=(ImageView)view.findViewById(R.id.beian);
+        beian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,BeianActivity.class);
+                startActivity(intent);
+            }
+        });
 //        pinggu=(ImageView)view.findViewById(R.id.pinggu);
 //        zhenggai=(ImageView)view.findViewById(R.id.zhenggai);
         initView(view);//获取控件并设置Onclick
@@ -56,7 +64,9 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.beian:
-
+                //跳转备案
+//                Intent intent =new Intent(context, BeianActivity.class);
+//                startActivity(intent);
                 break;
             case R.id.jiancha:
                 Intent intent = new Intent(getActivity(), JianchaActivity.class);
