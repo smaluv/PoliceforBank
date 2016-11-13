@@ -12,10 +12,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="42dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
             android:background="@mipmap/back"
             />
 
@@ -31,26 +29,55 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/colorGray"
         android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
         android:background="@mipmap/jingguantong"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            Button
-        </TextView>
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/beian_vault"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:text="银行业务库安全防范"
+            android:textSize="25dp"
+            android:background="@drawable/shape_solider_btn"/>
+
+        <Button
+            android:id="@+id/beian_lobby"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="银行营业场所安全防范"
+            android:textSize="25dp"
+            android:background="@drawable/shape_solider_btn"/>
+
+        <Button
+            android:id="@+id/beian_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="银行自助服务场所安全防护"
+            android:textSize="25dp"
+            android:background="@drawable/shape_solider_btn"/>
+
     </LinearLayout>
 
 </LinearLayout>
