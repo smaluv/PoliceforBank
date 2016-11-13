@@ -19,6 +19,8 @@
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".SigninActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".JianchaActivity"></activity>
+        <activity android:name=".jiancha.YewukuChangsuoActivity"></activity>
     </application>
 
 </manifest>
