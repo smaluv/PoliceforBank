@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tabUser.setOnClickListener(this);
         tabPoi.setOnClickListener(this);
 
-
     }
     //重置所有文本的选中状态
     public void selected(){

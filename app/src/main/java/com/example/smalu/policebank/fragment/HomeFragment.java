@@ -1,5 +1,6 @@
 package com.example.smalu.policebank.fragment;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.smalu.policebank.JianchaActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.activity.BeianActivity;
 
@@ -21,7 +24,8 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     private ImageView beian,jiancha,pinggu,zhenggai;
     private  Context context;
 
-    public  HomeFragment(Context context){
+    public HomeFragment(){}
+    public HomeFragment(Context context){
             this.context=context;
     }
 
@@ -40,7 +44,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
         });
 //        pinggu=(ImageView)view.findViewById(R.id.pinggu);
 //        zhenggai=(ImageView)view.findViewById(R.id.zhenggai);
-        initView(view);//获取控件
+        initView(view);//获取控件并设置Onclick
         return view;
     }
 
@@ -49,6 +53,11 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
         beian=(ImageView)view.findViewById(R.id.beian);
         pinggu=(ImageView)view.findViewById(R.id.pinggu);
         zhenggai=(ImageView)view.findViewById(R.id.zhenggai);
+
+        jiancha.setOnClickListener(this);
+//        beian.setOnClickListener(this);
+//        pinggu.setOnClickListener(this);
+//        zhenggai.setOnClickListener(this);
     }
 
     @Override
@@ -60,7 +69,8 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
 //                startActivity(intent);
                 break;
             case R.id.jiancha:
-
+                Intent intent = new Intent(getActivity(), JianchaActivity.class);
+                startActivity(intent);
                 break;
             case R.id.pinggu:
 

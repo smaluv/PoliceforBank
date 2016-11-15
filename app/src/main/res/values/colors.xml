@@ -14,5 +14,7 @@
     <color name="black">#000000</color><!--黑色 -->
     <color name="lime">#00FF00</color><!--酸橙色 -->
     <color name="colorInit">#b4b4b4</color>
+    <color name="colorWhiteBG">#FFFDFE</color>
+    <color name="colorText">#4e4c4d</color>
 
 </resources>

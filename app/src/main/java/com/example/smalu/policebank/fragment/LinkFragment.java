@@ -26,6 +26,7 @@ public class LinkFragment extends Fragment{
     private ListView listView;
     private List<Map<String, Object>> data;
     private Context context;
+    public LinkFragment(){}
 
     public LinkFragment(Context context){
             this.context=context;

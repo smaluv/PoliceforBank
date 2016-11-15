@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWitch"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_weight="1.60"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/threepolice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_weight="0.66"
+        android:gravity="center|top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_yewuku"
+            android:text="银行业务库安全防范"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonshape"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_yingyechangsuo"
+            android:text="银行营业场所安全防护"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonshape"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_zizhu"
+            android:text="银行自助服务场所安全防护"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonshape"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

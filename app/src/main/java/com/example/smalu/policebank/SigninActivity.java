@@ -42,6 +42,7 @@ public class SigninActivity extends Activity implements View.OnClickListener{
             case R.id.btn_sign:{
                 intent = new Intent(SigninActivity.this,MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             }
         }//switch()
