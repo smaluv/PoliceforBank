@@ -1,17 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_height="match_parent"
+    >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="填报单位:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="银行场所名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="备案编号:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="所属机构名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -23,9 +137,110 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:text="金库面积:"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:text="是否办理消防合格证:"/>
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="是"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="否"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="地址:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="保卫责任人:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorInit"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="责任人联系电话:"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -57,12 +272,12 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="库房结构:"/>
+                    android:text="工程属性:"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:contentDescription="属性"
+                    android:contentDescription="工程属性"
                     android:layout_marginLeft="30dp"
                     android:orientation="horizontal">
                     <RadioButton
@@ -70,13 +285,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
-                        android:text="达标"/>
+                        android:text="新建"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
-                        android:text="不达标"/>
+                        android:text="改建"/>
                 </RadioGroup>
 
             </LinearLayout>
@@ -94,35 +309,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="墙体结构:"/>
-
-                <RadioGroup
+                    android:text="开工日期:"/>
+                <EditText
+                    android:id="@+id/beian_vault_2_startTime"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textColorHint="@color/colorInit"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="18dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="点击选择时间"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <View
@@ -138,34 +343,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="金库门:"/>
-
-                <RadioGroup
+                    android:textColor="@color/colorIconGray"
+                    android:text="完工日期:"/>
+                <EditText
+                    android:id="@+id/beian_vault_2_finishTime"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textColorHint="@color/colorInit"
+                    android:textSize="18dp"
+                    android:hint="点击选择时间"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <View
@@ -181,35 +377,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="金库外隔离门:"/>
-
-                <RadioGroup
+                    android:textColor="@color/colorIconGray"
+                    android:text="开业日期:"/>
+                <EditText
+                    android:id="@+id/beian_vault_2_openTime"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textColorHint="@color/colorInit"
+                    android:textSize="18dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="点击选择时间"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <View
@@ -225,299 +411,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
+                android:orientation="vertical"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="辅助安防器材:"/>
-
-                <RadioGroup
+                    android:textColor="@color/colorIconGray"
+                    android:text="填报时间:"/>
+                <DatePicker
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="监控报警系统:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="报警控制系统:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="守库室方位:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="守库室卫及其他设施:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="武器弹药配备:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="与公安联网情况:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/datePicker" />
             </LinearLayout>
 
             <View
@@ -533,12 +441,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_solider_btn"
-                android:layout_marginBottom="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
                 android:textSize="20dp"
-                android:id="@+id/testbutton2" />
+                android:id="@+id/button2" />
+
         </LinearLayout>
     </ScrollView>
+
+
+
+
 </LinearLayout>

@@ -21,6 +21,10 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".activity.BeianActivity"/>
         <activity android:name=".activity.Beian_valutActivity"/>
+        <activity android:name=".activity.Beian_lobbyActivity"/>
+        <activity android:name=".activity.Beian_equipmentActivity"/>
+
+
     </application>
 
 </manifest>

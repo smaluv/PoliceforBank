@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.support.v4.app.DialogFragment;
 
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
@@ -31,7 +30,7 @@ import java.util.List;
 
 
 
-public class Beian_valutActivity extends AppCompatActivity implements DataCallBack {
+public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBack {
 
     // ViewPager是google SDk中自带的一个附加包的一个类，可以用来实现屏幕间的切换。
     // android-support-v4.jar
@@ -49,7 +48,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.beian_valut);
+        setContentView(R.layout.beian_lobby);
         InitImageView();
         InitTextView();
         InitViewPager();
@@ -73,25 +72,25 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
      * 初始化ViewPager
      */
     private void InitViewPager() {
-        mPager = (ViewPager) findViewById(R.id.beianValutViewpagerid);
+        mPager = (ViewPager) findViewById(R.id.beianlobbyViewpagerid);
         listViews = new ArrayList<View>();
         LayoutInflater mInflater = getLayoutInflater();
-        View beian_valut_1=mInflater.inflate(R.layout.beian_valut_1, null);
-        View beian_valut_2=mInflater.inflate(R.layout.beian_valut_2, null);
-        View beian_valut_3=mInflater.inflate(R.layout.beian_valut_3, null);
-        listViews.add(beian_valut_1);
-        listViews.add(beian_valut_2);
-        listViews.add(beian_valut_3);
+        View beian_lobby_1=mInflater.inflate(R.layout.beian_lobby_1, null);
+        View beian_lobby_2=mInflater.inflate(R.layout.beian_lobby_2, null);
+        View beian_lobby_3=mInflater.inflate(R.layout.beian_lobby_3, null);
+        listViews.add(beian_lobby_1);
+        listViews.add(beian_lobby_2);
+        listViews.add(beian_lobby_3);
 
         mPager.setAdapter(new viewPagerAdapter(listViews));
 
         mPager.setCurrentItem(0);
         mPager.setOnPageChangeListener(new MyOnPageChangeListener());
 
-        testbutton2=(Button)beian_valut_2.findViewById(R.id.testbutton2);
-        beian_vault_2_finishTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_finishTime);
-        beian_vault_2_startTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_startTime);
-        beian_vault_2_openTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_openTime);
+        testbutton2=(Button)beian_lobby_2.findViewById(R.id.testbutton2);
+        beian_vault_2_finishTime=(EditText)beian_lobby_1.findViewById(R.id.beian_vault_2_finishTime);
+        beian_vault_2_startTime=(EditText)beian_lobby_1.findViewById(R.id.beian_vault_2_startTime);
+        beian_vault_2_openTime=(EditText)beian_lobby_1.findViewById(R.id.beian_vault_2_openTime);
         InitTime();
 
 

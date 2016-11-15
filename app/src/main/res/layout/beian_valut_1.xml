@@ -1,12 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorBule"
-        android:text="基本信息1"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="填报单位:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="银行金库名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="备案编号:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="所属机构名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="地址:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorIconGray"
+                    android:text="填报时间:"/>
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/datePicker" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <Button
+                android:text="完成"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solider_btn"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:textSize="20dp"
+                android:id="@+id/button2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 </LinearLayout>

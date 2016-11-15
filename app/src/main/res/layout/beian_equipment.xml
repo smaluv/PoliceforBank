@@ -24,7 +24,7 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/colorWitch"
-            android:text= "银行金库安全防护建设备案" />
+            android:text= "银行营业场所安全防范建设" />
     </LinearLayout>
 
     <View
@@ -45,7 +45,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="金库基本信息"
+            android:text="基本信息"
             android:textColor="#000000"
             android:textSize="15.0dip" />
 
@@ -55,9 +55,9 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="金库建设信息"
+            android:text="自助设备技防建设"
             android:textColor="#000000"
-            android:textSize="15.0dip" />
+            android:textSize="13.0dip" />
 
         <TextView
             android:id="@+id/text3"
@@ -65,9 +65,9 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="防范设施是否达标"
+            android:text="自助银行技防建设"
             android:textColor="#000000"
-            android:textSize="15.0dip" />
+            android:textSize="13.0dip" />
     </LinearLayout>
 
     <ImageView
@@ -77,7 +77,7 @@
         android:scaleType="matrix"
         android:src="@mipmap/a" />
     <android.support.v4.view.ViewPager
-        android:id="@+id/beianValutViewpagerid"
+        android:id="@+id/beianequipmentViewpagerid"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
