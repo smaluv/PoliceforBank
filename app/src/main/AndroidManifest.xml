@@ -16,16 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".SigninActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-<<<<<<< HEAD
-        <activity android:name=".JianchaActivity"></activity>
-        <activity android:name=".jiancha.YewukuChangsuoActivity"></activity>
-=======
+        <activity android:name=".RegisterActivity">
+        </activity>
+        <activity android:name=".SigninActivity">
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".JianchaActivity">
+        </activity>
+        <activity android:name=".activity.Jiancha_yewukuActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".activity.Jiancha_autoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".activity.Jiancha_yingyeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
         <activity android:name=".activity.BeianActivity"/>
         <activity android:name=".activity.Beian_valutActivity"/>
->>>>>>> 0894058fac9a448b4738d0e2d9ddfb25df453a36
+
     </application>
 
 </manifest>

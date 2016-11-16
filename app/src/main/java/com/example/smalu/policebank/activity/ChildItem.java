@@ -1,4 +1,4 @@
-package com.example.smalu.policebank.jiancha;
+package com.example.smalu.policebank.activity;
 
 /**
  * Created by KL on 2016/11/13 0013.

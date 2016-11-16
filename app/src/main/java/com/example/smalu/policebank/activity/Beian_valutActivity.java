@@ -104,7 +104,7 @@ public class Beian_valutActivity extends Activity {
         public void onClick(View v) {
             mPager.setCurrentItem(index);
         }
-    };
+    }
 
     /**
      * 页卡切换监听
