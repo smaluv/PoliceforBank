@@ -23,6 +23,7 @@
                     android:textColor="@color/colorIconGray"
                     android:text="填报单位:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_office"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -52,6 +53,7 @@
                     android:textSize="20dp"
                     android:text="自助设备/银行名称:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -81,6 +83,7 @@
                     android:textSize="20dp"
                     android:text="备案编号:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -110,6 +113,7 @@
                     android:textSize="20dp"
                     android:text="所属机构名称:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_below_office"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -141,18 +145,21 @@
                     android:text="是否办理消防合格证:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_Radioxiaofang"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
                     android:layout_marginLeft="10dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_Radioxiaofang_is"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_Radioxiaofang_un"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
@@ -183,6 +190,7 @@
                     android:textColor="@color/colorIconGray"
                     android:text="地址:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_eare"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -212,6 +220,7 @@
                     android:textColor="@color/colorIconGray"
                     android:text="保卫责任人:"/>
                 <EditText
+                    android:id="@+id/beian_equipment_defend_person"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHint="@color/colorInit"
@@ -243,6 +252,7 @@
                     android:text="责任人联系电话:"/>
 
                 <EditText
+                    android:id="@+id/beian_equipment_defend_person_tel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -276,18 +286,21 @@
                     android:text="工程属性:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_RadioProject"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="工程属性"
                     android:layout_marginLeft="30dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_RadioProject_new"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="新建"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_RadioProject_old"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
@@ -320,18 +333,21 @@
                     android:text="自助类型:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_RadioAuto"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
                     android:layout_marginLeft="30dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_RadioAuto_bank"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="自助银行"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_RadioAuto_equipment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
@@ -470,7 +486,7 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/black"
                     android:layout_gravity="center"
-                    android:id="@+id/datePicker" />
+                    android:id="@+id/beian_equipment_datePicker" />
             </LinearLayout>
 
             <View
@@ -491,7 +507,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
                 android:textSize="20dp"
-                android:id="@+id/button2" />
+                android:id="@+id/beian_equipment_information_btn" />
 
         </LinearLayout>
     </ScrollView>

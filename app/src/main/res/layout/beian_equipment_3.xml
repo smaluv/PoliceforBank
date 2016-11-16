@@ -27,6 +27,7 @@
                     android:text="出入口、装填现金区安装控制装置:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_bank1"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -34,16 +35,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -72,6 +76,7 @@
                     android:text="装填现金区安装入侵报警探测装置并具备联动功能:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_bank2"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -79,16 +84,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -117,6 +125,7 @@
                     android:text="远程报警、图像、声音等信息的传输:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_bank3"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -124,16 +133,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -162,6 +174,7 @@
                     android:text="自助银行门前及运钞车停放区域安装监控设施:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_bank4"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -169,16 +182,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="有"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_bank_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
