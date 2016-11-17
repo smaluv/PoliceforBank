@@ -27,6 +27,7 @@
                     android:text="安装防砸、防撬、报警探测装置:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto1"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -34,16 +35,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -72,6 +76,7 @@
                     android:text="安装数字视频安防监控装置:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto2"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -79,16 +84,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -117,6 +125,7 @@
                     android:text="安装报警联动及报警联网功能:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto3"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -124,16 +133,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -162,6 +174,7 @@
                     android:text="远程报警图像声音等信息的传输:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto4"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -169,16 +182,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="有"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -207,6 +223,7 @@
                     android:text="对操作人员面部、出钞口及装钞过程的监控:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto5"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -214,16 +231,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 
@@ -252,6 +272,7 @@
                     android:text="回放图像能够清晰显示操作人员面部特征:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_equipment_auto6"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="7dp"
@@ -259,16 +280,19 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
                         android:text="是"/>
                     <RadioButton
+                        android:id="@+id/beian_equipment_auto_12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorIconGray"
                         android:layout_weight="1"
+                        android:checked="true"
                         android:text="无"/>
                 </RadioGroup>
 

@@ -22,9 +22,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textSize="16sp"
             android:textColor="@color/colorWitch"
             android:text= "银行营业场所安全防范建设" />
+
+        <TextView
+            android:id="@+id/beianequipment_submit"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="提交"
+            android:textColor="@color/colorWitch"
+            android:drawableRight="@mipmap/submit"/>
+            android:drawableRight="@mipmap/submit"/>
     </LinearLayout>
 
     <View
