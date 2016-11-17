@@ -23,7 +23,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:text="金库面积:"
+                    android:text="录像保留时间:"
                     android:textSize="20dp" />
 
                 <EditText
@@ -56,8 +56,315 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
+                    android:textSize="15dp"
+                    android:text="场所与外界的出口及门外:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="库房结构:"/>
+                    android:text="现金业务:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="现金业务:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="非现金业务:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="场所内设置的自助设备:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="场内人员活动区监控:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="20dp"
+                    android:text="运钞交接区:"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:contentDescription="属性"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="有"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorIconGray"
+                        android:layout_weight="1"
+                        android:text="无"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorButtonBg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorIconGray"
+                    android:textSize="16dp"
+                    android:text="监控回放清晰情况:"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -94,20 +401,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
+                android:orientation="vertical"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="墙体结构:"/>
+                    android:textSize="18dp"
+                    android:text="现金业务柜台连续记录声音复核装置:"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -138,63 +445,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
-                android:gravity="center"
+                android:orientation="vertical"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="金库门:"/>
+                    android:textSize="16dp"
+                    android:text="入侵报警、照明、视频安防监控及声音符合设备的联动:"/>
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="金库外隔离门:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -220,313 +484,6 @@
                 android:layout_marginRight="30dp"
                 android:layout_alignParentBottom="true"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="辅助安防器材:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="监控报警系统:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="报警控制系统:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="守库室方位:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="守库室卫及其他设施:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="武器弹药配备:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="与公安联网情况:"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="达标"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorIconGray"
-                        android:layout_weight="1"
-                        android:text="不达标"/>
-                </RadioGroup>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorButtonBg"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"/>
 
             <Button
                 android:text="完成"

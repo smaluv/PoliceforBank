@@ -19,7 +19,7 @@ import java.util.List;
 
 public class BeianActivity extends Activity {
 
-    private Button beianValut;
+    private Button beianValut,beianLobby,beianEquipment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,22 @@ public class BeianActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(BeianActivity.this,Beian_valutActivity.class);
+                startActivity(intent);
+            }
+        });
+        beianLobby=(Button)findViewById(R.id.beian_lobby);
+        beianLobby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(BeianActivity.this,Beian_lobbyActivity.class);
+                startActivity(intent);
+            }
+        });
+        beianEquipment=(Button)findViewById(R.id.beian_equipment);
+        beianEquipment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(BeianActivity.this,Beian_equipmentActivity.class);
                 startActivity(intent);
             }
         });

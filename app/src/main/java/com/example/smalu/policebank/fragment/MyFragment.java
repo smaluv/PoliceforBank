@@ -7,21 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.RegisterActivity;
 import com.example.smalu.policebank.SigninActivity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by Smalu on 2016/11/11.

@@ -1,6 +1,5 @@
 package com.example.smalu.policebank.fragment;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.smalu.policebank.JianchaActivity;
+import com.example.smalu.policebank.activity.JianchaActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.activity.BeianActivity;
+import com.example.smalu.policebank.activity.PingguActivity;
 
 /**
  * Created by Smalu on 2016/11/11.
@@ -21,6 +21,7 @@ import com.example.smalu.policebank.activity.BeianActivity;
 
 public class HomeFragment  extends Fragment implements View.OnClickListener{
 
+    private Intent intent;
     private ImageView beian,jiancha,pinggu,zhenggai;
     private  Context context;
 
@@ -33,7 +34,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment,container,false);
-        jiancha=(ImageView)view.findViewById(R.id.jiancha);
+//        jiancha=(ImageView)view.findViewById(R.id.jiancha);
         beian=(ImageView)view.findViewById(R.id.beian);
         beian.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +57,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
 
         jiancha.setOnClickListener(this);
 //        beian.setOnClickListener(this);
-//        pinggu.setOnClickListener(this);
+        pinggu.setOnClickListener(this);
 //        zhenggai.setOnClickListener(this);
     }
 
@@ -69,11 +70,12 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
 //                startActivity(intent);
                 break;
             case R.id.jiancha:
-                Intent intent = new Intent(getActivity(), JianchaActivity.class);
+                intent = new Intent(getActivity(), JianchaActivity.class);
                 startActivity(intent);
                 break;
             case R.id.pinggu:
-
+                intent = new Intent(getActivity(), PingguActivity.class);
+                startActivity(intent);
                 break;
             case R.id.zhenggai:
 

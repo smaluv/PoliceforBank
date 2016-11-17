@@ -1,12 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
+            android:textSize="20dp"
+            android:text="是否办理消防合格证:"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:contentDescription="属性"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorIconGray"
+                android:layout_weight="1"
+                android:text="是"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorIconGray"
+                android:layout_weight="1"
+                android:text="否"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/colorIconGray"
+            android:text="金库保卫责任人:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorInit"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorIconGray"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
+            android:textSize="20dp"
+            android:text="责任人联系电话:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColorHint="@color/colorInit"
+            android:textColor="@color/colorIconGray"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:layout_marginRight="30dp">
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorBule"
-        android:text="基本信息2"/>
+        android:textColor="@color/colorIconGray"
+        android:textSize="20dp"
+        android:text="工程属性:"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:contentDescription="工程属性"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorIconGray"
+                android:layout_weight="1"
+                android:text="新建"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorIconGray"
+                android:layout_weight="1"
+                android:text="改建"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
+            android:textSize="20dp"
+            android:text="开工日期:"/>
+        <EditText
+            android:id="@+id/beian_vault_2_startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
+            android:textColorHint="@color/colorInit"
+            android:layout_marginLeft="3dp"
+            android:textSize="18dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="点击选择时间"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/colorIconGray"
+            android:text="完工日期:"/>
+        <EditText
+            android:id="@+id/beian_vault_2_finishTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorIconGray"
+            android:textColorHint="@color/colorInit"
+            android:textSize="18dp"
+            android:hint="点击选择时间"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/colorIconGray"
+            android:text="开业日期:"/>
+        <EditText
+            android:id="@+id/beian_vault_2_openTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorIconGray"
+            android:textColorHint="@color/colorInit"
+            android:textSize="18dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="点击选择时间"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorButtonBg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:text="完成"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_solider_btn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:id="@+id/testbutton2" />
+
 
 </LinearLayout>

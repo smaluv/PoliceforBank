@@ -16,14 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity">
-        </activity>
-        <activity android:name=".SigninActivity">
-        </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".JianchaActivity">
-        </activity>
+
         <activity android:name=".activity.Jiancha_yewukuActivity"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
@@ -33,8 +26,24 @@
         <activity android:name=".activity.Jiancha_yingyeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
+        <activity android:name=".activity.Pinggu_qingkuang"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".activity.Pinggu_fenshu"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".activity.PingguActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".SigninActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activity.JianchaActivity"></activity>
         <activity android:name=".activity.BeianActivity"/>
         <activity android:name=".activity.Beian_valutActivity"/>
+        <activity android:name=".activity.Beian_lobbyActivity"/>
+        <activity android:name=".activity.Beian_equipmentActivity"/>
 
     </application>
 

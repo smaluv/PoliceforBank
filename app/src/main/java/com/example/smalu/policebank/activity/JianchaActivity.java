@@ -1,4 +1,4 @@
-package com.example.smalu.policebank;
+package com.example.smalu.policebank.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.smalu.policebank.activity.Jiancha_autoActivity;
-import com.example.smalu.policebank.activity.Jiancha_yewukuActivity;
-import com.example.smalu.policebank.activity.Jiancha_yingyeActivity;
+import com.example.smalu.policebank.R;
 
 /**
  * Created by KL on 2016/11/13 0013.

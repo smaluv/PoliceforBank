@@ -55,20 +55,16 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
     private EditText et1, et2;
     private List<String> spinnerList, spinnerList2, spinnerList3;
     private ArrayAdapter<String> spinner_adapter, spinner_adapter2, spinner_adapter3;
-    private Button btn1;
-    private String view1_data = "";
+    private String view_data = "";
     private RadioGroup yyrg1, yyrg2;
-    private String[] data1 = new String[9];
 
     private Button btn;
     private EditText et21,et22,et23,et24,et25,et26,et27,et28,et29,et210,et211,et212;
     private RadioGroup rg21,rg22,rg23,rg24,rg25,rg26,rg27,rg28,rg29,rg210,rg211,rg212,rg213,rg214,rg215,
             rg216,rg217,rg218,rg219,rg220,rg221,rg222,rg223,rg224,rg225,rg226,rg227,rg228;
-    private String[] data = new String[40];
+    private String[] data = new String[52];
 
     private EditText et31, et32, et33;
-    private Button btn31;
-    private String view2_data = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +145,6 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         et2 = (EditText) view.findViewById(R.id.et2);
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
         yyrg2 = (RadioGroup) view.findViewById(R.id.rg2);
-        btn1 = (Button) view.findViewById(R.id.btn1);
 
         spinnerList = new ArrayList<String>();
         spinnerList.add("吉安");
@@ -187,35 +182,14 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
         yyrg2 = (RadioGroup) view.findViewById(R.id.rg2);
 
-        data1[1] = "有|";
-        data1[2] = "有|";
+        data[1] = "有|";
+        data[2] = "有|";
 
         yyrg1.setOnCheckedChangeListener(this);
         yyrg2.setOnCheckedChangeListener(this);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data1[0] = et1.getText().toString()+ "|";
-                data1[3] = et2.getText().toString() + "|";
-                data1[4] = sp1.getSelectedItem().toString() + "|";
-                data1[5] = sp2.getSelectedItem().toString() + "|";
-                data1[6] = sp3.getSelectedItem().toString() + "|";
-                data1[7] = sp4.getSelectedItem().toString() + "|";
-                data1[8] = sp5.getSelectedItem().toString() + "|";
-
-                for (int i = 0; i < data1.length; i++) {
-                    view1_data = view1_data + data1[i];
-                }
-                //将view1_data，以便后面储存传递给数据库
-                Toast.makeText(Jiancha_yingyeActivity.this, view1_data, Toast.LENGTH_SHORT).show();
-                view1_data = "";
-            }
-        });
     }
 
     private void initPag2(View view) {
-        btn = (Button) view.findViewById(R.id.btn);
         et21 = (EditText) view.findViewById(R.id.et1);
         et22 = (EditText) view.findViewById(R.id.et2);
         et23 = (EditText) view.findViewById(R.id.et3);
@@ -286,9 +260,13 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         rg226.setOnCheckedChangeListener(this);
         rg227.setOnCheckedChangeListener(this);
         rg228.setOnCheckedChangeListener(this);
+    }
 
-
-
+    private void initPag3(View view) {
+        btn = (Button) view.findViewById(R.id.btn);
+        et31 = (EditText) view.findViewById(R.id.et1);
+        et32 = (EditText) view.findViewById(R.id.et2);
+        et33 = (EditText) view.findViewById(R.id.et3);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -304,101 +282,91 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
                 data[23] = et210.getText().toString();
                 data[24] = et211.getText().toString();
                 data[25] = et212.getText().toString();
-                for (int i = 0;i<data.length;i++){
-                    view2_data += data[i];
+
+                data[0] = et1.getText().toString()+ "|";
+                data[3] = et2.getText().toString() + "|";
+                data[4] = sp1.getSelectedItem().toString() + "|";
+                data[5] = sp2.getSelectedItem().toString() + "|";
+                data[6] = sp3.getSelectedItem().toString() + "|";
+                data[7] = sp4.getSelectedItem().toString() + "|";
+                data[8] = sp5.getSelectedItem().toString() + "|";
+                data[49] = et31.getText().toString() + "|";
+                data[50] = et32.getText().toString() + "|";
+                data[51] = et33.getText().toString() + "|";
+                for (int i = 0; i < data.length; i++) {
+                    view_data = view_data + data[i];
                 }
-                Toast.makeText(Jiancha_yingyeActivity.this,view2_data,Toast.LENGTH_SHORT).show();
-                view2_data = "";
+                Toast.makeText(Jiancha_yingyeActivity.this, view_data, Toast.LENGTH_SHORT).show();
+                view_data = "";
             }
         });
-    }
-
-    private void initPag3(View view) {
-        View viewx = view;
-        btn31 = (Button) viewx.findViewById(R.id.btn);
-        et31 = (EditText) viewx.findViewById(R.id.et1);
-        et32 = (EditText) viewx.findViewById(R.id.et2);
-        et33 = (EditText) viewx.findViewById(R.id.et3);
-        btn31.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String[] data = {et31.getText().toString() + "|", et32.getText().toString() + "|", et33.getText().toString() + "|"};
-                for (int i = 0; i < 3; i++) {
-                    view1_data = view1_data + data[i];
-                }
-                Toast.makeText(Jiancha_yingyeActivity.this, view1_data, Toast.LENGTH_SHORT).show();
-                view1_data = "";
-            }
-        });
-
-        et31.getText().toString();
     }
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         switch (i) {
-            case R.id.rb1:data1[1] = "有|";break;
-            case R.id.rb2:data1[1] = "无|";break;
-            case R.id.rb3:data1[2] = "有|";break;
-            case R.id.rb4:data1[2] = "无|";break;
+            case R.id.rb1:data[1] = "有|";break;
+            case R.id.rb2:data[1] = "无|";break;
+            case R.id.rb3:data[2] = "有|";break;
+            case R.id.rb4:data[2] = "无|";break;
 
-            case R.id.rb11:data[0] = "防弹玻璃";break;
-            case R.id.rb12:data[0] = "防砸玻璃";break;
-            case R.id.rb13:data[0] = "加装金属防护栏";break;
-            case R.id.rb21:data[1] = "是";break;
-            case R.id.rb22:data[1] = "否";break;
-            case R.id.rb31:data[2] = "是";break;
-            case R.id.rb32:data[2] = "否";break;
-            case R.id.rb41:data[3] = "是";break;
-            case R.id.rb42:data[3] = "否";break;
-            case R.id.rb51:data[4] = "是";break;
-            case R.id.rb52:data[4] = "否";break;
-            case R.id.rb61:data[5] = "是";break;
-            case R.id.rb62:data[5] = "否";break;
-            case R.id.rb71:data[9] = "是";break;
-            case R.id.rb72:data[9] = "否";break;
-            case R.id.rb81:data[12] = "是";break;
-            case R.id.rb82:data[12] = "否";break;
-            case R.id.rb91:data[14] = "是";break;
-            case R.id.rb92:data[14] = "否";break;
-            case R.id.rb101:data[18] = "是";break;
-            case R.id.rb102:data[18] = "否";break;
-            case R.id.rb111:data[19] = "是";break;
-            case R.id.rb112:data[19] = "否";break;
-            case R.id.rb121:data[20] = "是";break;
-            case R.id.rb122:data[20] = "否";break;
-            case R.id.rb131:data[21] = "是";break;
-            case R.id.rb132:data[21] = "否";break;
-            case R.id.rb141:data[22] = "是";break;
-            case R.id.rb142:data[22] = "否";break;
-            case R.id.rb151:data[26] = "是";break;
-            case R.id.rb152:data[26] = "否";break;
-            case R.id.rb161:data[27] = "是";break;
-            case R.id.rb162:data[27] = "否";break;
-            case R.id.rb171:data[28] = "是";break;
-            case R.id.rb172:data[28] = "否";break;
-            case R.id.rb181:data[29] = "是";break;
-            case R.id.rb182:data[29] = "否";break;
-            case R.id.rb191:data[30] = "是";break;
-            case R.id.rb192:data[30] = "否";break;
-            case R.id.rb201:data[31] = "是";break;
-            case R.id.rb202:data[31] = "否";break;
-            case R.id.rb211:data[32] = "是";break;
-            case R.id.rb212:data[32] = "否";break;
-            case R.id.rb221:data[33] = "是";break;
-            case R.id.rb222:data[33] = "否";break;
-            case R.id.rb231:data[34] = "是";break;
-            case R.id.rb232:data[34] = "否";break;
-            case R.id.rb241:data[35] = "是";break;
-            case R.id.rb242:data[35] = "否";break;
-            case R.id.rb251:data[36] = "是";break;
-            case R.id.rb252:data[36] = "否";break;
-            case R.id.rb261:data[37] = "是";break;
-            case R.id.rb262:data[37] = "否";break;
-            case R.id.rb271:data[38] = "有";break;
-            case R.id.rb272:data[38] = "无";break;
-            case R.id.rb281:data[39] = "有";break;
-            case R.id.rb282:data[39] = "无";break;
+            case R.id.rb11:data[9] = "防弹玻璃|";break;
+            case R.id.rb12:data[9] = "防砸玻璃|";break;
+            case R.id.rb13:data[9] = "加装金属防护栏|";break;
+            case R.id.rb21:data[10] = "是|";break;
+            case R.id.rb22:data[10] = "否|";break;
+            case R.id.rb31:data[11] = "是|";break;
+            case R.id.rb32:data[11] = "否|";break;
+            case R.id.rb41:data[12] = "是|";break;
+            case R.id.rb42:data[12] = "否|";break;
+            case R.id.rb51:data[13] = "是|";break;
+            case R.id.rb52:data[13] = "否|";break;
+            case R.id.rb61:data[14] = "是|";break;
+            case R.id.rb62:data[14] = "否|";break;
+            case R.id.rb71:data[18] = "是|";break;
+            case R.id.rb72:data[18] = "否|";break;
+            case R.id.rb81:data[21] = "是|";break;
+            case R.id.rb82:data[21] = "否|";break;
+            case R.id.rb91:data[23] = "是|";break;
+            case R.id.rb92:data[23] = "否|";break;
+            case R.id.rb101:data[27] = "是|";break;
+            case R.id.rb102:data[27] = "否";break;
+            case R.id.rb111:data[28] = "是";break;
+            case R.id.rb112:data[28] = "否";break;
+            case R.id.rb121:data[29] = "是";break;
+            case R.id.rb122:data[29] = "否";break;
+            case R.id.rb131:data[30] = "是";break;
+            case R.id.rb132:data[30] = "否";break;
+            case R.id.rb141:data[31] = "是";break;
+            case R.id.rb142:data[31] = "否";break;
+            case R.id.rb151:data[35] = "是";break;
+            case R.id.rb152:data[35] = "否";break;
+            case R.id.rb161:data[36] = "是";break;
+            case R.id.rb162:data[36] = "否";break;
+            case R.id.rb171:data[37] = "是";break;
+            case R.id.rb172:data[37] = "否";break;
+            case R.id.rb181:data[38] = "是";break;
+            case R.id.rb182:data[38] = "否";break;
+            case R.id.rb191:data[39] = "是";break;
+            case R.id.rb192:data[39] = "否";break;
+            case R.id.rb201:data[40] = "是";break;
+            case R.id.rb202:data[40] = "否";break;
+            case R.id.rb211:data[41] = "是";break;
+            case R.id.rb212:data[41] = "否";break;
+            case R.id.rb221:data[42] = "是";break;
+            case R.id.rb222:data[42] = "否";break;
+            case R.id.rb231:data[43] = "是";break;
+            case R.id.rb232:data[43] = "否";break;
+            case R.id.rb241:data[44] = "是";break;
+            case R.id.rb242:data[44] = "否";break;
+            case R.id.rb251:data[45] = "是";break;
+            case R.id.rb252:data[45] = "否";break;
+            case R.id.rb261:data[46] = "是";break;
+            case R.id.rb262:data[46] = "否";break;
+            case R.id.rb271:data[47] = "有";break;
+            case R.id.rb272:data[47] = "无";break;
+            case R.id.rb281:data[48] = "有";break;
+            case R.id.rb282:data[48] = "无";break;
         }
     }
     /*

@@ -210,13 +210,4 @@
                 android:layout_width="match_parent"/>
         </TableRow>
 
-    <Button
-        android:id="@+id/ywk_btn1"
-        android:layout_marginTop="5dp"
-        android:text="下一步"
-        android:background="@drawable/buttonshape"
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="30dp" />
-
 </LinearLayout>
