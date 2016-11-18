@@ -20,6 +20,7 @@
             android:text="是否办理消防合格证:"/>
 
         <RadioGroup
+            android:id="@+id/beian_valut2_isxiaofang"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:contentDescription="属性"
@@ -61,6 +62,7 @@
             android:textColor="@color/colorIconGray"
             android:text="金库保卫责任人:"/>
         <EditText
+            android:id="@+id/beian_valut2_defendpeople"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorInit"
@@ -91,6 +93,7 @@
             android:textSize="20dp"
             android:text="责任人联系电话:"/>
         <EditText
+            android:id="@+id/beian_valut2_defendtel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
@@ -124,6 +127,7 @@
         android:text="工程属性:"/>
 
         <RadioGroup
+            android:id="@+id/beian_valut2_defendproject"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:contentDescription="工程属性"

@@ -27,6 +27,7 @@
                     android:textColor="@color/colorIconGray"
                     android:text="填报单位:"/>
                 <EditText
+                    android:id="@+id/beian_valut_office"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -56,6 +57,7 @@
                     android:textSize="20dp"
                     android:text="银行金库名称:"/>
                 <EditText
+                    android:id="@+id/beian_valut_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -85,6 +87,7 @@
                     android:textSize="20dp"
                     android:text="备案编号:"/>
                 <EditText
+                    android:id="@+id/beian_valut_num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -114,6 +117,7 @@
                     android:textSize="20dp"
                     android:text="所属机构名称:"/>
                 <EditText
+                    android:id="@+id/beian_valut_belowoffice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -143,6 +147,7 @@
                     android:textColor="@color/colorIconGray"
                     android:text="地址:"/>
                 <EditText
+                    android:id="@+id/beian_valut_eare"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -173,12 +178,12 @@
                     android:textColor="@color/colorIconGray"
                     android:text="填报时间:"/>
                 <DatePicker
+                    android:id="@+id/beian_valut_datepicker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/black"
-                    android:layout_gravity="center"
-                    android:id="@+id/datePicker" />
+                    android:layout_gravity="center"/>
             </LinearLayout>
 
             <View

@@ -27,6 +27,7 @@
                     android:textSize="20dp" />
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_1"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -71,6 +72,7 @@
                     android:text="二层以下门窗:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_2"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -115,6 +117,7 @@
                     android:text="周边 围墙 防护:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_3"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -159,6 +162,7 @@
                     android:text="柜台建筑材料:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_4"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -202,6 +206,7 @@
                     android:text="现金业务区出入防尾门:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_5"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -253,6 +258,7 @@
                     android:text="宽度:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_guitai_width"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -268,6 +274,7 @@
                     android:textSize="20dp"
                     android:text="高度:"/>
                 <EditText
+                    android:id="@+id/beian_lobby2_guitai_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -308,6 +315,7 @@
                     android:text="宽度:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_fanghuban_width"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -316,6 +324,7 @@
                     android:hint="宽"
                     android:layout_weight="1"/>
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -323,6 +332,7 @@
                     android:textSize="20dp"
                     android:text="高度:"/>
                 <EditText
+                    android:id="@+id/beian_lobby2_fanghuban_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -353,9 +363,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="单块面积:"/>
+                    android:text="防护板单块面积:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_singer_eare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -386,9 +397,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="封顶高度:"/>
+                    android:text="防护板封顶高度:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_fengdinggaodu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -419,9 +431,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
-                    android:text="单位长度及空隙:"/>
+                    android:text="防护板单位长度及空隙:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_danwei_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -462,6 +475,7 @@
                     android:text="长:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_shouyincao_long"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -478,6 +492,7 @@
                     android:text="宽:"/>
 
                 <EditText
+                    android:id="@+id/beian_lobby2_shouyincao_width"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -493,6 +508,7 @@
                     android:textSize="20dp"
                     android:text="高:"/>
                 <EditText
+                    android:id="@+id/beian_lobby2_shouyincao_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
@@ -526,6 +542,7 @@
                     android:text="卫生间设置:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_6"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -570,6 +587,7 @@
                     android:text="自卫器材:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_7"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -614,6 +632,7 @@
                     android:text="自动照明设备:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_8"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -658,6 +677,7 @@
                     android:text="消防器材:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_9"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -702,6 +722,7 @@
                     android:text="紧急报警装置:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_10"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -746,6 +767,7 @@
                     android:text="110联网情况:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_lobby2_11"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"

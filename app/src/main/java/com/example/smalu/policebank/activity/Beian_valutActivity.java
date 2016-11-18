@@ -12,10 +12,14 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.support.v4.app.DialogFragment;
+import android.widget.Toast;
 
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
@@ -23,6 +27,7 @@ import com.example.smalu.policebank.fragment.DatePickerFragment;
 import com.example.smalu.policebank.interfaceclass.DataCallBack;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -42,9 +47,52 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
     private int offset = 0;// 动画图片偏移量
     private int currIndex = 0;// 当前页卡编号
     private int bmpW;// 动画图片宽度
-    private EditText beian_vault_2_finishTime,beian_vault_2_startTime,beian_vault_2_openTime;
+    private Calendar calendar;
+    private int year;
+    private int month;
+    private int day;
+    private EditText beian_vault_2_finishTime,beian_vault_2_startTime,beian_vault_2_openTime,
+            beian_valut_office,   //填报单位
+            beian_valut_name, //银行金库名称
+            beian_valut_num,//备案编号
+            beian_valut_belowoffice,//填报所属机构名称
+            beian_valut_eare,//地址
+            beian_valut2_defendpeople,//保卫责任人
+            beian_valut2_defendtel,//保卫联系电话
+            beian_valut3_eare;//金库面积
+    private RadioGroup beian_valut2_defendproject,//工程属性
+            beian_valut2_isxiaofang,//消防是否达标
+            beian_valut3_1,
+            beian_valut3_2,
+            beian_valut3_3,
+            beian_valut3_4,
+            beian_valut3_5,
+            beian_valut3_6,
+            beian_valut3_7,
+            beian_valut3_8,
+            beian_valut3_9,
+            beian_valut3_10,
+            beian_valut3_11,
+            beian_valut3_12;
+    private String beian_valut2_defendproject1="新建",//工程属性
+            beian_valut2_isxiaofang1="达标",//消防是否达标
+            beian_valut3_110="达标",
+            beian_valut3_22="达标",
+            beian_valut3_33="达标",
+            beian_valut3_44="达标",
+            beian_valut3_55="达标",
+            beian_valut3_66="达标",
+            beian_valut3_77="达标",
+            beian_valut3_88="达标",
+            beian_valut3_99="达标",
+            beian_valut3_101="达标",
+            beian_valut3_111="达标",
+            beian_valut3_122="达标";
+    private DatePicker beian_valut_datepicker;
     private Button testbutton2;
+    private String datepictime;
     private int timestage;//记录金库的建设时间判断码
+    private View beian_valut_1,beian_valut_2,beian_valut_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +101,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         InitImageView();
         InitTextView();
         InitViewPager();
+        InitViewClick();
 
     }
 
@@ -69,6 +118,230 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         t3.setOnClickListener(new MyOnClickListener(2));
     }
 
+    private void InitViewClick(){
+        //界面1
+        beian_valut_office=(EditText)beian_valut_1.findViewById(R.id.beian_valut_office);
+        beian_valut_name=(EditText)beian_valut_1.findViewById(R.id.beian_valut_name);
+        beian_valut_num=(EditText)beian_valut_1.findViewById(R.id.beian_valut_num);
+        beian_valut_belowoffice=(EditText)beian_valut_1.findViewById(R.id.beian_valut_belowoffice);
+        beian_valut_eare=(EditText)beian_valut_1.findViewById(R.id.beian_valut_eare);
+        beian_valut_datepicker=(DatePicker)beian_valut_1.findViewById(R.id.beian_valut_datepicker);
+        beian_vault_2_finishTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_finishTime);
+        beian_vault_2_startTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_startTime);
+        beian_vault_2_openTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_openTime);
+        InitTime();
+
+        //获取DatePicker时间
+        // 获取日历对象
+        calendar = Calendar.getInstance();
+        // 获取当前对应的年、月、日的信息
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        int monthtime=month+1;
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+//         dataPicker初始化
+        beian_valut_datepicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Beian_valutActivity.this.year=year;
+                Beian_valutActivity.this.month=monthOfYear+1;
+                Beian_valutActivity.this.day=dayOfMonth;
+                datepictime=year + "-" + month + "-" + day;
+                Toast.makeText(Beian_valutActivity.this,datepictime,Toast.LENGTH_LONG).show();
+            }
+        });
+        //界面2
+        beian_valut2_defendpeople=(EditText)beian_valut_2.findViewById(R.id.beian_valut2_defendpeople);
+        beian_valut2_defendtel=(EditText)beian_valut_2.findViewById(R.id.beian_valut2_defendtel);
+        beian_valut2_defendproject = (RadioGroup) beian_valut_2.findViewById(R.id.beian_valut2_defendproject);
+        //获取RadioGroup值
+        beian_valut2_defendproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut2_defendproject1= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "工程属性：" + beian_valut2_defendproject1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut2_isxiaofang = (RadioGroup) beian_valut_2.findViewById(R.id.beian_valut2_isxiaofang);
+        beian_valut2_isxiaofang.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut2_isxiaofang1= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "消防合格：" + beian_valut2_isxiaofang1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        //界面三
+        beian_valut3_eare=(EditText)beian_valut_3.findViewById(R.id.beian_valut3_eare);
+        beian_valut3_1 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_1);
+        //获取RadioGroup值
+        beian_valut3_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_110= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "库房结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_3 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_3);
+        beian_valut3_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_33= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "墙体结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_4 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_4);
+        beian_valut3_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_44= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "金库门：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_5 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_5);
+        beian_valut3_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_55= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "金库外隔离门：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_6 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_6);
+        beian_valut3_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_66= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "辅助安防器材：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_7 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_7);
+        beian_valut3_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_77= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "监控报警系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_8 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_8);
+        beian_valut3_8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_88= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "报警控制系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_9 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_9);
+        beian_valut3_9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_99= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "守卫室方位：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_10 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_10);
+        beian_valut3_10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_101= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "守卫室及其他设施：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_11 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_11);
+        beian_valut3_11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_111= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "武器弹药配置：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        beian_valut3_12 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_12);
+        beian_valut3_12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                // TODO Auto-generated method stub
+                //获取变更后的选中项的ID
+                int radioButtonId = arg0.getCheckedRadioButtonId();
+                //根据ID获取RadioButton的实例
+                RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
+                //更新文本内容，以符合选中项
+                beian_valut3_122= String.valueOf(rb.getText());
+                Toast.makeText(Beian_valutActivity.this, "与公安联网情况：" + rb.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
     /**
      * 初始化ViewPager
      */
@@ -76,9 +349,9 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         mPager = (ViewPager) findViewById(R.id.beianValutViewpagerid);
         listViews = new ArrayList<View>();
         LayoutInflater mInflater = getLayoutInflater();
-        View beian_valut_1=mInflater.inflate(R.layout.beian_valut_1, null);
-        View beian_valut_2=mInflater.inflate(R.layout.beian_valut_2, null);
-        View beian_valut_3=mInflater.inflate(R.layout.beian_valut_3, null);
+        beian_valut_1=mInflater.inflate(R.layout.beian_valut_1, null);
+        beian_valut_2=mInflater.inflate(R.layout.beian_valut_2, null);
+        beian_valut_3=mInflater.inflate(R.layout.beian_valut_3, null);
         listViews.add(beian_valut_1);
         listViews.add(beian_valut_2);
         listViews.add(beian_valut_3);
@@ -89,10 +362,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         mPager.setOnPageChangeListener(new MyOnPageChangeListener());
 
         testbutton2=(Button)beian_valut_2.findViewById(R.id.testbutton2);
-        beian_vault_2_finishTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_finishTime);
-        beian_vault_2_startTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_startTime);
-        beian_vault_2_openTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_openTime);
-        InitTime();
+
 
 
 //        testbutton2.setOnClickListener(new View.OnClickListener() {

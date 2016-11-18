@@ -27,6 +27,7 @@
                     android:textSize="20dp" />
 
                 <EditText
+                    android:id="@+id/beian_valut3_eare"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
@@ -60,6 +61,7 @@
                     android:text="库房结构:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_1"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -104,6 +106,7 @@
                     android:text="墙体结构:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_3"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -148,6 +151,7 @@
                     android:text="金库门:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_4"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -191,6 +195,7 @@
                     android:text="金库外隔离门:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_5"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -235,6 +240,7 @@
                     android:text="辅助安防器材:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_6"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -279,6 +285,7 @@
                     android:text="监控报警系统:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_7"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -323,6 +330,7 @@
                     android:text="报警控制系统:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_8"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -367,6 +375,7 @@
                     android:text="守库室方位:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_9"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -411,6 +420,7 @@
                     android:text="守库室卫及其他设施:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_10"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -455,6 +465,7 @@
                     android:text="武器弹药配备:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_11"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
@@ -499,6 +510,7 @@
                     android:text="与公安联网情况:"/>
 
                 <RadioGroup
+                    android:id="@+id/beian_valut3_12"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"

@@ -185,7 +185,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
-
+                beian_equipment_bank11= String.valueOf(rb.getText());
                 Toast.makeText(Beian_equipmentActivity.this, "出入口装填区安装控制装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -197,6 +197,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_bank22= String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "现金安装入侵设备并联网：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -209,6 +210,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_bank33= String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "远程报警、图像、声音等信息传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -244,7 +246,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_equipment_auto11= String.valueOf(rb.getText());
-                Toast.makeText(Beian_equipmentActivity.this, "安装防砸等探测装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Beian_equipmentActivity.this, "安装防砸等探测装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_auto2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -255,6 +257,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_auto22=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "安装数字监控装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -267,6 +270,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_auto33=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "安装报警联网功能：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -279,6 +283,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_auto44=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "远程报警传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -291,6 +296,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_auto55=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
                 Toast.makeText(Beian_equipmentActivity.this, "对操作人员面部监控：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -303,8 +309,9 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_auto66=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "回放图片清晰：" + rb.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Beian_equipmentActivity.this, "回放图片清晰：" + beian_equipment_auto66, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -338,7 +345,8 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                      int radioButtonId = arg0.getCheckedRadioButtonId();
                     //根据ID获取RadioButton的实例
                      RadioButton rb = (RadioButton)Beian_equipmentActivity.this.findViewById(radioButtonId);
-                   //更新文本内容，以符合选中项
+                     beian_equipment_RadioAuto1=String.valueOf(rb.getText());
+                //更新文本内容，以符合选中项
                      Toast.makeText(Beian_equipmentActivity.this,"自助类型：" + rb.getText(),Toast.LENGTH_SHORT).show();
                  }
         });
@@ -351,9 +359,15 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton)Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_RadioProject2=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this,"项目属性：" + rb.getText(),Toast.LENGTH_SHORT).show();
-                flag=0;
+                Toast.makeText(Beian_equipmentActivity.this,"项目属性：" + beian_equipment_RadioProject2,Toast.LENGTH_SHORT).show();
+//                if(beian_equipment_RadioProject2=="1")
+//                {flag=0;
+//                    Toast.makeText(Beian_equipmentActivity.this,"新建Flag0",Toast.LENGTH_SHORT).show();
+//                }else if(beian_equipment_RadioProject2=="2"){
+//                    flag=1;
+//                }
             }
         });
         //获取RadioGroup值
@@ -365,8 +379,9 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 int radioButtonId = arg0.getCheckedRadioButtonId();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton)Beian_equipmentActivity.this.findViewById(radioButtonId);
+                beian_equipment_Radioxiaofang3= String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this,"消防合格：" + rb.getText(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(Beian_equipmentActivity.this,"消防合格：" + beian_equipment_Radioxiaofang3,Toast.LENGTH_SHORT).show();
             }
         });
 

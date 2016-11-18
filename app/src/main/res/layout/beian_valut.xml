@@ -24,7 +24,21 @@
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/colorWitch"
-            android:text= "银行金库安全防护建设备案" />
+            android:text= "银行金库安全防护建设备案"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/beianequipment_submit"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="提交"
+            android:textColor="@color/colorWitch"
+            android:drawableRight="@mipmap/submit"/>
     </LinearLayout>
 
     <View
