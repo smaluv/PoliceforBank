@@ -45,7 +45,8 @@
         <activity android:name=".activity.Beian_valutActivity"/>
         <activity android:name=".activity.Beian_lobbyActivity"/>
         <activity android:name=".activity.Beian_equipmentActivity"/>
-        <activity android:name=".activity.ZhenggaiActivity"/>
+        <activity android:name=".activity.Zhenggai_Activity"/>
+
 
     </application>
 

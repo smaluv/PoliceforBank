@@ -5,5 +5,5 @@ package com.example.smalu.policebank.utils;
  */
 
 public class CONTS {
-    public static final String ServerIp = "http://192.168.2.105:8080/bank/";
+    public static final String ServerIp = "http://100.73.96.65:8080/bank/";
 }

@@ -114,6 +114,13 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         InitTextView();
         InitViewPager();
         InitViewClick();
+        ImageView back =(ImageView)findViewById(R.id.bback);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     /**
@@ -355,51 +362,56 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         beianequipment_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                URL= CONST.HOST + CONST.EvaluateInsert +
-                        "runit=" +  beian_valut_office.getText().toString()+
-                        "&vaultname=" + beian_valut_name.getText().toString() +
-                        "&rnum=" + beian_valut_num.getText().toString() +
-                        "&belongto=" + beian_valut_belowoffice.getText().toString() +
-                        "&addr=" + beian_valut_eare.getText().toString() +
-                        "&rtime=" + datepictime +
-                        "&guard=" + beian_valut2_defendpeople.getText().toString()
-                        + "&phone=" + beian_valut2_defendtel.getText().toString() +
-                        "&ischecked=" + beian_valut2_isxiaofang1 +
-                        "&startdate=" + beian_vault_2_startTime.getText().toString() +
-                        "&completedate=" + beian_vault_2_finishTime.getText().toString() +
-                        "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
-                        "&project=" + beian_valut2_defendproject1 +//界面2
-                        "&vaultsize=" + beian_valut3_eare.getText().toString()+
-                        "&vaulthouse=" + beian_valut3_110 +
-                        "&wall=" + beian_valut3_33 +
-                        "&door=" + beian_valut3_44 +
-                        "&outdoor=" + beian_valut3_55 +
-                        "&pequipment=" + beian_valut3_66 +
-                        "&walarm=" + beian_valut3_77 +
-                        "&alarmcontrol=" + beian_valut3_88 +
-                        "&otheroom=" + beian_valut3_99 +
-                        "&vaultguard=" + beian_valut3_101 +
-                        "&weapons=" + beian_valut3_111 +
-                        "&internet=" + beian_valut3_122+
-                        "&advice=" + "无";
-                Log.d("URL",URL);
-                StringRequest stringRequest = new StringRequest(URL,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Beian_valutActivity.this,"备案成功",Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(Beian_valutActivity.this,BeianActivity.class);
-                                startActivity(intent);
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                        Toast.makeText(Beian_valutActivity.this,"备案失败，请查证输入数据",Toast.LENGTH_SHORT).show();
-                    }
-                });
-                mQueue.add(stringRequest);
+                if (beian_valut_office.getText().toString().equals("")||beian_valut_name.getText().toString().equals("")||beian_valut_num.getText().toString().equals("")||beian_valut_belowoffice.getText().toString().equals("")) {
+                    Toast.makeText(Beian_valutActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                } else {
+                    URL = CONST.HOST + CONST.EvaluateInsert +
+                            "runit=" + beian_valut_office.getText().toString() +
+                            "&vaultname=" + beian_valut_name.getText().toString() +
+                            "&rnum=" + beian_valut_num.getText().toString() +
+                            "&belongto=" + beian_valut_belowoffice.getText().toString() +
+                            "&addr=" + beian_valut_eare.getText().toString() +
+                            "&rtime=" + datepictime +
+                            "&guard=" + beian_valut2_defendpeople.getText().toString()
+                            + "&phone=" + beian_valut2_defendtel.getText().toString() +
+                            "&ischecked=" + beian_valut2_isxiaofang1 +
+                            "&startdate=" + beian_vault_2_startTime.getText().toString() +
+                            "&completedate=" + beian_vault_2_finishTime.getText().toString() +
+                            "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
+                            "&project=" + beian_valut2_defendproject1 +//界面2
+                            "&vaultsize=" + beian_valut3_eare.getText().toString() +
+                            "&vaulthouse=" + beian_valut3_110 +
+                            "&wall=" + beian_valut3_33 +
+                            "&door=" + beian_valut3_44 +
+                            "&outdoor=" + beian_valut3_55 +
+                            "&pequipment=" + beian_valut3_66 +
+                            "&walarm=" + beian_valut3_77 +
+                            "&alarmcontrol=" + beian_valut3_88 +
+                            "&otheroom=" + beian_valut3_99 +
+                            "&vaultguard=" + beian_valut3_101 +
+                            "&weapons=" + beian_valut3_111 +
+                            "&internet=" + beian_valut3_122 +
+                            "&advice=" + "无";
+                    Log.d("URL", URL);
+                    StringRequest stringRequest = new StringRequest(URL,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("TAG", response);
+                                    Toast.makeText(Beian_valutActivity.this, "备案成功", Toast.LENGTH_SHORT).show();
+//                                    Intent intent = new Intent(Beian_valutActivity.this, BeianActivity.class);
+//                                    startActivity(intent);
+                                    finish();
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Beian_valutActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    mQueue.add(stringRequest);
+                }
             }
         });
 

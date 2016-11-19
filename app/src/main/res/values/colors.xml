@@ -16,5 +16,7 @@
     <color name="colorInit">#b4b4b4</color>
     <color name="colorWhiteBG">#FFFDFE</color>
     <color name="colorText">#4e4c4d</color>
+    <color name="backg">#1140c6ff</color>
+    <color name="line">#45BE46</color>
 
 </resources>

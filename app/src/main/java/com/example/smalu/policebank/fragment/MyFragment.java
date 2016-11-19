@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.RegisterActivity;
 import com.example.smalu.policebank.SigninActivity;
+import com.example.smalu.policebank.activity.Zhenggai_Activity;
 
 
 /**
@@ -21,7 +22,7 @@ import com.example.smalu.policebank.SigninActivity;
 
 public class MyFragment extends Fragment {
 
-    private TextView tv;
+    private TextView tv,text_mycheck;
 //    private Button btn_sign;
 //    private Button btn_reg;
 
@@ -32,10 +33,18 @@ public class MyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.my_fragment,container,false);
+        final View view = inflater.inflate(R.layout.my_fragment,container,false);
         tv = (TextView) view.findViewById(R.id.tv1);
         Bundle bundle = getArguments();
         tv.setText(bundle.getString("username"));
+        text_mycheck=(TextView)view.findViewById(R.id.text_mycheck);
+        text_mycheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(view.getContext(), Zhenggai_Activity.class);
+                startActivity(intent);
+            }
+        });
         //textview显示获得的用户名
 
 //        mTextView = (TextView)view.findViewById(R.id.txt_content);

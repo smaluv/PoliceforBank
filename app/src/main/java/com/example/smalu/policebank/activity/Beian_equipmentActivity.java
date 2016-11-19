@@ -118,6 +118,13 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         InitViewPager();
         InitTime();
         InitViewClick();
+        ImageView back =(ImageView)findViewById(R.id.bback);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 
@@ -164,13 +171,6 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
 
     private void InitViewClick(){
         beian_equipment_office=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_office);
-        beian_equipment_office.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            Toast.makeText(Beian_equipmentActivity.this,beian_equipment_office.getText().toString(),Toast.LENGTH_SHORT).show();
-
-            }
-        });
         beian_equipment_name=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_name);
         beian_equipment_num=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_num);
         beian_equipment_below_office=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_below_office);
@@ -341,7 +341,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         int monthtime=month+1;
         day = calendar.get(Calendar.DAY_OF_MONTH);
         datepictime=year + "-" + monthtime + "-" + day;
-        Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
+//        Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
 //         dataPicker初始化
         beian_equipment_datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
             @Override
@@ -419,58 +419,61 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         beianequipment_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (beian_equipment_office.getText().toString().equals("")||beian_equipment_name.getText().toString().equals("")||beian_equipment_num.getText().toString().equals("")||beian_equipment_below_office.getText().toString().equals("")) {
+                    Toast.makeText(Beian_equipmentActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                } else {
 //                loadData();
-                URL= CONST.HOST + CONST.SelfServiceInsert +
-                        "runit=" +  beian_equipment_office.getText().toString()+
-                        "&selfname=" + beian_equipment_name.getText().toString() +
-                        "&rnum=" + beian_equipment_num.getText().toString() +
-                        "&belongto=" + beian_equipment_below_office.getText().toString() +
-                        "&addr=" + beian_equipment_eare.getText().toString() +
-                        "&guard=" + beian_equipment_defend_person.getText().toString() +
-                        "&phone=" + beian_equipment_defend_person_tel.getText().toString()
-                        + "&ischecked=" + beian_equipment_Radioxiaofang3 +
-                        "&project=" + beian_equipment_RadioProject2 +
-                        "&busiplace=" + beian_equipment_RadioAuto1 +
-                        "&startdate=" + beian_vault_2_startTime.getText().toString() +
-                        "&completedate=" + beian_vault_2_finishTime.getText().toString() +
-                        "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
-                        "&rtime=" + datepictime //界面1
-                        +"&barsize=" + beian_equipment_auto11 +
-                        "&barwidth=" + beian_equipment_auto22+
-                        "&barheight=" + beian_equipment_auto33+
-                        "&singlearea=" + beian_equipment_auto44+
-                        "&maxheight=" + beian_equipment_auto55+
-                        "&wrongsize=" + beian_equipment_auto66+
-                        "&doorkey=" + beian_equipment_bank11 +
-                        "&window=" + beian_equipment_bank22 +
-                        "&wall=" + beian_equipment_bank33 +
-                        "&barmaterial=" + beian_equipment_bank44 +
-                        "&advice=" + "无";
-                Log.i("TAG",URL);
-                Toast.makeText(Beian_equipmentActivity.this,beian_equipment_office.getText().toString(),Toast.LENGTH_SHORT).show();
-
-
-                StringRequest stringRequest = new StringRequest(URL,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Beian_equipmentActivity.this,"备案成功",Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(Beian_equipmentActivity.this,BeianActivity.class);
-                                startActivity(intent);
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                        Toast.makeText(Beian_equipmentActivity.this,"备案失败，请查证输入数据",Toast.LENGTH_SHORT).show();
-                    }
-                });
-                mQueue.add(stringRequest);
+                    URL = CONST.HOST + CONST.SelfServiceInsert +
+                            "runit=" + beian_equipment_office.getText().toString() +
+                            "&selfname=" + beian_equipment_name.getText().toString() +
+                            "&rnum=" + beian_equipment_num.getText().toString() +
+                            "&belongto=" + beian_equipment_below_office.getText().toString() +
+                            "&addr=" + beian_equipment_eare.getText().toString() +
+                            "&guard=" + beian_equipment_defend_person.getText().toString() +
+                            "&phone=" + beian_equipment_defend_person_tel.getText().toString()
+                            + "&ischecked=" + beian_equipment_Radioxiaofang3 +
+                            "&project=" + beian_equipment_RadioProject2 +
+                            "&busiplace=" + beian_equipment_RadioAuto1 +
+                            "&startdate=" + beian_vault_2_startTime.getText().toString() +
+                            "&completedate=" + beian_vault_2_finishTime.getText().toString() +
+                            "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
+                            "&rtime=" + datepictime //界面1
+                            + "&barsize=" + beian_equipment_auto11 +
+                            "&barwidth=" + beian_equipment_auto22 +
+                            "&barheight=" + beian_equipment_auto33 +
+                            "&singlearea=" + beian_equipment_auto44 +
+                            "&maxheight=" + beian_equipment_auto55 +
+                            "&wrongsize=" + beian_equipment_auto66 +
+                            "&doorkey=" + beian_equipment_bank11 +
+                            "&window=" + beian_equipment_bank22 +
+                            "&wall=" + beian_equipment_bank33 +
+                            "&barmaterial=" + beian_equipment_bank44 +
+                            "&advice=" + "无";
+                    Log.i("TAG", URL);
+                    Toast.makeText(Beian_equipmentActivity.this, beian_equipment_office.getText().toString(), Toast.LENGTH_SHORT).show();
+                    StringRequest stringRequest = new StringRequest(URL,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("TAG", response);
+                                    Toast.makeText(Beian_equipmentActivity.this, "备案成功", Toast.LENGTH_SHORT).show();
+//                                    Intent intent = new Intent(Beian_equipmentActivity.this, BeianActivity.class);
+//                                    startActivity(intent);
+                                    finish();
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Beian_equipmentActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    mQueue.add(stringRequest);
 //                Toast.makeText(Beian_equipmentActivity.this,URL,Toast.LENGTH_SHORT).show();
-            }
-        });
-
+                }
+              }
+           });
         }
 
     //选择时间

@@ -14,7 +14,7 @@ import com.example.smalu.policebank.activity.JianchaActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.activity.BeianActivity;
 import com.example.smalu.policebank.activity.PingguActivity;
-import com.example.smalu.policebank.activity.ZhenggaiActivity;
+import com.example.smalu.policebank.activity.Zhenggai_Activity;
 
 /**
  * Created by Smalu on 2016/11/11.
@@ -59,7 +59,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
         jiancha.setOnClickListener(this);
 //        beian.setOnClickListener(this);
         pinggu.setOnClickListener(this);
-//        zhenggai.setOnClickListener(this);
+        zhenggai.setOnClickListener(this);
     }
 
     @Override
@@ -79,7 +79,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.zhenggai:
-                intent = new Intent(getActivity(), ZhenggaiActivity.class);
+                intent = new Intent(getActivity(), Zhenggai_Activity.class);
                 startActivity(intent);
                 break;
         }

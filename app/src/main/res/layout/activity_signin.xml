@@ -33,7 +33,6 @@ android:orientation="vertical">
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     <EditText
         android:id="@+id/et2"
         android:textColor="@color/black"
@@ -42,6 +41,7 @@ android:orientation="vertical">
         android:layout_marginRight="20dp"
         android:drawablePadding="10dp"
         android:textColorHint="@color/colorIconGray"
+        android:password="true"
         android:hint="请输入密码"
         android:textSize="20dp"
         android:layout_marginTop="5dp"

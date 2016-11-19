@@ -144,7 +144,13 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
         InitTextView();
         InitViewPager();
         InitViewClick();
-
+        ImageView back =(ImageView)findViewById(R.id.bback);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void loadData(){
@@ -568,75 +574,77 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
         beianequipment_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                URL= CONST.HOST + CONST.BankHallInsert +
-                        "runit=" +  beian_lobby_office.getText().toString()+
-                        "&bankname=" + beian_lobby_bankname.getText().toString() +
-                        "&rnum=" + beian_lobby_number.getText().toString() +
-                        "&belongto=" + beian_lobby_belowoffice.getText().toString() +
-                        "&addr=" + beian_lobby_eare.getText().toString() +
-                        "&guard=" + beian_lobby_defender.getText().toString() +
-                        "&phone=" + beian_lobby_defendertel.getText().toString()
-                        + "&ischecked=" + beian_lobby_isxiaofang1 +
-                        "&project=" + beian_lobby_isnew1 +
-                        "&startdate=" + beian_vault_2_startTime.getText().toString() +
-                        "&completedate=" + beian_vault_2_finishTime.getText().toString() +
-                        "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
-                        "&rtime=" + datepictime //界面1
-                        +"&barsize=" + beian_lobby2_guitai_width.getText().toString() +
-                        "&barwidth=" + beian_lobby2_fanghuban_width.getText().toString()+
-                        "&barheight=" + beian_lobby2_fanghuban_height.getText().toString()+
-                        "&singlearea=" + beian_lobby2_singer_eare.getText().toString()+
-                        "&maxheight=" + beian_lobby2_fengdinggaodu.getText().toString()+
-                        "&wrongsize=" + beian_lobby2_danwei_height.getText().toString()+
-                        "&wrongwidth=" + beian_lobby2_danwei_height.getText().toString()+
-                        "&doplength=" + beian_lobby2_shouyincao_long.getText().toString()+
-                        "&dopwidth=" + beian_lobby2_shouyincao_width.getText().toString()+
-                        "&dopheight=" + beian_lobby2_shouyincao_height.getText().toString()+
-                        "&doorkey=" + beian_lobby2_01 +
-                        "&window=" + beian_lobby2_21 +
-                        "&wall=" + beian_lobby2_31 +
-                        "&barmaterial=" + beian_lobby2_41 +
-                        "&moneydoor=" + beian_lobby2_51 +
-                        "&toilet=" + beian_lobby2_61 +
-                        "&self=" + beian_lobby2_71 +
-                        "&light=" + beian_lobby2_81 +
-                        "&fire=" + beian_lobby2_91 +
-                        "&alarm=" + beian_lobby2_101 +
-                        "&Internet=" + beian_lobby2_111+//界面2
-                        "&videotime=" + beian_lobby3_video_savetime.getText().toString()+
-                        "&buisdoor=" + beian_lobby3_11 +
-                        "&cashspace=" + beian_lobby3_21 +
-                        "&uncash=" + beian_lobby3_41 +
-                        "&buislef=" + beian_lobby3_51 +
-                        "&jk=" + beian_lobby3_61 +
-                        "&jkback=" + beian_lobby3_71 +
-                        "&jjmoney=" + beian_lobby3_81 +
-                        "&voice=" + beian_lobby3_91 +
-                        "&unio=" + beian_lobby3_101+
-                        "&advice=" + "无";
-                Log.d("URL",URL);
-                StringRequest stringRequest = new StringRequest(URL,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Beian_lobbyActivity.this,"备案成功",Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(Beian_lobbyActivity.this,BeianActivity.class);
-                                startActivity(intent);
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                        Toast.makeText(Beian_lobbyActivity.this,"备案失败，请查证输入数据",Toast.LENGTH_SHORT).show();
-                    }
-                });
-                mQueue.add(stringRequest);
+                if (beian_lobby_office.getText().toString().equals("")||beian_lobby_bankname.getText().toString().equals("")||beian_lobby_number.getText().toString().equals("")||beian_lobby_belowoffice.getText().toString().equals("")) {
+                    Toast.makeText(Beian_lobbyActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                } else {
+                    URL = CONST.HOST + CONST.BankHallInsert +
+                            "runit=" + beian_lobby_office.getText().toString() +
+                            "&bankname=" + beian_lobby_bankname.getText().toString() +
+                            "&rnum=" + beian_lobby_number.getText().toString() +
+                            "&belongto=" + beian_lobby_belowoffice.getText().toString() +
+                            "&addr=" + beian_lobby_eare.getText().toString() +
+                            "&guard=" + beian_lobby_defender.getText().toString() +
+                            "&phone=" + beian_lobby_defendertel.getText().toString()
+                            + "&ischecked=" + beian_lobby_isxiaofang1 +
+                            "&project=" + beian_lobby_isnew1 +
+                            "&startdate=" + beian_vault_2_startTime.getText().toString() +
+                            "&completedate=" + beian_vault_2_finishTime.getText().toString() +
+                            "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
+                            "&rtime=" + datepictime //界面1
+                            + "&barsize=" + beian_lobby2_guitai_width.getText().toString() +
+                            "&barwidth=" + beian_lobby2_fanghuban_width.getText().toString() +
+                            "&barheight=" + beian_lobby2_fanghuban_height.getText().toString() +
+                            "&singlearea=" + beian_lobby2_singer_eare.getText().toString() +
+                            "&maxheight=" + beian_lobby2_fengdinggaodu.getText().toString() +
+                            "&wrongsize=" + beian_lobby2_danwei_height.getText().toString() +
+                            "&wrongwidth=" + beian_lobby2_danwei_height.getText().toString() +
+                            "&doplength=" + beian_lobby2_shouyincao_long.getText().toString() +
+                            "&dopwidth=" + beian_lobby2_shouyincao_width.getText().toString() +
+                            "&dopheight=" + beian_lobby2_shouyincao_height.getText().toString() +
+                            "&doorkey=" + beian_lobby2_01 +
+                            "&window=" + beian_lobby2_21 +
+                            "&wall=" + beian_lobby2_31 +
+                            "&barmaterial=" + beian_lobby2_41 +
+                            "&moneydoor=" + beian_lobby2_51 +
+                            "&toilet=" + beian_lobby2_61 +
+                            "&self=" + beian_lobby2_71 +
+                            "&light=" + beian_lobby2_81 +
+                            "&fire=" + beian_lobby2_91 +
+                            "&alarm=" + beian_lobby2_101 +
+                            "&Internet=" + beian_lobby2_111 +//界面2
+                            "&videotime=" + beian_lobby3_video_savetime.getText().toString() +
+                            "&buisdoor=" + beian_lobby3_11 +
+                            "&cashspace=" + beian_lobby3_21 +
+                            "&uncash=" + beian_lobby3_41 +
+                            "&buislef=" + beian_lobby3_51 +
+                            "&jk=" + beian_lobby3_61 +
+                            "&jkback=" + beian_lobby3_71 +
+                            "&jjmoney=" + beian_lobby3_81 +
+                            "&voice=" + beian_lobby3_91 +
+                            "&unio=" + beian_lobby3_101 +
+                            "&advice=" + "无";
+                    Log.d("URL", URL);
+                    StringRequest stringRequest = new StringRequest(URL,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("TAG", response);
+                                    Toast.makeText(Beian_lobbyActivity.this, "备案成功", Toast.LENGTH_SHORT).show();
+//                                    Intent intent = new Intent(Beian_lobbyActivity.this, BeianActivity.class);
+//                                    startActivity(intent);
+                                    finish();
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Beian_lobbyActivity.this, "备案失败，请查证输入数据", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    mQueue.add(stringRequest);
+                }
             }
         });
-
-
-
     }
     /**
      * 初始化头标

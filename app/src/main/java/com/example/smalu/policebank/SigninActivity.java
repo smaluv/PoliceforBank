@@ -14,13 +14,10 @@ import com.alibaba.fastjson.JSON;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.smalu.policebank.bean.JsonData;
 import com.example.smalu.policebank.bean.Userinfo;
 
-import org.json.JSONObject;
 
 import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 

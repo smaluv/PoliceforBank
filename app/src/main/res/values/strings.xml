@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">PoliceBank</string>
+    <string name="app_name">警管通</string>
+    <string name="HeadTitle">责令限期整改通知</string>
+    <string name="Onetitle">一、根据相关法律我支队民警对你单位依法检查：</string>
+    <string name="CheckTime">&#160;&#160;检查时间：&#160;&#160;</string>
+    <string name="Ischecked">&#160;&#160;整改单位：&#160;&#160;</string>
+    <string name="WhoToCheck">&#160;&#160;检查民警:&#160;&#160;</string>
+    <string name="Who">&#160;&#160;整改单位联系人:&#160;&#160;</string>
+    <string name="SafeProblem">&#160;&#160;存在如下安全隐患：&#160;&#160;</string>
+    <string name="HowToDeal">&#160;&#160;整改方法：&#160;&#160;</string>
+    <string name="TwoTitle">二、鉴于以上检查信息，现责令你单位在截止日期前完成整改工作：</string>
+    <string name="deadTime">&#160;&#160;限改时间：&#160;&#160;&#160;&#160;</string>
+    <string name="ToSpread">&#160;&#160;整改范围：&#160;&#160;</string>
+    <string name="end">三、请你单位将整改结果以书面函告我大队。如特殊情况不能按期整改的，请申报延期整改
+    书面报告报送我大队或未完成整改，将按相关法律法规进行处罚。 </string>
+    <string name="other">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;（注：请你单位将整改结果以书面函告我大队。如特殊情况不能按期整改的，请申报延期整改
+    书面报告报送我大队或未完成整改，将按相关法律法规进行处罚。以上章程均参照《公安机关监督检查企事业单位规定》、《企事业单位内部治安保卫工作条例》等法律）</string>
+    <string name="phoneNumber" >&#160;&#160;联系电话：&#160;&#160;</string>
 </resources>
