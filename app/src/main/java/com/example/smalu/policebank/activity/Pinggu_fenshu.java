@@ -1,6 +1,7 @@
 package com.example.smalu.policebank.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 
@@ -44,6 +46,7 @@ public class Pinggu_fenshu extends Activity {
     private int currIndex = 0;// 当前页卡编号
     private int bmpW;// 动画图片宽度
     private String[] data;
+    private ImageView tit_iv;
 
     private View view1,view2,view3;
     private String view_data;
@@ -62,6 +65,14 @@ public class Pinggu_fenshu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_common);
         mQueue = Volley.newRequestQueue(Pinggu_fenshu.this);
+        tit_iv = (ImageView) findViewById(R.id.title_id);
+        tit_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Pinggu_fenshu.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         InitImageView();
         InitTextView();
         InitViewPager();
@@ -183,31 +194,35 @@ public class Pinggu_fenshu extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data = new String[]{et14.getText().toString() + "|",et15.getText().toString() + "|",et16.getText().toString() + "|",
-                        et17.getText().toString() + "|",et18.getText().toString() + "|",et19.getText().toString() + "|",
-                        et113.getText().toString() + "|",et114.getText().toString() + "|",et115.getText().toString() + "|",
-                        et116.getText().toString() + "|",et117.getText().toString() + "|",et118.getText().toString() + "|",
-                        et19.getText().toString() + "|",et120.getText().toString() + "|",et121.getText().toString() + "|",
-                        et125.getText().toString() + "|",et126.getText().toString() + "|",et127.getText().toString() + "|",
-                        et128.getText().toString() + "|",et129.getText().toString() + "|",et130.getText().toString() + "|",
-                        et21.getText().toString() + "|",et22.getText().toString() + "|",
-                        et23.getText().toString() + "|", et24.getText().toString() + "|",
-                        et25.getText().toString() + "|", et26.getText().toString() + "|",
-                        et210.getText().toString() + "|",
-                        et211.getText().toString() + "|", et212.getText().toString() + "|",
-                        et213.getText().toString() + "|", et214.getText().toString() + "|",
-                        et215.getText().toString() + "|", et216.getText().toString() + "|",
-                        et217.getText().toString() + "|", et218.getText().toString() + "|",
-                        et219.getText().toString() + "|", et220.getText().toString() + "|",
-                        et221.getText().toString() + "|", et222.getText().toString() + "|",
-                        et223.getText().toString() + "|", et224.getText().toString() + "|",
-                        et31.getText().toString() + "|",et32.getText().toString() + "|"};
-                StringRequest stringRequest = new StringRequest(ServerIp+"InspectorServlet?=item_equip_proj="+data[0]+"item_equip_prob="+data[1]+"item_equip_score="+data[2]+"tech_equip_proj="+data[3]+"tech_equip_prob="+data[4]
-                        +"tech_equip_score="+data[5]+"en_pre_proj="+data[6]+"en_pre_prob="+data[7]+"en_pre_score="+data[8]+"tech_pre_proj="+data[9]+"tech_pre_prob="+data[10]+"tech_pre_score="+data[11]+"loc_pre_proj="+data[12]+"loc_pre_prob="+data[13]
-                +"loc_pre_score="+data[14]+"helf_safe_proj="+data[15]+"hlef_safe_prob="+data[16]+"helf_safe_score="+data[17]+"bank_safe_proj="+data[18]+"bank_safe_prob="+data[19]+"bank_safe_score="+data[20]+"tran_cash_proj="+data[21]+"tran_cash_prob="+data[22]
-                +"tran_cash_score="+data[23]+"fire_control_proj="+data[24]+"fire_control_prob="+data[25]+"fire_control_score="+data[26]+"compu_safe_proj="+data[27]+"compu_safe_prob="+data[28]+"compu_safe_score="+data[29]+"date_safe_proj="+data[30]
-                +"date_safe_prob="+data[31]+"date_safe_score="+data[32]+"gun_safe_proj="+data[33]+"gun_safe_prob="+data[34]+"gun_safe_score="+data[35]+"case_proj="+data[36]+"case_prob="+data[37]+"case_score="+data[38]+"safe_defent_proj="+data[39]+"safe_defent_prob="
-                        +data[40]+"safe_defent_score="+data[41]+"assess_member="+data[42]+"assess_leader="+data[43],
+                data = new String[]{et14.getText().toString(),et15.getText().toString(),et16.getText().toString(),
+                        et17.getText().toString(),et18.getText().toString(),et19.getText().toString(),
+                        et113.getText().toString(),et114.getText().toString(),et115.getText().toString(),
+                        et116.getText().toString(),et117.getText().toString(),et118.getText().toString(),
+                        et19.getText().toString(),et120.getText().toString(),et121.getText().toString(),
+                        et125.getText().toString(),et126.getText().toString()  ,et127.getText().toString(),
+                        et128.getText().toString(),et129.getText().toString()  ,et130.getText().toString(),
+                        et21.getText().toString(),et22.getText().toString(),
+                        et23.getText().toString(), et24.getText().toString(),
+                        et25.getText().toString(), et26.getText().toString() ,
+                        et210.getText().toString(),
+                        et211.getText().toString(), et212.getText().toString(),
+                        et213.getText().toString(), et214.getText().toString() ,
+                        et215.getText().toString(), et216.getText().toString() ,
+                        et217.getText().toString(), et218.getText().toString() ,
+                        et219.getText().toString(), et220.getText().toString() ,
+                        et221.getText().toString(), et222.getText().toString(),
+                        et223.getText().toString(), et224.getText().toString(),
+                        et31.getText().toString(),et32.getText().toString()};
+                String url = ServerIp+"EvaluateInsert?item_equip_proj="+data[0]+"&item_equip_prob="+data[1]+"&item_equip_score="+data[2]+
+                        "&tech_equip_proj="+data[3]+"&tech_equip_prob="+data[4]+"&tech_equip_score="+data[5]+"&en_pre_proj="+data[6]+"&en_pre_prob="+data[7]
+                        +"&en_pre_score="+data[8]+"&tech_pre_proj="+data[9]+"&tech_pre_prob="+data[10]+"&tech_pre_score="+data[11]+"&loc_pre_proj="+data[12]
+                        +"&loc_pre_prob="+data[13]+"&loc_pre_score="+data[14]+"&helf_safe_proj="+data[15]+"&helf_safe_prob="+data[16]+"&helf_safe_score="+data[17]+"&bank_safe_proj="+data[18]
+                        +"&bank_safe_prob="+data[19]+"&bank_safe_score="+data[20]+"&tran_cash_proj="+data[21]+"&tran_cash_prob="+data[22]+"&tran_cash_score="+data[23]+"&fire_control_proj="+data[24]
+                        +"&fire_control_prob="+data[25]+"&fire_control_score="+data[26]+"&compu_safe_proj="+data[27]+"&compu_safe_prob="+data[28]+"&compu_safe_score="+data[29]
+                        +"&date_safe_proj="+data[30]+"&date_safe_prob="+data[31]+"&date_safe_score="+data[32]+"&gun_safe_proj="+data[33]+"&gun_safe_prob="+data[34]+"&gun_safe_score="+data[35]
+                        +"&case_proj="+data[36]+"&case_prob="+data[37]+"&case_score="+data[38]+"&safe_defent_proj="+data[39]+"&safe_defent_prob="+data[40]+"&safe_defent_score="+data[41]+"&assess_member="+data[42]+"&assess_leader="+data[43];
+                Log.i("TAG",url);
+                StringRequest stringRequest = new StringRequest(url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

@@ -1,5 +1,6 @@
 package com.example.smalu.policebank.activity;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 
@@ -56,6 +58,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
     private int offset = 0;// 动画图片偏移量
     private int currIndex = 0;// 当前页卡编号
     private int bmpW;// 动画图片宽度
+    private ImageView tit_iv;
 
     private View view1,view2,view3;
     private Spinner sp;
@@ -77,6 +80,14 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_common);
         mQueue = Volley.newRequestQueue(Jiancha_autoActivity.this);
+        tit_iv = (ImageView) findViewById(R.id.title_id);
+        tit_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Jiancha_autoActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         InitImageView();
         InitTextView();
         InitViewPager();

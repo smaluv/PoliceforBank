@@ -2,6 +2,7 @@ package com.example.smalu.policebank;
 
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -117,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tabUser.setSelected(true);
                 if(f3==null){
                     f3 = new MyFragment();
+                    Bundle bundle = this.getIntent().getExtras();
+                    f3.setArguments(bundle);
+
                     transaction.add(R.id.fragment_container,f3);
                 }else{
                     transaction.show(f3);

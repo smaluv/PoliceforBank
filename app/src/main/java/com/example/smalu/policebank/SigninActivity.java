@@ -101,7 +101,10 @@ public class SigninActivity extends Activity implements View.OnClickListener{
                                     Toast.makeText(SigninActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
                                 }else if(s.equals("1")){
                                     Toast.makeText(SigninActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("username",text1);
                                     Intent intent = new Intent(SigninActivity.this,MainActivity.class);
+                                    intent.putExtras(bundle);
                                     startActivity(intent);
                                     finish();
                                 }

@@ -34,6 +34,8 @@ public class MyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.my_fragment,container,false);
         tv = (TextView) view.findViewById(R.id.tv1);
+        Bundle bundle = getArguments();
+        tv.setText(bundle.getString("username"));
         //textview显示获得的用户名
 
 //        mTextView = (TextView)view.findViewById(R.id.txt_content);
