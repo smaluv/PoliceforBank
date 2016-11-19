@@ -5,6 +5,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
     android:orientation="vertical">
 
     <TextView
@@ -132,11 +134,13 @@
         android:layout_height="wrap_content" />
     <EditText
         android:hint="高"
+        android:singleLine="true"
         android:id="@+id/et1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="厚度"
+        android:singleLine="true"
         android:id="@+id/et2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -146,6 +150,7 @@
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et3"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -174,10 +179,12 @@
     <EditText
         android:hint="高"
         android:id="@+id/et4"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="宽"
+        android:singleLine="true"
         android:id="@+id/et5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -206,6 +213,7 @@
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/et6"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -234,16 +242,19 @@
     <EditText
         android:hint="长"
         android:id="@+id/et7"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="宽"
         android:id="@+id/et8"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="高"
         android:id="@+id/et9"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -348,16 +359,19 @@
     <EditText
         android:hint="现金区内"
         android:id="@+id/et10"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="营业厅"
         android:id="@+id/et11"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:hint="外部环境"
         android:id="@+id/et12"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView

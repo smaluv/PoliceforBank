@@ -19,21 +19,21 @@ public class PingguActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pinggu);
-        btn1 = (Button) findViewById(R.id.btn1);
+//        btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
 
-        btn1.setOnClickListener(this);
+//        btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn1:{
-                intent = new Intent(PingguActivity.this,Pinggu_qingkuang.class);
-                startActivity(intent);
-                break;
-            }
+//            case R.id.btn1:{
+//                intent = new Intent(PingguActivity.this,Pinggu_qingkuang.class);
+//                startActivity(intent);
+//                break;
+//            }
             case R.id.btn2:{
                 intent = new Intent(PingguActivity.this,Pinggu_fenshu.class);
                 startActivity(intent);

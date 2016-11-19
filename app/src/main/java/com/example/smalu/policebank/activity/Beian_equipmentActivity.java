@@ -118,10 +118,6 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         InitViewPager();
         InitTime();
         InitViewClick();
-
-//        Log.d("URL",URL);
-
-
     }
 
 
@@ -193,6 +189,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         beian_equipment_bank2= (RadioGroup) beian_equipment_3.findViewById(R.id.beian_equipment_bank2);
         beian_equipment_bank3= (RadioGroup) beian_equipment_3.findViewById(R.id.beian_equipment_bank3);
         beian_equipment_bank4= (RadioGroup) beian_equipment_3.findViewById(R.id.beian_equipment_bank4);
+
         //获取RadioGroup值
         beian_equipment_bank1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -203,10 +200,11 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
-                beian_equipment_bank11= String.valueOf(rb.getText());
-                Toast.makeText(Beian_equipmentActivity.this, "出入口装填区安装控制装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
+                beian_equipment_auto11=rb.getText().toString();
+                Toast.makeText(Beian_equipmentActivity.this, "出入口装填区安装控制装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
             }
         });
+
         beian_equipment_bank2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup arg0, int arg1) {
@@ -265,6 +263,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 //更新文本内容，以符合选中项
                 beian_equipment_auto11= String.valueOf(rb.getText());
                 Toast.makeText(Beian_equipmentActivity.this, "安装防砸等探测装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
+
             }
         });
         beian_equipment_auto2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

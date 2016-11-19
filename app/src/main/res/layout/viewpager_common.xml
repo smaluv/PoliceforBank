@@ -11,19 +11,7 @@
         android:background="@color/colorBule"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="30dp"
-            android:background="@mipmap/back"
-            />
-
-        <TextView
-            android:id="@+id/txt_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="@color/colorWitch" />
+      <include layout="@layout/common_title"/>
     </LinearLayout>
 
     <View

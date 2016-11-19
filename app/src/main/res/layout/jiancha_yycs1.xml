@@ -6,6 +6,9 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginTop="25dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,6 +22,7 @@
             android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/et1"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -85,6 +89,7 @@
             android:layout_height="50dp" />
         <EditText
             android:id="@+id/et2"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

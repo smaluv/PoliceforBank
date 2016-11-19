@@ -21,7 +21,7 @@ android:orientation="vertical">
         android:id="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/edit_user_num"
+        android:id="@+id/et1"
         android:textColor="@color/black"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -35,7 +35,7 @@ android:orientation="vertical">
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/edit_user_pwd"
+        android:id="@+id/et2"
         android:textColor="@color/black"
         android:drawableLeft="@mipmap/pwd_icon"
         android:layout_marginLeft="20dp"
@@ -74,12 +74,13 @@ android:orientation="vertical">
         android:layout_centerInParent="true" />
 
     <TextView
+        android:textSize="17dp"
         android:id="@+id/tv_register"
         android:text="还没注册?去注册"
         android:textColor="@color/dimgray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_sign"
+        android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/btn_sign"
         android:layout_alignEnd="@+id/btn_sign" />
 </RelativeLayout>

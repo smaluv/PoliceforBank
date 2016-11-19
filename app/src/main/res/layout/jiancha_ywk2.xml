@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="450dp">
 <LinearLayout
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -65,6 +67,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -92,6 +95,7 @@
                     android:layout_height="wrap_content" />
                 <RadioButton
                     android:text="否"
+                    android:checked="true"
                     android:id="@+id/rb42"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -109,6 +113,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb51"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -132,6 +137,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb61"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -154,6 +160,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb71"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -175,6 +182,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb81"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -198,6 +206,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb91"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -220,6 +229,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb101"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -241,6 +251,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb111"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -264,6 +275,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb121"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -286,6 +298,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb131"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -307,6 +320,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb141"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -330,6 +344,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb151"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -352,6 +367,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb161"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -374,6 +390,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb171"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -395,6 +412,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb181"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -418,6 +436,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb191"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -440,6 +459,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb201"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -462,6 +482,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb211"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -484,6 +505,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb221"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -506,6 +528,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb231"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -528,6 +551,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb241"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -550,6 +574,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb251"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -572,6 +597,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb261"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -594,6 +620,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb271"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -616,6 +643,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb281"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -638,6 +666,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb291"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -660,6 +689,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb301"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -681,6 +711,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb311"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -703,6 +734,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb321"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -726,6 +758,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb331"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -748,6 +781,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb341"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -770,6 +804,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb351"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -791,6 +826,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb361"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -814,6 +850,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb371"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -835,6 +872,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb381"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -858,6 +896,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb391"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -879,6 +918,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb401"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -901,6 +941,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb411"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -924,6 +965,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb421"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -946,6 +988,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb431"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -967,6 +1010,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb441"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -989,6 +1033,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb451"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -1012,6 +1057,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb461"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -1033,6 +1079,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb471"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -1055,6 +1102,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb481"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -1078,6 +1126,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb491"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -1100,6 +1149,7 @@
                 <RadioButton
                     android:text="是"
                     android:id="@+id/rb501"
+                    android:checked="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
@@ -1121,6 +1171,7 @@
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:text="是"
+                    android:checked="true"
                     android:id="@+id/rb511"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

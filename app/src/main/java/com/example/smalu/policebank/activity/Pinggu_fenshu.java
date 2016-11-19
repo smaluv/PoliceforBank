@@ -1,11 +1,13 @@
 package com.example.smalu.policebank.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -16,11 +18,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 
 /**
  * Created by KL on 2016/11/17 0017.
@@ -36,23 +46,33 @@ public class Pinggu_fenshu extends Activity {
     private int currIndex = 0;// 当前页卡编号
     private int bmpW;// 动画图片宽度
     private String[] data;
+    private ImageView tit_iv;
 
     private View view1,view2,view3;
     private String view_data;
     private Button btn;
-    private EditText et11,et12,et13,et14,et15,et16,et17,et18,et19,et110,et111,et112,et113,et114,et115,
-            et116,et117,et118,et119,et120,et121,et122,et123,et124,et125,et126,et127,et128,et129,et130;
+    private EditText et14,et15,et16,et17,et18,et19,et113,et114,et115,
+            et116,et117,et118,et119,et120,et121,et125,et126,et127,et128,et129,et130;
 
-    private EditText et21,et22,et23,et24,et25,et26,et27,et28,et29,et210,et211,et212,et213,et214,et215,
+    private EditText et21,et22,et23,et24,et25,et26,et210,et211,et212,et213,et214,et215,
             et216,et217,et218,et219,et220,et221,et222,et223,et224;
 
     private EditText et31,et32;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_common);
-
+        mQueue = Volley.newRequestQueue(Pinggu_fenshu.this);
+        tit_iv = (ImageView) findViewById(R.id.title_id);
+        tit_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Pinggu_fenshu.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         InitImageView();
         InitTextView();
         InitViewPager();
@@ -107,18 +127,18 @@ public class Pinggu_fenshu extends Activity {
     }
 
     private void initPag1(View view){
-        et11 = (EditText) view.findViewById(R.id.et1);
-        et12 = (EditText) view.findViewById(R.id.et2);
-        et13 = (EditText) view.findViewById(R.id.et3);
+//        et11 = (EditText) view.findViewById(R.id.et1);
+//        et12 = (EditText) view.findViewById(R.id.et2);
+//        et13 = (EditText) view.findViewById(R.id.et3);
         et14 = (EditText) view.findViewById(R.id.et4);
         et15 = (EditText) view.findViewById(R.id.et5);
         et16 = (EditText) view.findViewById(R.id.et6);
         et17 = (EditText) view.findViewById(R.id.et7);
         et18 = (EditText) view.findViewById(R.id.et8);
         et19 = (EditText) view.findViewById(R.id.et9);
-        et110 = (EditText) view.findViewById(R.id.et10);
-        et111 = (EditText) view.findViewById(R.id.et11);
-        et112 = (EditText) view.findViewById(R.id.et12);
+//        et110 = (EditText) view.findViewById(R.id.et10);
+//        et111 = (EditText) view.findViewById(R.id.et11);
+//        et112 = (EditText) view.findViewById(R.id.et12);
         et113 = (EditText) view.findViewById(R.id.et13);
         et114 = (EditText) view.findViewById(R.id.et14);
         et115 = (EditText) view.findViewById(R.id.et15);
@@ -128,9 +148,9 @@ public class Pinggu_fenshu extends Activity {
         et119 = (EditText) view.findViewById(R.id.et19);
         et120 = (EditText) view.findViewById(R.id.et20);
         et121 = (EditText) view.findViewById(R.id.et21);
-        et122 = (EditText) view.findViewById(R.id.et22);
-        et123 = (EditText) view.findViewById(R.id.et23);
-        et124 = (EditText) view.findViewById(R.id.et24);
+//        et122 = (EditText) view.findViewById(R.id.et22);
+//        et123 = (EditText) view.findViewById(R.id.et23);
+//        et124 = (EditText) view.findViewById(R.id.et24);
         et125 = (EditText) view.findViewById(R.id.et25);
         et126 = (EditText) view.findViewById(R.id.et26);
         et127 = (EditText) view.findViewById(R.id.et27);
@@ -146,9 +166,9 @@ public class Pinggu_fenshu extends Activity {
         et24 = (EditText) view.findViewById(R.id.et4);
         et25 = (EditText) view.findViewById(R.id.et5);
         et26 = (EditText) view.findViewById(R.id.et6);
-        et27 = (EditText) view.findViewById(R.id.et7);
-        et28 = (EditText) view.findViewById(R.id.et8);
-        et29 = (EditText) view.findViewById(R.id.et9);
+//        et27 = (EditText) view.findViewById(R.id.et7);
+//        et28 = (EditText) view.findViewById(R.id.et8);
+//        et29 = (EditText) view.findViewById(R.id.et9);
         et210 = (EditText) view.findViewById(R.id.et10);
         et211 = (EditText) view.findViewById(R.id.et11);
         et212 = (EditText) view.findViewById(R.id.et12);
@@ -174,35 +194,49 @@ public class Pinggu_fenshu extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data = new String[]{et11.getText().toString() + "|",et12.getText().toString() + "|",et13.getText().toString() + "|",
-                        et14.getText().toString() + "|",et15.getText().toString() + "|",et16.getText().toString() + "|",
-                        et17.getText().toString() + "|",et18.getText().toString() + "|",et19.getText().toString() + "|",
-                        et110.getText().toString() + "|",et111.getText().toString() + "|",et112.getText().toString() + "|",
-                        et113.getText().toString() + "|",et114.getText().toString() + "|",et115.getText().toString() + "|",
-                        et116.getText().toString() + "|",et117.getText().toString() + "|",et118.getText().toString() + "|",
-                        et19.getText().toString() + "|",et120.getText().toString() + "|",et121.getText().toString() + "|",
-                        et122.getText().toString() + "|",et123.getText().toString() + "|",et124.getText().toString() + "|",
-                        et125.getText().toString() + "|",et126.getText().toString() + "|",et127.getText().toString() + "|",
-                        et128.getText().toString() + "|",et129.getText().toString() + "|",et130.getText().toString() + "|",
-                        et21.getText().toString() + "|",et22.getText().toString() + "|",
-                        et23.getText().toString() + "|", et24.getText().toString() + "|",
-                        et25.getText().toString() + "|", et26.getText().toString() + "|",
-                        et27.getText().toString() + "|", et28.getText().toString() + "|",
-                        et29.getText().toString() + "|", et210.getText().toString() + "|",
-                        et211.getText().toString() + "|", et212.getText().toString() + "|",
-                        et213.getText().toString() + "|", et214.getText().toString() + "|",
-                        et215.getText().toString() + "|", et216.getText().toString() + "|",
-                        et217.getText().toString() + "|", et218.getText().toString() + "|",
-                        et219.getText().toString() + "|", et220.getText().toString() + "|",
-                        et221.getText().toString() + "|", et222.getText().toString() + "|",
-                        et223.getText().toString() + "|", et224.getText().toString() + "|",
-                        et31.getText().toString() + "|",et32.getText().toString() + "|"};
+                data = new String[]{et14.getText().toString(),et15.getText().toString(),et16.getText().toString(),
+                        et17.getText().toString(),et18.getText().toString(),et19.getText().toString(),
+                        et113.getText().toString(),et114.getText().toString(),et115.getText().toString(),
+                        et116.getText().toString(),et117.getText().toString(),et118.getText().toString(),
+                        et19.getText().toString(),et120.getText().toString(),et121.getText().toString(),
+                        et125.getText().toString(),et126.getText().toString()  ,et127.getText().toString(),
+                        et128.getText().toString(),et129.getText().toString()  ,et130.getText().toString(),
+                        et21.getText().toString(),et22.getText().toString(),
+                        et23.getText().toString(), et24.getText().toString(),
+                        et25.getText().toString(), et26.getText().toString() ,
+                        et210.getText().toString(),
+                        et211.getText().toString(), et212.getText().toString(),
+                        et213.getText().toString(), et214.getText().toString() ,
+                        et215.getText().toString(), et216.getText().toString() ,
+                        et217.getText().toString(), et218.getText().toString() ,
+                        et219.getText().toString(), et220.getText().toString() ,
+                        et221.getText().toString(), et222.getText().toString(),
+                        et223.getText().toString(), et224.getText().toString(),
+                        et31.getText().toString(),et32.getText().toString()};
+                String url = ServerIp+"EvaluateInsert?item_equip_proj="+data[0]+"&item_equip_prob="+data[1]+"&item_equip_score="+data[2]+
+                        "&tech_equip_proj="+data[3]+"&tech_equip_prob="+data[4]+"&tech_equip_score="+data[5]+"&en_pre_proj="+data[6]+"&en_pre_prob="+data[7]
+                        +"&en_pre_score="+data[8]+"&tech_pre_proj="+data[9]+"&tech_pre_prob="+data[10]+"&tech_pre_score="+data[11]+"&loc_pre_proj="+data[12]
+                        +"&loc_pre_prob="+data[13]+"&loc_pre_score="+data[14]+"&helf_safe_proj="+data[15]+"&helf_safe_prob="+data[16]+"&helf_safe_score="+data[17]+"&bank_safe_proj="+data[18]
+                        +"&bank_safe_prob="+data[19]+"&bank_safe_score="+data[20]+"&tran_cash_proj="+data[21]+"&tran_cash_prob="+data[22]+"&tran_cash_score="+data[23]+"&fire_control_proj="+data[24]
+                        +"&fire_control_prob="+data[25]+"&fire_control_score="+data[26]+"&compu_safe_proj="+data[27]+"&compu_safe_prob="+data[28]+"&compu_safe_score="+data[29]
+                        +"&date_safe_proj="+data[30]+"&date_safe_prob="+data[31]+"&date_safe_score="+data[32]+"&gun_safe_proj="+data[33]+"&gun_safe_prob="+data[34]+"&gun_safe_score="+data[35]
+                        +"&case_proj="+data[36]+"&case_prob="+data[37]+"&case_score="+data[38]+"&safe_defent_proj="+data[39]+"&safe_defent_prob="+data[40]+"&safe_defent_score="+data[41]+"&assess_member="+data[42]+"&assess_leader="+data[43];
+                Log.i("TAG",url);
+                StringRequest stringRequest = new StringRequest(url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                Log.d("TAG", response);
+                                Toast.makeText(Pinggu_fenshu.this,"信息插入成功",Toast.LENGTH_SHORT).show();
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("TAG", error.getMessage(), error);
+                    }
+                });
+                mQueue.add(stringRequest);
 
-                for (int i = 0;i<data.length;i++){
-                    view_data = view_data+data[i];
-                }
-                Toast.makeText(Pinggu_fenshu.this,view_data,Toast.LENGTH_SHORT).show();
-                view_data = "";
             }
         });
 

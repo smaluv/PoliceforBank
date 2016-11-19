@@ -5,6 +5,9 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -15,7 +18,7 @@
             <TableRow>
 
                 <TextView
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:text="评估内容及评分标准"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
@@ -38,7 +41,7 @@
 
             <TableRow>
                 <TextView
-                    android:text="四、运钞安全（10分）"
+                    android:text="8、运钞安全（10分）"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -59,7 +62,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="五、消防安全 (10分)"
+                    android:text="9、消防安全 (10分)"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -78,30 +81,30 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
             </TableRow>
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:text="六、计算机安全（10分）"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et7"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et8"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et9"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+            <!--</TableRow>-->
             <TableRow>
                 <TextView
-                    android:text="六、计算机安全（10分）"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/et7"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/et8"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/et9"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:text="(一)营业场所计算机安全(4分)"
+                    android:text="10、营业场所计算机安全(4分)"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -122,7 +125,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="(二)数据处理中心安全(6分)"
+                    android:text="11、数据处理中心安全(6分)"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -143,7 +146,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="七、枪支弹药安全（10分）"
+                    android:text="12、枪支弹药安全（10分）"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -164,7 +167,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="八、案件防范 (10分)"
+                    android:text="13、案件防范 (10分)"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
@@ -185,7 +188,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="九、安全保卫基础工作(10分)"
+                    android:text="14、安全保卫基础工作(10分)"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
