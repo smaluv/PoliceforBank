@@ -547,6 +547,7 @@
                 android:background="@drawable/shape_solider_btn"
                 android:layout_marginBottom="30dp"
                 android:layout_marginLeft="30dp"
+                android:visibility="gone"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="50dp"
                 android:textSize="20dp"

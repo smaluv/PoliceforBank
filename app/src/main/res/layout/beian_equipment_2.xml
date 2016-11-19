@@ -263,6 +263,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
                 android:orientation="vertical"
+                android:layout_marginBottom="5dp"
                 android:layout_marginRight="30dp">
                 <TextView
                     android:layout_width="wrap_content"
@@ -306,6 +307,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"
+                android:visibility="gone"
                 android:textSize="20dp"
                 android:id="@+id/button2" />
 

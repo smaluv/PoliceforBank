@@ -249,13 +249,6 @@
                     android:textColor="@color/colorIconGray"
                     android:textSize="20dp"
                     android:text="柜台宽高:"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
-                    android:text="宽度:"/>
 
                 <EditText
                     android:id="@+id/beian_lobby2_guitai_width"
@@ -264,23 +257,7 @@
                     android:textColor="@color/colorIconGray"
                     android:textColorHint="@color/colorInit"
                     android:textSize="20dp"
-                    android:hint="宽"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textColorHint="@color/colorInit"
-                    android:textSize="20dp"
-                    android:text="高度:"/>
-                <EditText
-                    android:id="@+id/beian_lobby2_guitai_height"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorIconGray"
-                    android:textColorHint="@color/colorInit"
-                    android:textSize="20dp"
-                    android:hint="高"
+                    android:hint="宽*高"
                     android:layout_weight="1"/>
 
             </LinearLayout>
@@ -806,6 +783,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="50dp"
+                android:visibility="gone"
                 android:textSize="20dp"
                 android:id="@+id/testbutton2" />
         </LinearLayout>

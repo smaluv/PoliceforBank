@@ -461,6 +461,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="50dp"
+                android:visibility="gone"
                 android:textSize="20dp"
                 android:id="@+id/testbutton2" />
         </LinearLayout>

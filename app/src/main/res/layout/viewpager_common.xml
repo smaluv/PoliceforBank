@@ -22,23 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@color/colorWitch"
-            android:text= "银行自助服务场所安全防范建设"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/beianequipment_submit"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginRight="8dp"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="提交"
-            android:textColor="@color/colorWitch"
-            android:drawableRight="@mipmap/submit"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorWitch" />
     </LinearLayout>
 
     <View
@@ -59,7 +44,6 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="基本信息"
             android:textColor="#000000"
             android:textSize="15.0dip" />
 
@@ -69,9 +53,8 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="自助设备技防建设"
             android:textColor="#000000"
-            android:textSize="13.0dip" />
+            android:textSize="15.0dip" />
 
         <TextView
             android:id="@+id/text3"
@@ -79,9 +62,8 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:gravity="center"
-            android:text="自助银行技防建设"
             android:textColor="#000000"
-            android:textSize="13.0dip" />
+            android:textSize="15.0dip" />
     </LinearLayout>
 
     <ImageView
@@ -91,7 +73,7 @@
         android:scaleType="matrix"
         android:src="@mipmap/a" />
     <android.support.v4.view.ViewPager
-        android:id="@+id/beianequipmentViewpagerid"
+        android:id="@+id/Viewpagerid"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

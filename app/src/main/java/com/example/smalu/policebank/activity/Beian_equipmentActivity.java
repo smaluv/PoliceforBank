@@ -1,12 +1,14 @@
 package com.example.smalu.policebank.activity;
 
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -20,16 +22,23 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 import com.example.smalu.policebank.fragment.DatePickerFragment;
 import com.example.smalu.policebank.interfaceclass.DataCallBack;
+import com.example.smalu.policebank.utils.CONST;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import static com.example.smalu.policebank.R.id.beian_equipment_Radioxiaofang;
+import static com.example.smalu.policebank.R.id.beian_equipment_office;
 
 /**
  * Created by Smalu on 2016/11/13.
@@ -66,7 +75,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
     private Button beian_equipment_information_btn;
     private DatePicker beian_equipment_datePicker;   //填报时间
     private  TextView beianequipment_submit;
-    private String datepictime;
+    private String datepictime,beian_equipment_Radioxiaofang3;
     private int timestage;//记录金库的建设时间判断码
     private View beian_equipment_1,beian_equipment_2,beian_equipment_3;
     private RadioGroup  beian_equipment_RadioAuto, //自动类型：设备or银行
@@ -84,7 +93,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
             beian_equipment_bank4;
     private String  beian_equipment_RadioAuto1,
             beian_equipment_RadioProject2,
-            beian_equipment_Radioxiaofang3,
+//            beian_equipment_Radioxiaofang3,
             beian_equipment_auto11,
             beian_equipment_auto22,
             beian_equipment_auto33,
@@ -95,25 +104,26 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
             beian_equipment_bank22,
             beian_equipment_bank33,
             beian_equipment_bank44;
+    private String URL;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beian_equipment);
+        beianequipment_submit=(TextView)findViewById(R.id.beianequipment_submit);
+        mQueue = Volley.newRequestQueue(Beian_equipmentActivity.this);
         InitImageView();
         InitTextView();
         InitViewPager();
+        InitTime();
+        InitViewClick();
 
-        beianequipment_submit=(TextView)findViewById(R.id.beianequipment_submit);
-        beianequipment_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String text=datepictime+beian_equipment_bank44+beian_equipment_auto11;
-                Toast.makeText(Beian_equipmentActivity.this,text,Toast.LENGTH_SHORT).show();
-            }
-        });
+//        Log.d("URL",URL);
+
 
     }
+
 
     /**
      * 初始化头标
@@ -149,14 +159,22 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         beian_vault_2_finishTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_finishTime);
         beian_vault_2_startTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_startTime);
         beian_vault_2_openTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_openTime);
-        InitTime();
-        InitViewClick();
+//        beian_equipment_office=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_office);
+//        InitTime();
+//        InitViewClick();
 
 
     }
 
     private void InitViewClick(){
         beian_equipment_office=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_office);
+        beian_equipment_office.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Toast.makeText(Beian_equipmentActivity.this,beian_equipment_office.getText().toString(),Toast.LENGTH_SHORT).show();
+
+            }
+        });
         beian_equipment_name=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_name);
         beian_equipment_num=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_num);
         beian_equipment_below_office=(EditText)beian_equipment_1.findViewById(R.id.beian_equipment_below_office);
@@ -388,7 +406,9 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         beian_equipment_information_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Beian_equipmentActivity.this,"填报时间"+datepictime,Toast.LENGTH_LONG).show();
+
+//                Toast.makeText(Beian_equipmentActivity.this,beian_equipment_office.getText().toString(),Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this,"填报时间"+datepictime,Toast.LENGTH_LONG).show();
 //                String beian_equipment_information_data=beian_equipment_office.toString()+beian_equipment_name.toString()+beian_equipment_num.toString()+beian_equipment_below_office.toString()+beian_equipment_eare.toString()+beian_equipment_defend_person.toString()+beian_equipment_defend_person_tel.toString()+beian_vault_2_startTime.toString()+beian_vault_2_openTime.toString()+beian_vault_2_finishTime.getText().toString();
 //                Toast.makeText(v.getContext(),beian_equipment_information_data,Toast.LENGTH_LONG).show();
 //                Log.d("hs","shsh");
@@ -396,7 +416,63 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
 //                startActivity(intent);
             }
         });
-    }
+
+        beianequipment_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                loadData();
+                URL= CONST.HOST + CONST.SelfServiceInsert +
+                        "runit=" +  beian_equipment_office.getText().toString()+
+                        "&selfname=" + beian_equipment_name.getText().toString() +
+                        "&rnum=" + beian_equipment_num.getText().toString() +
+                        "&belongto=" + beian_equipment_below_office.getText().toString() +
+                        "&addr=" + beian_equipment_eare.getText().toString() +
+                        "&guard=" + beian_equipment_defend_person.getText().toString() +
+                        "&phone=" + beian_equipment_defend_person_tel.getText().toString()
+                        + "&ischecked=" + beian_equipment_Radioxiaofang3 +
+                        "&project=" + beian_equipment_RadioProject2 +
+                        "&busiplace=" + beian_equipment_RadioAuto1 +
+                        "&startdate=" + beian_vault_2_startTime.getText().toString() +
+                        "&completedate=" + beian_vault_2_finishTime.getText().toString() +
+                        "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
+                        "&rtime=" + datepictime //界面1
+                        +"&barsize=" + beian_equipment_auto11 +
+                        "&barwidth=" + beian_equipment_auto22+
+                        "&barheight=" + beian_equipment_auto33+
+                        "&singlearea=" + beian_equipment_auto44+
+                        "&maxheight=" + beian_equipment_auto55+
+                        "&wrongsize=" + beian_equipment_auto66+
+                        "&doorkey=" + beian_equipment_bank11 +
+                        "&window=" + beian_equipment_bank22 +
+                        "&wall=" + beian_equipment_bank33 +
+                        "&barmaterial=" + beian_equipment_bank44 +
+                        "&advice=" + "无";
+                Log.i("TAG",URL);
+                Toast.makeText(Beian_equipmentActivity.this,beian_equipment_office.getText().toString(),Toast.LENGTH_SHORT).show();
+
+
+                StringRequest stringRequest = new StringRequest(URL,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                Log.d("TAG", response);
+                                Toast.makeText(Beian_equipmentActivity.this,"备案成功",Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(Beian_equipmentActivity.this,BeianActivity.class);
+                                startActivity(intent);
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("TAG", error.getMessage(), error);
+                        Toast.makeText(Beian_equipmentActivity.this,"备案失败，请查证输入数据",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                mQueue.add(stringRequest);
+//                Toast.makeText(Beian_equipmentActivity.this,URL,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        }
 
     //选择时间
     private void InitTime() {

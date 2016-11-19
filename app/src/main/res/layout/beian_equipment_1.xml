@@ -486,6 +486,7 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/black"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
                     android:id="@+id/beian_equipment_datePicker" />
             </LinearLayout>
 
@@ -506,6 +507,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
+                android:visibility="visible"
                 android:textSize="20dp"
                 android:id="@+id/beian_equipment_information_btn" />
 

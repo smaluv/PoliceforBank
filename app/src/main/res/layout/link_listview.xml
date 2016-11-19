@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/colorWitch">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -37,6 +38,7 @@
                 android:textSize="18dp"
                 android:id="@+id/link_time" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

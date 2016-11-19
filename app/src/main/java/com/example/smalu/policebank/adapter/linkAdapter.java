@@ -28,6 +28,7 @@ public class linkAdapter extends BaseAdapter {
         this.listItems=data;
     }
 
+
     @Override
     public int getCount() {
         return listItems.size();

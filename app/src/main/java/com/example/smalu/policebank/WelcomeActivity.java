@@ -15,7 +15,6 @@ public class WelcomeActivity extends Activity{
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_welcome);
-        //
 
         Intent intent = new Intent(WelcomeActivity.this,SigninActivity.class);
         startActivity(intent);

@@ -1,12 +1,14 @@
 package com.example.smalu.policebank.activity;
 
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
@@ -21,10 +23,16 @@ import android.widget.TextView;
 import android.support.v4.app.DialogFragment;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 import com.example.smalu.policebank.fragment.DatePickerFragment;
 import com.example.smalu.policebank.interfaceclass.DataCallBack;
+import com.example.smalu.policebank.utils.CONST;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -77,7 +85,6 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
     private String beian_valut2_defendproject1="新建",//工程属性
             beian_valut2_isxiaofang1="达标",//消防是否达标
             beian_valut3_110="达标",
-            beian_valut3_22="达标",
             beian_valut3_33="达标",
             beian_valut3_44="达标",
             beian_valut3_55="达标",
@@ -93,16 +100,20 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
     private String datepictime;
     private int timestage;//记录金库的建设时间判断码
     private View beian_valut_1,beian_valut_2,beian_valut_3;
+    private String URL;
+    private TextView beianequipment_submit;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beian_valut);
+        beianequipment_submit = (TextView) findViewById(R.id.beianequipment_submit);
+        mQueue = Volley.newRequestQueue(Beian_valutActivity.this);
         InitImageView();
         InitTextView();
         InitViewPager();
         InitViewClick();
-
     }
 
     /**
@@ -139,6 +150,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         month = calendar.get(Calendar.MONTH);
         int monthtime=month+1;
         day = calendar.get(Calendar.DAY_OF_MONTH);
+        datepictime=year + "-" + monthtime + "-" + day;
 //         dataPicker初始化
         beian_valut_datepicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
             @Override
@@ -340,6 +352,57 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
             }
         });
 
+        beianequipment_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                URL= CONST.HOST + CONST.EvaluateInsert +
+                        "runit=" +  beian_valut_office.getText().toString()+
+                        "&vaultname=" + beian_valut_name.getText().toString() +
+                        "&rnum=" + beian_valut_num.getText().toString() +
+                        "&belongto=" + beian_valut_belowoffice.getText().toString() +
+                        "&addr=" + beian_valut_eare.getText().toString() +
+                        "&rtime=" + datepictime +
+                        "&guard=" + beian_valut2_defendpeople.getText().toString()
+                        + "&phone=" + beian_valut2_defendtel.getText().toString() +
+                        "&ischecked=" + beian_valut2_isxiaofang1 +
+                        "&startdate=" + beian_vault_2_startTime.getText().toString() +
+                        "&completedate=" + beian_vault_2_finishTime.getText().toString() +
+                        "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
+                        "&project=" + beian_valut2_defendproject1 +//界面2
+                        "&vaultsize=" + beian_valut3_eare.getText().toString()+
+                        "&vaulthouse=" + beian_valut3_110 +
+                        "&wall=" + beian_valut3_33 +
+                        "&door=" + beian_valut3_44 +
+                        "&outdoor=" + beian_valut3_55 +
+                        "&pequipment=" + beian_valut3_66 +
+                        "&walarm=" + beian_valut3_77 +
+                        "&alarmcontrol=" + beian_valut3_88 +
+                        "&otheroom=" + beian_valut3_99 +
+                        "&vaultguard=" + beian_valut3_101 +
+                        "&weapons=" + beian_valut3_111 +
+                        "&internet=" + beian_valut3_122+
+                        "&advice=" + "无";
+                Log.d("URL",URL);
+                StringRequest stringRequest = new StringRequest(URL,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                Log.d("TAG", response);
+                                Toast.makeText(Beian_valutActivity.this,"备案成功",Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(Beian_valutActivity.this,BeianActivity.class);
+                                startActivity(intent);
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("TAG", error.getMessage(), error);
+                        Toast.makeText(Beian_valutActivity.this,"备案失败，请查证输入数据",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                mQueue.add(stringRequest);
+            }
+        });
+
     }
 
     /**
@@ -458,7 +521,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         public void onClick(View v) {
             mPager.setCurrentItem(index);
         }
-    };
+    }
 
     /**
      * 页卡切换监听
