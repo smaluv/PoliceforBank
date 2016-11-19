@@ -13,11 +13,10 @@
         android:textColor="@color/colorGray"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:text="手机号："
         android:hint="请输入手机号"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/reg_phone" />
+        android:id="@+id/et1" />
 
     <EditText
         android:layout_marginLeft="20dp"
@@ -27,11 +26,10 @@
         android:textColor="@color/colorGray"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:text="密码："
         android:hint="请输入6位数密码"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/reg_pwd1" />
+        android:id="@+id/et2" />
 
     <EditText
         android:layout_marginLeft="20dp"
@@ -41,11 +39,10 @@
         android:textColor="@color/colorGray"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:text="确认密码："
         android:hint="请确认密码"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/reg_pwd2" />
+        android:id="@+id/et3" />
 
     <EditText
         android:layout_marginLeft="20dp"
@@ -55,11 +52,10 @@
         android:textColor="@color/colorGray"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:text="城市："
         android:hint="请输入城市"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/reg_city" />
+        android:id="@+id/et4" />
 
     <EditText
         android:layout_marginLeft="20dp"
@@ -69,11 +65,10 @@
         android:textColor="@color/colorGray"
         android:textSize="15dp"
         android:layout_marginTop="10dp"
-        android:text="邮箱："
         android:hint="请输入邮箱"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/reg_email" />
+        android:id="@+id/et5" />
 
     <LinearLayout
         android:layout_gravity="center"
@@ -82,11 +77,11 @@
 
         <Button
             android:text="确认"
-            android:background="@drawable/button_bg"
+            android:background="@drawable/buttonshape"
             android:layout_marginTop="40dp"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button" />
+            android:id="@+id/btn" />
     </LinearLayout>
 
 </LinearLayout>

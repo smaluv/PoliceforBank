@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginTop="25dp"
     android:layout_height="match_parent"
     android:orientation="vertical">
 <TableLayout
@@ -12,7 +18,7 @@
         android:layout_height="match_parent" >
         <TextView
             android:text="银行名称"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -28,7 +34,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et1"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -44,7 +50,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et3"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -60,7 +66,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et5"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -76,7 +82,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et7"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -92,7 +98,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et9"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -108,7 +114,7 @@
         android:layout_height="match_parent" >
         <EditText
             android:id="@+id/et11"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
@@ -131,3 +137,5 @@
         android:layout_height="wrap_content" />
 
 </LinearLayout>
+
+</ScrollView>

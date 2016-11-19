@@ -16,8 +16,20 @@ public class WelcomeActivity extends Activity{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_welcome);
 
-        Intent intent = new Intent(WelcomeActivity.this,SigninActivity.class);
-        startActivity(intent);
-        finish();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                    Intent intent = new Intent(WelcomeActivity.this,SigninActivity.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+
     }
 }

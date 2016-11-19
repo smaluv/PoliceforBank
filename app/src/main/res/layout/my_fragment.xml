@@ -18,38 +18,47 @@
             android:src="@mipmap/police_icon"
             android:layout_height="85dp" />
 
-        <RelativeLayout
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv1"
+            android:text="欢迎使用"
+            android:textSize="30dp"
             android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/btn_sign"
-                android:textSize="20dp"
-                android:background="@drawable/buttonshape"
-                android:text="登录"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginStart="80dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+        <!--<RelativeLayout-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
-            <Button
-                android:id="@+id/btn_register"
-                android:textSize="20dp"
-                android:background="@drawable/buttonshape"
-                android:text="注册"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="80dp"
-                android:layout_marginEnd="80dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-        </RelativeLayout>
+            <!--<Button-->
+                <!--android:id="@+id/btn_sign"-->
+                <!--android:textSize="20dp"-->
+                <!--android:background="@drawable/buttonshape"-->
+                <!--android:text="登录"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="80dp"-->
+                <!--android:layout_marginStart="80dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_register"-->
+                <!--android:textSize="20dp"-->
+                <!--android:background="@drawable/buttonshape"-->
+                <!--android:text="注册"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="80dp"-->
+                <!--android:layout_marginEnd="80dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true" />-->
+        <!--</RelativeLayout>-->
     </LinearLayout>
 
     <TextView

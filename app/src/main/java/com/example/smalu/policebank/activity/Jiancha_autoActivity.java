@@ -25,13 +25,22 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 
 /**
  * Created by KL on 2016/11/16 0016.
@@ -60,12 +69,14 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
             rg16,rg17,rg18,rg19,rg20,rg21,rg22,rg23,rg24;
     private String data [] = new String[31];
 
-    private EditText et31,et32,et33;
+    private EditText et311,et312,et32,et33;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_common);
+        mQueue = Volley.newRequestQueue(Jiancha_autoActivity.this);
         InitImageView();
         InitTextView();
         InitViewPager();
@@ -171,7 +182,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
         rg24 = (RadioGroup) view.findViewById(R.id.rg24);
 
         for (int i = 0;i<data.length;i++){
-            data[i] = "是|";
+            data[i] = "是";
         }
         rg1.setOnCheckedChangeListener(this);
         rg2.setOnCheckedChangeListener(this);
@@ -200,23 +211,47 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
     }
     private void initPag3(View view){
         btn = (Button) view.findViewById(R.id.btn);
-        et31 = (EditText) view.findViewById(R.id.et1);
+        et311 = (EditText) view.findViewById(R.id.et11);
+        et312 = (EditText) view.findViewById(R.id.et12);
         et32 = (EditText) view.findViewById(R.id.et2);
         et33 = (EditText) view.findViewById(R.id.et3);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data[0] = sp.getSelectedItem().toString()+"|";
-                data[1] = et1.getText().toString()+"|";
-                data[2] = et2.getText().toString()+"|";
-                data[28] = et31.getText().toString() + "|";
-                data[29] = et32.getText().toString() + "|";
-                data[30] = et33.getText().toString() + "|";
+                data[0] = sp.getSelectedItem().toString();
+                data[1] = et1.getText().toString();
+                data[2] = et2.getText().toString();
+                data[27] = et311.getText().toString();
+                data[28] = et312.getText().toString();
+                data[29] = et32.getText().toString();
+                data[30] = et33.getText().toString();
                 for(int i =0;i<data.length;i++){
                     view_data = view_data+data[i];
                 }
-                Toast.makeText(Jiancha_autoActivity.this,view_data,Toast.LENGTH_SHORT).show();
-                view_data = "";
+//                Toast.makeText(Jiancha_autoActivity.this,view_data,Toast.LENGTH_SHORT).show();
+
+                //需要修改HTTP地址
+                    String url = new String(ServerIp+"SelfServiceInsert?place="+data[1]+"&position="+data[2]+"&date="+data[0]+"&siren="+data[3]+data[4]+data[5]+data[6]+"&access_control="+data[7]+data[8]+"&usp_power="+data[9]+ data[10]+
+                            "&video_monitor="+data[11]+data[12]+data[13]+data[14]+"&steal_shake="+data[15]+data[16]+"&infrared_siren="+data[17]+data[18]+"&talkback="+data[19]+data[20]+
+                            "&selfhelp_machine="+data[21]+data[22]+"&fire_equip="+data[23]+data[24]+"&emergen_light="+data[25]+data[26]+"&hid_danger_method="+data[27]+"&method="
+                            +data[28]+"&check_man="+data[29]+"&check_unit="+data[30]);
+                    Log.i("TAG",url);
+                StringRequest stringRequest = new StringRequest(url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                Log.d("TAG", response);
+                                Toast.makeText(Jiancha_autoActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("TAG", error.getMessage(), error);
+                    }
+                });
+                mQueue.add(stringRequest);
+
+//                view_data = "";
             }
         });
     }
@@ -225,154 +260,148 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         switch (i) {
             case R.id.rb11:
-                data[3] = "是|";
+                data[3] = "是";
                 break;
             case R.id.rb12:
-                data[3] = "否|";
+                data[3] = "否";
                 break;
             case R.id.rb21:
-                data[4] = "是|";
+                data[4] = "是";
                 break;
             case R.id.rb22:
-                data[4] = "否|";
+                data[4] = "否";
                 break;
             case R.id.rb31:
-                data[5] = "是|";
+                data[5] = "是";
                 break;
             case R.id.rb32:
-                data[5] = "否|";
+                data[5] = "否";
                 break;
             case R.id.rb41:
-                data[6] = "是|";
+                data[6] = "是";
                 break;
             case R.id.rb42:
-                data[6] = "否|";
+                data[6] = "否";
                 break;
             case R.id.rb51:
-                data[7] = "是|";
+                data[7] = "是";
                 break;
             case R.id.rb52:
-                data[7] = "否|";
+                data[7] = "否";
                 break;
             case R.id.rb61:
-                data[8] = "是|";
+                data[8] = "是";
                 break;
             case R.id.rb62:
-                data[8] = "否|";
+                data[8] = "否";
                 break;
             case R.id.rb71:
-                data[9] = "是|";
+                data[9] = "是";
                 break;
             case R.id.rb72:
-                data[9] = "否|";
+                data[9] = "否";
                 break;
             case R.id.rb81:
-                data[10] = "是|";
+                data[10] = "是";
                 break;
             case R.id.rb82:
-                data[10] = "否|";
+                data[10] = "否";
                 break;
             case R.id.rb91:
-                data[11] = "是|";
+                data[11] = "是";
                 break;
             case R.id.rb92:
-                data[11] = "否|";
+                data[11] = "否";
                 break;
             case R.id.rb101:
-                data[12] = "是|";
+                data[12] = "是";
                 break;
             case R.id.rb102:
-                data[12] = "否|";
+                data[12] = "否";
                 break;
             case R.id.rb111:
-                data[13] = "是|";
+                data[13] = "是";
                 break;
             case R.id.rb112:
-                data[13] = "否|";
+                data[13] = "否";
                 break;
             case R.id.rb121:
-                data[14] = "是|";
+                data[14] = "是";
                 break;
             case R.id.rb122:
-                data[14] = "否|";
+                data[14] = "否";
                 break;
             case R.id.rb131:
-                data[15] = "是|";
+                data[15] = "是";
                 break;
             case R.id.rb132:
-                data[15] = "否|";
+                data[15] = "否";
                 break;
             case R.id.rb141:
-                data[16] = "是|";
+                data[16] = "是";
                 break;
             case R.id.rb142:
-                data[16] = "否|";
+                data[16] = "否";
                 break;
             case R.id.rb151:
-                data[17] = "是|";
+                data[17] = "是";
                 break;
             case R.id.rb152:
-                data[17] = "否|";
+                data[17] = "否";
                 break;
             case R.id.rb161:
-                data[18] = "是|";
+                data[18] = "是";
                 break;
             case R.id.rb162:
-                data[18] = "否|";
+                data[18] = "否";
                 break;
             case R.id.rb171:
-                data[19] = "是|";
+                data[19] = "是";
                 break;
             case R.id.rb172:
-                data[19] = "否|";
+                data[19] = "否";
                 break;
             case R.id.rb181:
-                data[20] = "是|";
+                data[20] = "是";
                 break;
             case R.id.rb182:
-                data[20] = "否|";
+                data[20] = "否";
                 break;
             case R.id.rb191:
-                data[21] = "是|";
+                data[21] = "是";
                 break;
             case R.id.rb192:
-                data[21] = "否|";
+                data[21] = "否";
                 break;
             case R.id.rb201:
-                data[22] = "是|";
+                data[22] = "是";
                 break;
             case R.id.rb202:
-                data[22] = "否|";
+                data[22] = "否";
                 break;
             case R.id.rb211:
-                data[23] = "是|";
+                data[23] = "是";
                 break;
             case R.id.rb212:
-                data[23] = "否|";
+                data[23] = "否";
                 break;
             case R.id.rb221:
-                data[24] = "是|";
+                data[24] = "是";
                 break;
             case R.id.rb222:
-                data[24] = "否|";
+                data[24] = "否";
                 break;
             case R.id.rb231:
-                data[25] = "是|";
+                data[25] = "是";
                 break;
             case R.id.rb232:
-                data[25] = "否|";
+                data[25] = "否";
                 break;
             case R.id.rb241:
-                data[26] = "是|";
+                data[26] = "是";
                 break;
             case R.id.rb242:
-                data[26] = "否|";
-                break;
-            case R.id.rb251:
-                data[27] = "是|";
-                break;
-            case R.id.rb252:
-                data[27] = "否|";
+                data[26] = "否";
                 break;
         }
     }

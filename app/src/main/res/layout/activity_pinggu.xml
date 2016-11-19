@@ -21,6 +21,7 @@
 
         <Button
             android:id="@+id/btn1"
+            android:textColor="@color/colorWitch"
             android:text="安全评估工作情况"
             android:layout_marginTop="25dp"
             android:background="@drawable/buttonshape"
@@ -29,6 +30,7 @@
 
         <Button
             android:id="@+id/btn2"
+            android:textColor="@color/colorWitch"
             android:text="安全评估计分"
             android:layout_marginTop="25dp"
             android:background="@drawable/buttonshape"
