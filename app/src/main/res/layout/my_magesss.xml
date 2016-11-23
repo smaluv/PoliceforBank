@@ -29,10 +29,17 @@
             android:text= "银管通" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listview"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="#ffffff"
-        android:dividerHeight="1dp"/>
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="暂时没有消息"
+            android:textColor="@color/colorGray"
+            />
+    </LinearLayout>
 </LinearLayout>

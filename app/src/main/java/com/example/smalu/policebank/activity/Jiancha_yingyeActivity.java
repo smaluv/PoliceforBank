@@ -61,7 +61,7 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
     private ImageView tit_iv;
 
     private View view1, view2, view3;
-    private Spinner sp1, sp2, sp3,sp4,sp5;
+    private Spinner sp1, sp2, sp3;
     private EditText et1, et2;
     private List<String> spinnerList, spinnerList2, spinnerList3;
     private ArrayAdapter<String> spinner_adapter, spinner_adapter2, spinner_adapter3;
@@ -159,8 +159,6 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         sp1 = (Spinner) view.findViewById(R.id.sp1);
         sp2 = (Spinner) view.findViewById(R.id.sp2);
         sp3 = (Spinner) view.findViewById(R.id.sp3);
-        sp4 = (Spinner) view.findViewById(R.id.sp4);
-        sp5 = (Spinner) view.findViewById(R.id.sp5);
         et1 = (EditText) view.findViewById(R.id.et1);
         et2 = (EditText) view.findViewById(R.id.et2);
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
@@ -196,8 +194,6 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         sp1.setAdapter(spinner_adapter);
         sp2.setAdapter(spinner_adapter2);
         sp3.setAdapter(spinner_adapter3);
-        sp4.setAdapter(spinner_adapter3);
-        sp5.setAdapter(spinner_adapter3);
 
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
         yyrg2 = (RadioGroup) view.findViewById(R.id.rg2);
@@ -309,8 +305,6 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
                 data[4] = sp1.getSelectedItem().toString() + "";
                 data[5] = sp2.getSelectedItem().toString() + "";
                 data[6] = sp3.getSelectedItem().toString() + "";
-                data[7] = sp4.getSelectedItem().toString() + "";
-                data[8] = sp5.getSelectedItem().toString() + "";
                 data[49] = et311.getText().toString() + "";
                 data[50] = et312.getText().toString() + "";
                 data[51] = et32.getText().toString() + "";
@@ -320,17 +314,23 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
                 data[34] = et212.getText().toString();
                 String url = ServerIp+"BankHallInsert?place="+data[0]+"&has_selfhelp_equip="+data[1]+"&has_business_location="+data[2]+"&cash_num="+data[3]+"&detail_position="+data[4]+data[5]+data[6]+data[7]+data[8]+"&glass_wall="+data[9]+"&door_tail="+data[10]+"&door_standard="+data[11]+"&casharea_wind="+data[12]+"&casharea_wind_strength="+data[13]+"&counter_structure="+data[14]+"&counter_standard="+data[15]+data[16]+"&counter_num="+data[17]+"&cash_wall="+data[18]+"&glass_standard="+data[19]+data[20]+"&glass_report="+data[21]+"&glass_area="+data[22]+"&glass_frame="+data[23]+"&cashier_slot="+data[24]+data[25]+data[26]+"&camera_clear="+data[27]+"&access_info_time="+data[28]+"&video_has_net="+data[29]+"&video_is_normal="+data[30]+"&video_time="+data[31]+"&video_num="+data[32]+data[33]+data[34]+"&playback_clear="+data[35]+"&hall_out_blind="+data[36]+"&hall_blind="+data[37]+"&hall_power="+data[38]+"&btn_hidden="+data[39]+"&btn_normal="+data[40]+"&btn_net="+data[41]+"&police_monitor_defense="+data[42]+"&custom_tallback="+data[43]+"&fire_equip_standard="+data[44]+"&teller_self_defense="+data[45]+"&hall_light="+data[46]+"&hall_plans="+data[47]+"&hall_rehearse="+data[48]+"&hid_danger_method="+data[49]+"&method="+data[50]+"&check_man="+data[51]+"&check_unit="+data[52];
                 Log.i("TAG",url);
+                if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
+                    Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
+                }else{
                 StringRequest stringRequest = new StringRequest(url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 Log.d("TAG", response);
                                 Toast.makeText(Jiancha_yingyeActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.e("TAG", error.getMessage(), error);
+                        Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败",Toast.LENGTH_SHORT).show();
+
                     }
                 });
                 mQueue.add(stringRequest);
@@ -339,7 +339,8 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
 //                }
 //                Toast.makeText(Jiancha_yingyeActivity.this, view_data, Toast.LENGTH_SHORT).show();
 //                view_data = "";
-            }
+                }
+                }
         });
     }
 

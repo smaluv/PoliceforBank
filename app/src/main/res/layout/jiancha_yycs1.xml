@@ -117,16 +117,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </Spinner>
-        <Spinner
-            android:id="@+id/sp4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
-        <Spinner
-            android:id="@+id/sp5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
 
     </LinearLayout>
 

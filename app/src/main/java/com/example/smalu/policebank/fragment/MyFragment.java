@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.RegisterActivity;
 import com.example.smalu.policebank.SigninActivity;
+import com.example.smalu.policebank.activity.My_MessageActivity;
 import com.example.smalu.policebank.activity.Zhenggai_Activity;
 
 
@@ -22,7 +23,7 @@ import com.example.smalu.policebank.activity.Zhenggai_Activity;
 
 public class MyFragment extends Fragment {
 
-    private TextView tv,text_mycheck;
+    private TextView tv,text_mycheck,text_mymessage;
 //    private Button btn_sign;
 //    private Button btn_reg;
 
@@ -42,6 +43,14 @@ public class MyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(view.getContext(), Zhenggai_Activity.class);
+                startActivity(intent);
+            }
+        });
+        text_mymessage=(TextView)view.findViewById(R.id.text_mymessage);
+        text_mymessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(view.getContext(), My_MessageActivity.class);
                 startActivity(intent);
             }
         });

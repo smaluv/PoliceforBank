@@ -47,6 +47,9 @@
         <EditText
             android:id="@+id/et2"
             android:singleLine="true"
+            android:textColorHint="@color/colorGray"
+            android:textSize="15dp"
+            android:hint="必须填写"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -64,6 +67,9 @@
         <EditText
             android:singleLine="true"
             android:id="@+id/et3"
+            android:hint="必须填写"
+            android:textColorHint="@color/colorGray"
+            android:textSize="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -77,6 +83,7 @@
 
     <Button
         android:id="@+id/btn"
+        android:layout_marginTop="15dp"
         android:text="下一步"
         android:layout_gravity="center"
         android:background="@drawable/buttonshape"

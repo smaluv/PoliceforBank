@@ -228,11 +228,13 @@ public class Pinggu_fenshu extends Activity {
                             public void onResponse(String response) {
                                 Log.d("TAG", response);
                                 Toast.makeText(Pinggu_fenshu.this,"信息插入成功",Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.e("TAG", error.getMessage(), error);
+                        Toast.makeText(Pinggu_fenshu.this,"信息插入失败",Toast.LENGTH_SHORT).show();
                     }
                 });
                 mQueue.add(stringRequest);

@@ -8,11 +8,12 @@
     <EditText
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+
         android:drawablePadding="10dp"
         android:drawableLeft="@mipmap/phone_icon"
         android:textColor="@color/colorGray"
         android:textSize="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="35dp"
         android:hint="请输入手机号"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
         android:drawableLeft="@mipmap/pwd_icon"
         android:textColor="@color/colorGray"
         android:textSize="15dp"
+        android:password="true"
         android:layout_marginTop="10dp"
         android:hint="请输入6位数密码"
         android:layout_width="match_parent"
@@ -38,6 +40,7 @@
         android:drawableLeft="@mipmap/pwd_icon"
         android:textColor="@color/colorGray"
         android:textSize="15dp"
+        android:password="true"
         android:layout_marginTop="10dp"
         android:hint="请确认密码"
         android:layout_width="match_parent"
@@ -78,7 +81,7 @@
         <Button
             android:text="确认"
             android:background="@drawable/buttonshape"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn" />

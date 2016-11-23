@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">警管通</string>
+    <string name="app_name">银管通</string>
     <string name="HeadTitle">责令限期整改通知</string>
     <string name="Onetitle">一、根据相关法律我支队民警对你单位依法检查：</string>
     <string name="CheckTime">&#160;&#160;检查时间：&#160;&#160;</string>

@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.smalu.policebank.R;
+import com.example.smalu.policebank.bean.InspectorServlet;
 import com.example.smalu.policebank.utils.Theone;
 
 import java.util.List;
@@ -18,9 +19,9 @@ import java.util.List;
 
 public class ZhenggaiAdapter extends BaseAdapter {
     private LayoutInflater mlayoutInflater;
-    private List<Theone>list;
+    private List<InspectorServlet>list;
 
-    public ZhenggaiAdapter(Context context, List<Theone> list) {
+    public ZhenggaiAdapter(Context context, List<InspectorServlet> list) {
         this.mlayoutInflater = LayoutInflater.from(context);
         this.list = list;
     }
@@ -49,37 +50,27 @@ public class ZhenggaiAdapter extends BaseAdapter {
             convertView=mlayoutInflater.inflate(R.layout.zhenggai_item,null);
             viewHodle.one= (TextView) convertView.findViewById(R.id.one);
             viewHodle.two= (TextView) convertView.findViewById(R.id.two);
-            viewHodle.three= (TextView) convertView.findViewById(R.id.three);
-            viewHodle.four= (TextView) convertView.findViewById(R.id.four);
             viewHodle.five= (TextView) convertView.findViewById(R.id.five);
             viewHodle.six= (TextView) convertView.findViewById(R.id.six);
             viewHodle.seven= (TextView) convertView.findViewById(R.id.seven);
             viewHodle.eight= (TextView) convertView.findViewById(R.id.eight);
             viewHodle.nine= (TextView) convertView.findViewById(R.id.nine);
-            viewHodle.ten= (TextView) convertView.findViewById(R.id.ten);
-            viewHodle.eleven= (TextView) convertView.findViewById(R.id.eleven);
-            viewHodle.twelve= (TextView) convertView.findViewById(R.id.twelve);
             convertView.setTag(viewHodle);
         }
         else {
             viewHodle= (ViewHodle) convertView.getTag();
         }
-        Theone to=list.get(position);
-        viewHodle.one.setText(to.getOne());
-        viewHodle.two.setText(to.getTwo());
-        viewHodle.three.setText(to.getThree());
-        viewHodle.five.setText(to.getFive());
-        viewHodle.four.setText(to.getFour());
-        viewHodle.six.setText(to.getSix());
-        viewHodle.seven.setText(to.getSeven());
-        viewHodle.eight.setText(to.getEight());
-        viewHodle.nine.setText(to.getNine());
-        viewHodle.ten.setText(to.getTen());
-        viewHodle.eleven.setText(to.getEleven());
-        viewHodle.twelve.setText(to.getTwelve());
+        InspectorServlet to=list.get(position);
+        viewHodle.one.setText(to.getPlace());
+        viewHodle.two.setText(to.getDate());
+        viewHodle.five.setText(to.getCheckman());
+        viewHodle.six.setText(to.getCheck_unit());
+        viewHodle.seven.setText(to.getTel());
+        viewHodle.eight.setText(to.getHid_danger());
+        viewHodle.nine.setText(to.getMethod());
         return convertView;
     }
     class ViewHodle{
-        public TextView one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve;
+        public TextView one,two,five,six,seven,eight,nine;
     }
 }

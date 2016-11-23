@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWitch"
+    android:layout_marginTop="5dp"
     android:orientation="vertical"
     >
 
@@ -11,6 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         android:layout_gravity="center"
+        android:textColor="@color/colorIconGray"
         android:textStyle="bold"
         android:textSize="23dp"/>
     <LinearLayout
@@ -25,6 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorIconGray"
         android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -32,11 +36,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorIconGray"
         android:textSize="19dp"
         android:text="@string/Ischecked" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorIconGray"
         android:textSize="17dp"
         android:id="@+id/one"/>
 </LinearLayout>
@@ -58,6 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -66,41 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="19dp"
+            android:textColor="@color/colorIconGray"
             android:text="@string/CheckTime" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:textSize="17dp"
             android:id="@+id/two"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="年"
-            android:textSize="19dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:id="@+id/three"/>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="月"
-            android:textSize="19dp"
-            android:id="@+id/textView2" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:id="@+id/four"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="日"
-            android:textSize="19dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,6 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -129,11 +110,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="19dp"
+            android:textColor="@color/colorIconGray"
             android:text="@string/WhoToCheck" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
+            android:textColor="@color/colorIconGray"
             android:id="@+id/five"/>
     </LinearLayout>
     <LinearLayout
@@ -154,6 +137,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -161,11 +145,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="19dp"
+            android:textColor="@color/colorIconGray"
             android:text="@string/Who" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
+            android:textColor="@color/colorIconGray"
             android:id="@+id/six"/>
     </LinearLayout>
     <LinearLayout
@@ -186,6 +172,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -193,11 +180,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:textSize="19dp"
             android:text="@string/phoneNumber" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:textSize="17dp"
             android:id="@+id/seven"/>
 
@@ -205,7 +194,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1.5px"
-        android:orientation="horizontal"
         android:background="@color/line"
         android:layout_marginBottom="12dp"
         android:layout_marginTop="5dp"
@@ -220,6 +208,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
 
@@ -228,6 +217,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="19dp"
+            android:textColor="@color/colorIconGray"
             android:text="@string/SafeProblem" />
 
     </LinearLayout>
@@ -244,6 +234,7 @@
             android:id="@+id/eight"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
+            android:textColor="@color/colorIconGray"
             android:textSize="17dp"/>
     </LinearLayout>
     <LinearLayout
@@ -264,11 +255,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorIconGray"
             android:textSize="19dp"
             android:text="@string/HowToDeal" />
 
@@ -284,70 +277,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nine"
+            android:textColor="@color/colorIconGray"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
             android:textSize="17dp"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1.5px"
-        android:orientation="horizontal"
-        android:background="@color/line"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="&#160;&#160;&#160;&#160;&#160;&#160;"/>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="19dp"
-            android:text="@string/deadTime" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:id="@+id/ten"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="年"
-            android:textSize="19dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:id="@+id/eleven"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="月"
-            android:textSize="19dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:id="@+id/twelve"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="日"
-            android:textSize="19dp"/>
-
-
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1.5px"
@@ -360,23 +295,14 @@
 
     </LinearLayout>
 
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text=""/>
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorIconGray"
         android:text="@string/other"
         android:textSize="11dp"/>
 

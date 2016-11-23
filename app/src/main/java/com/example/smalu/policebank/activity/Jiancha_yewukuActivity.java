@@ -295,42 +295,48 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data[0] = et1.getText() + "|";
-                data[1] = sp2_changsuo.getSelectedItem().toString() + "|";
-                data[2] = et3.getText() + "|";
-                data[3] = et4.getText() + "|";
-                data[4] = et5.getText() + "|";
-                data[5] = et6.getText() + "|";
-                data[6] = et7.getText() + "|";
-                data[7] = sp8_changsuo.getSelectedItem().toString() + "|";
-                data[8] = et9.getText() + "|";
-                data[9] = sp10_changsuo.getSelectedItem().toString() + "|";
-                data[10] = sp11_changsuo.getSelectedItem().toString() + "|";
-                data[62] = et311.getText().toString() + "|";
-                data[63] = et312.getText().toString() + "|";
-                data[64] = et32.getText().toString() + "|";
-                data[65] = et33.getText().toString() + "|";
+                data[0] = et1.getText().toString();
+                data[1] = sp2_changsuo.getSelectedItem().toString();
+                data[2] = et3.getText().toString();
+                data[3] = et4.getText().toString();
+                data[4] = et5.getText().toString();
+                data[5] = et6.getText().toString();
+                data[6] = et7.getText().toString();
+                data[7] = sp8_changsuo.getSelectedItem().toString();
+                data[8] = et9.getText().toString();
+                data[9] = sp10_changsuo.getSelectedItem().toString();
+                data[10] = sp11_changsuo.getSelectedItem().toString();
+                data[62] = et311.getText().toString();
+                data[63] = et312.getText().toString();
+                data[64] = et32.getText().toString();
+                data[65] = et33.getText().toString();
                 String url = ServerIp+"BankLibraryCheckInsert?belong_unit="+data[0]+"&date="+data[1]+"&address="+data[2]+"&defend_head="+data[3]+"&tel="+data[4]+"&item_unit="+data[5]+"&tech_unit="+data[6]+"&cate="+data[7]+"&area="+data[8]+"&start_date="+data[9]+"&finish_date="+data[10]+"&req1="+data[11]+"&req2="+data[12]+"&req3="+data[13]+"&req4="+data[14]+"&req5="+data[15]+"&req6="+data[16]+"&req7="+data[17]+"&req8="+data[18]+"&req9="+data[19]+"&req10="+data[20]+"&req11="+data[21]+"&req12="+data[22]+"&req13="+data[23]+"&req14="+data[24]+"&req15="+data[25]+"&req16="+data[26]+"&req17="+data[27]+"&req18="+data[28]+"&req19="+data[29]+"&req20="+data[30]+"&req21="+data[31]+"&req22="+data[32]+"&req23="+data[33]+"&req24="+data[34]+"&req25="+data[35]+"&req26="+data[36]+"&req27="+data[37]+"&req28="+data[38]+"&req29="+data[39]+"&req30="+data[40]+"&req31="+data[41]+"&req32="+data[42]+"&req33="+data[43]+"&req34="+data[44]+"&req35="+data[45]+"&req36="+data[46]+"&req37="+data[47]+"&req38="+data[48]+"&req39="+data[49]+"&req40="+data[50]+"&req41"+data[51]+"&req42="+data[52]+"&req43="+data[53]+"&req44="+data[54]+"&req45="+data[55]+"&req46="+data[56]+"&req47="+data[57]+"&req48="+data[58]+"&req49="+data[59]+"&req50="+data[60]+"&req51="+data[61]+"&hid_danger_method="+data[62]+"&method="+data[63]+"&check_unit="+data[64]+"&check_man="+data[65];
-                StringRequest stringRequest = new StringRequest(url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Jiancha_yewukuActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                    }
-                });
-                mQueue.add(stringRequest);
+                if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
+                    Toast.makeText(Jiancha_yewukuActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
+                }else {
+                    StringRequest stringRequest = new StringRequest(url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("TAG", response);
+                                    Toast.makeText(Jiancha_yewukuActivity.this, "信息插入成功", Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Jiancha_yewukuActivity.this, "信息插入失败", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    mQueue.add(stringRequest);
 
 //                for(int i =0;i<data.length;i++){
 //                    view_data = view_data+data[i];
 //                }
 //                Toast.makeText(Jiancha_yewukuActivity.this,view_data,Toast.LENGTH_SHORT).show();
 //                view_data = "";
+                }
             }
         });
     }

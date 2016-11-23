@@ -1,6 +1,8 @@
 package com.example.smalu.policebank.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.bean.Document;
+import com.example.smalu.policebank.utils.CONST;
 
 import java.util.List;
 import java.util.Map;
@@ -26,6 +29,7 @@ public class linkAdapter extends BaseAdapter {
     private Context context;                        //运行上下文
     private List<Document> listItems;    //商品信息集合
     private LayoutInflater mInflater;
+    private String address;
 
     public linkAdapter(Context context, List<Document> data){
         this.context=context;
@@ -74,7 +78,17 @@ public class linkAdapter extends BaseAdapter {
         holder.link_num.setText((String)listItems.get(position).getId());
         holder.link_content.setText((String)listItems.get(position).getTitle());
         holder.link_time.setText((String)listItems.get(position).getDate());
-        String address =HOST+listItems.get(position).getAddress();
+         address =CONST.HOST+listItems.get(position).getAddress();
+        holder.linearLayoutLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(address);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                context.startActivity(intent);
+            }
+        });
+
+
         Log.d("TAG11",listItems.get(position).getTitle());
         Log.d("TAG11",address);
         return convertView;

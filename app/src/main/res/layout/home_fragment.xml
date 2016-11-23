@@ -6,7 +6,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_marginRight="1dp"
         android:layout_marginLeft="1dp"
         android:background="@mipmap/jingguantong"/>
@@ -24,9 +24,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/beian"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="26dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"/>
             <ImageView
@@ -34,10 +34,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/jiancha"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="26dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
@@ -50,8 +50,8 @@
                 android:layout_height="match_parent"
                 android:background="@mipmap/pinggu"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"/>
 
@@ -60,9 +60,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="26dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:background="@mipmap/zhenggai"
                 android:layout_weight="1"/>
         </LinearLayout>

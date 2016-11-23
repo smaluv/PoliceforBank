@@ -451,7 +451,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                             "&barmaterial=" + beian_equipment_bank44 +
                             "&advice=" + "无";
                     Log.i("TAG", URL);
-                    Toast.makeText(Beian_equipmentActivity.this, beian_equipment_office.getText().toString(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Beian_equipmentActivity.this, beian_equipment_office.getText().toString(), Toast.LENGTH_SHORT).show();
                     StringRequest stringRequest = new StringRequest(URL,
                             new Response.Listener<String>() {
                                 @Override

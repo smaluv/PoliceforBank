@@ -247,22 +247,32 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
                             "&selfhelp_machine="+data[21]+data[22]+"&fire_equip="+data[23]+data[24]+"&emergen_light="+data[25]+data[26]+"&hid_danger_method="+data[27]+"&method="
                             +data[28]+"&check_man="+data[29]+"&check_unit="+data[30]);
                     Log.i("TAG",url);
-                StringRequest stringRequest = new StringRequest(url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Jiancha_autoActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                    }
-                });
-                mQueue.add(stringRequest);
+                if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
+                    Toast.makeText(Jiancha_autoActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
+                }else {
+                    StringRequest stringRequest = new StringRequest(url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    if (response.equals("1")) {
+                                        Log.d("TAG", response);
+                                        Toast.makeText(Jiancha_autoActivity.this, "信息插入成功", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                    } else {
+                                        Toast.makeText(Jiancha_autoActivity.this, "信息插入失败", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Jiancha_autoActivity.this, "信息插入失败", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    mQueue.add(stringRequest);
 
 //                view_data = "";
+                }
             }
         });
     }

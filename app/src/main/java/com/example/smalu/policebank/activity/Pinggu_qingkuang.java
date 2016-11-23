@@ -165,26 +165,26 @@ public class Pinggu_qingkuang extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data = new String[]{et1.getText().toString() + "|",sp.getSelectedItem().toString() + "|",
-                        et2.getText().toString() + "|",et3.getText().toString() + "|",
-                        et4.getText().toString() + "|",et5.getText().toString() + "|",
-                        et6.getText().toString() + "|",et7.getText().toString() + "|",
-                        et8.getText().toString() + "|",et21.getText().toString() + "|",
-                        et22.getText().toString() + "|",
-                        et23.getText().toString() + "|", et24.getText().toString() + "|",
-                        et25.getText().toString() + "|", et26.getText().toString() + "|",
-                        et27.getText().toString() + "|", et28.getText().toString() + "|",
-                        et29.getText().toString() + "|", et210.getText().toString() + "|",
-                        et211.getText().toString() + "|", et212.getText().toString() + "|",
-                        et213.getText().toString() + "|", et214.getText().toString() + "|",
-                        et215.getText().toString() + "|", et216.getText().toString() + "|",
-                        et217.getText().toString() + "|", et218.getText().toString() + "|",
-                        et31.getText().toString() + "|",et32.getText().toString() + "|",
-                        et33.getText().toString() + "|",et34.getText().toString() + "|",
-                        et35.getText().toString() + "|",et36.getText().toString() + "|",
-                        et37.getText().toString() + "|",et38.getText().toString() + "|",
-                        et39.getText().toString() + "|",et310.getText().toString() + "|",
-                        et311.getText().toString() + "|",et312.getText().toString() + "|"};
+                data = new String[]{et1.getText().toString(),sp.getSelectedItem().toString(),
+                        et2.getText().toString(),et3.getText().toString(),
+                        et4.getText().toString(),et5.getText().toString(),
+                        et6.getText().toString(),et7.getText().toString(),
+                        et8.getText().toString(),et21.getText().toString(),
+                        et22.getText().toString(),
+                        et23.getText().toString(), et24.getText().toString(),
+                        et25.getText().toString(), et26.getText().toString(),
+                        et27.getText().toString(), et28.getText().toString(),
+                        et29.getText().toString(), et210.getText().toString(),
+                        et211.getText().toString(), et212.getText().toString(),
+                        et213.getText().toString(), et214.getText().toString(),
+                        et215.getText().toString(), et216.getText().toString(),
+                        et217.getText().toString(), et218.getText().toString(),
+                        et31.getText().toString(),et32.getText().toString(),
+                        et33.getText().toString(),et34.getText().toString(),
+                        et35.getText().toString(),et36.getText().toString(),
+                        et37.getText().toString(),et38.getText().toString(),
+                        et39.getText().toString(),et310.getText().toString(),
+                        et311.getText().toString(),et312.getText().toString()};
 
                 for (int i = 0;i<data.length;i++){
                     view_data = view_data+data[i];

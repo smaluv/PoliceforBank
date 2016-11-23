@@ -62,6 +62,9 @@ public class RegisterActivity extends Activity {
                                 public void onResponse(String response) {
                                     Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
                                     Log.d("TAG", response);
+                                    Intent intent = new Intent(RegisterActivity.this,SigninActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 }
                             }, new Response.ErrorListener() {
                         @Override
@@ -81,9 +84,6 @@ public class RegisterActivity extends Activity {
                             }
                         }
                     }).start();
-                    Intent intent = new Intent(RegisterActivity.this,SigninActivity.class);
-                    startActivity(intent);
-                    finish();
                 }
             }
         });
