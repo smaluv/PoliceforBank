@@ -82,7 +82,7 @@
             android:gravity="center"
             android:text="防范设施是否达标"
             android:textColor="#000000"
-            android:textSize="15.0dip" />
+            android:textSize="13.0dip" />
     </LinearLayout>
 
     <ImageView

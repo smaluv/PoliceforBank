@@ -6,9 +6,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginLeft="1dp"
+        android:layout_height="230dp"
         android:background="@mipmap/jingguantong"/>
 
     <LinearLayout
@@ -24,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/beian"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
@@ -34,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/jiancha"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"

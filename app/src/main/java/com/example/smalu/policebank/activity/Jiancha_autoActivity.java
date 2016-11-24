@@ -1,20 +1,24 @@
 package com.example.smalu.policebank.activity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -38,6 +42,7 @@ import com.example.smalu.policebank.adapter.viewPagerAdapter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +67,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
 
     private View view1,view2,view3;
     private Spinner sp;
-    private EditText et1,et2;
+    private EditText et1,et2,et_date;
     private List<String> spinnerList;
     private ArrayAdapter<String> spinner_adapter;
     private String view_data = "";
@@ -154,9 +159,30 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
     }
 
     private void initPag1(View view){
-        sp = (Spinner) view.findViewById(R.id.sp);
+//        sp = (Spinner) view.findViewById(R.id.sp);
         et1 = (EditText) view.findViewById(R.id.et1);
         et2 = (EditText) view.findViewById(R.id.et2);
+        et_date = (EditText) view.findViewById(R.id.et_date);
+
+        et_date.setInputType(InputType.TYPE_NULL);
+
+        et_date.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    Calendar calendar = Calendar.getInstance();
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Jiancha_autoActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                            Jiancha_autoActivity.this.et_date.setText(year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
+                        }
+                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    datePickerDialog.show();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         spinnerList = new ArrayList<String>();
         for (int i =1;i<30;i++){
@@ -164,7 +190,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
         }
 
         spinner_adapter = new ArrayAdapter<String>(Jiancha_autoActivity.this,android.R.layout.simple_spinner_item,spinnerList);
-        sp.setAdapter(spinner_adapter);
+//        sp.setAdapter(spinner_adapter);
     }
     private void initPag2(View view){
         rg1 = (RadioGroup) view.findViewById(R.id.rg1);
@@ -229,7 +255,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data[0] = sp.getSelectedItem().toString();
+                data[0] = et_date.getText().toString();
                 data[1] = et1.getText().toString();
                 data[2] = et2.getText().toString();
                 data[27] = et311.getText().toString();

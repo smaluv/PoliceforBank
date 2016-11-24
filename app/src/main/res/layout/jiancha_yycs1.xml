@@ -102,21 +102,10 @@
             android:text="详细地址:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <Spinner
-            android:id="@+id/sp1"
+        <EditText
+            android:id="@+id/et_address"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
-        <Spinner
-            android:id="@+id/sp2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
-        <Spinner
-            android:id="@+id/sp3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Spinner>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

@@ -215,7 +215,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_110= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "库房结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "库房结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_3 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_3);
@@ -229,7 +229,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_33= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "墙体结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "墙体结构：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_4 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_4);
@@ -243,7 +243,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_44= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "金库门：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "金库门：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_5 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_5);
@@ -257,7 +257,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_55= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "金库外隔离门：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "金库外隔离门：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_6 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_6);
@@ -271,7 +271,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_66= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "辅助安防器材：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "辅助安防器材：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_7 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_7);
@@ -285,7 +285,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_77= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "监控报警系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "监控报警系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_8 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_8);
@@ -299,7 +299,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_88= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "报警控制系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "报警控制系统：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_9 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_9);
@@ -313,7 +313,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_99= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "守卫室方位：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "守卫室方位：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_10 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_10);
@@ -327,7 +327,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_101= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "守卫室及其他设施：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "守卫室及其他设施：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_11 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_11);
@@ -341,7 +341,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_111= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "武器弹药配置：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "武器弹药配置：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_valut3_12 = (RadioGroup) beian_valut_3.findViewById(R.id.beian_valut3_12);
@@ -355,7 +355,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_valutActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_valut3_122= String.valueOf(rb.getText());
-                Toast.makeText(Beian_valutActivity.this, "与公安联网情况：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_valutActivity.this, "与公安联网情况：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -62,7 +62,7 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
 
     private View view1, view2, view3;
     private Spinner sp1, sp2, sp3;
-    private EditText et1, et2;
+    private EditText et1, et2,et_address;
     private List<String> spinnerList, spinnerList2, spinnerList3;
     private ArrayAdapter<String> spinner_adapter, spinner_adapter2, spinner_adapter3;
     private String view_data = "";
@@ -72,7 +72,7 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
     private EditText et21,et22,et23,et24,et25,et26,et27,et28,et29,et210,et211,et212;
     private RadioGroup rg21,rg22,rg23,rg24,rg25,rg26,rg27,rg28,rg29,rg210,rg211,rg212,rg213,rg214,rg215,
             rg216,rg217,rg218,rg219,rg220,rg221,rg222,rg223,rg224,rg225,rg226,rg227,rg228;
-    private String[] data = new String[53];
+    private String[] data = new String[49];
 
     private EditText et311,et312, et32, et33;
     private RequestQueue mQueue;
@@ -156,44 +156,45 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
     }
 
     private void initPag1(View view) {
-        sp1 = (Spinner) view.findViewById(R.id.sp1);
-        sp2 = (Spinner) view.findViewById(R.id.sp2);
-        sp3 = (Spinner) view.findViewById(R.id.sp3);
+//        sp1 = (Spinner) view.findViewById(R.id.sp1);
+//        sp2 = (Spinner) view.findViewById(R.id.sp2);
+//        sp3 = (Spinner) view.findViewById(R.id.sp3);
         et1 = (EditText) view.findViewById(R.id.et1);
         et2 = (EditText) view.findViewById(R.id.et2);
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
         yyrg2 = (RadioGroup) view.findViewById(R.id.rg2);
+        et_address = (EditText) view.findViewById(R.id.et_address);
 
-        spinnerList = new ArrayList<String>();
-        spinnerList.add("吉安");
-        spinnerList.add("上饶");
-        spinnerList.add("九江");
-        spinnerList.add("景德镇");
-        spinnerList.add("鹰潭");
-        spinnerList.add("南昌");
-        spinnerList.add("抚州");
-        spinnerList.add("新余");
-        spinnerList.add("萍香");
-        spinnerList.add("赣州");
-        spinnerList.add("宜春");
+//        spinnerList = new ArrayList<String>();
+//        spinnerList.add("吉安");
+//        spinnerList.add("上饶");
+//        spinnerList.add("九江");
+//        spinnerList.add("景德镇");
+//        spinnerList.add("鹰潭");
+//        spinnerList.add("南昌");
+//        spinnerList.add("抚州");
+//        spinnerList.add("新余");
+//        spinnerList.add("萍香");
+//        spinnerList.add("赣州");
+//        spinnerList.add("宜春");
+//
+//        spinnerList2 = new ArrayList<String>();
+//        spinnerList2.add("南京路");
+//        spinnerList2.add("北京路");
+//        spinnerList2.add("西津路");
+//        spinnerList2.add("东进路");
+//
+//        spinnerList3 = new ArrayList<String>();
+//        for (int i = 1; i < 20; i++) {
+//            spinnerList3.add(i + "号");
+//        }
 
-        spinnerList2 = new ArrayList<String>();
-        spinnerList2.add("南京路");
-        spinnerList2.add("北京路");
-        spinnerList2.add("西津路");
-        spinnerList2.add("东进路");
-
-        spinnerList3 = new ArrayList<String>();
-        for (int i = 1; i < 20; i++) {
-            spinnerList3.add(i + "号");
-        }
-
-        spinner_adapter = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList);
-        spinner_adapter2 = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList2);
-        spinner_adapter3 = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList3);
-        sp1.setAdapter(spinner_adapter);
-        sp2.setAdapter(spinner_adapter2);
-        sp3.setAdapter(spinner_adapter3);
+//        spinner_adapter = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList);
+//        spinner_adapter2 = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList2);
+//        spinner_adapter3 = new ArrayAdapter<String>(Jiancha_yingyeActivity.this, android.R.layout.simple_spinner_item, spinnerList3);
+//        sp1.setAdapter(spinner_adapter);
+//        sp2.setAdapter(spinner_adapter2);
+//        sp3.setAdapter(spinner_adapter3);
 
         yyrg1 = (RadioGroup) view.findViewById(R.id.rg1);
         yyrg2 = (RadioGroup) view.findViewById(R.id.rg2);
@@ -287,32 +288,49 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data[6] = et21.getText().toString();
-                data[7] = et22.getText().toString();
-                data[8] = et23.getText().toString();
-                data[10] = et24.getText().toString();
-                data[11] = et25.getText().toString();
-                data[13] = et26.getText().toString();
-                data[15] = et27.getText().toString();
-                data[16] = et28.getText().toString();
-                data[17] = et29.getText().toString();
-                data[23] = et210.getText().toString();
-                data[24] = et211.getText().toString();
-                data[25] = et212.getText().toString();
+                data[0] = et1.getText().toString();
+                data[3] = et2.getText().toString();
+                data[4] = et_address.getText().toString();
 
-                data[0] = et1.getText().toString()+ "";
-                data[3] = et2.getText().toString() + "";
-                data[4] = sp1.getSelectedItem().toString() + "";
-                data[5] = sp2.getSelectedItem().toString() + "";
-                data[6] = sp3.getSelectedItem().toString() + "";
-                data[49] = et311.getText().toString() + "";
-                data[50] = et312.getText().toString() + "";
-                data[51] = et32.getText().toString() + "";
-                data[52] = et33.getText().toString() + "";
-                data[32] = et210.getText().toString();
-                data[33] = et211.getText().toString();
-                data[34] = et212.getText().toString();
-                String url = ServerIp+"BankHallInsert?place="+data[0]+"&has_selfhelp_equip="+data[1]+"&has_business_location="+data[2]+"&cash_num="+data[3]+"&detail_position="+data[4]+data[5]+data[6]+data[7]+data[8]+"&glass_wall="+data[9]+"&door_tail="+data[10]+"&door_standard="+data[11]+"&casharea_wind="+data[12]+"&casharea_wind_strength="+data[13]+"&counter_structure="+data[14]+"&counter_standard="+data[15]+data[16]+"&counter_num="+data[17]+"&cash_wall="+data[18]+"&glass_standard="+data[19]+data[20]+"&glass_report="+data[21]+"&glass_area="+data[22]+"&glass_frame="+data[23]+"&cashier_slot="+data[24]+data[25]+data[26]+"&camera_clear="+data[27]+"&access_info_time="+data[28]+"&video_has_net="+data[29]+"&video_is_normal="+data[30]+"&video_time="+data[31]+"&video_num="+data[32]+data[33]+data[34]+"&playback_clear="+data[35]+"&hall_out_blind="+data[36]+"&hall_blind="+data[37]+"&hall_power="+data[38]+"&btn_hidden="+data[39]+"&btn_normal="+data[40]+"&btn_net="+data[41]+"&police_monitor_defense="+data[42]+"&custom_tallback="+data[43]+"&fire_equip_standard="+data[44]+"&teller_self_defense="+data[45]+"&hall_light="+data[46]+"&hall_plans="+data[47]+"&hall_rehearse="+data[48]+"&hid_danger_method="+data[49]+"&method="+data[50]+"&check_man="+data[51]+"&check_unit="+data[52];
+                data[11] = et21.getText().toString();
+                data[12] = et22.getText().toString();
+                data[13] = et23.getText().toString();
+
+                data[15] = et24.getText().toString();
+                data[16] = et25.getText().toString();
+
+                data[18] = et26.getText().toString();
+
+                data[20] = et27.getText().toString();
+                data[21] = et28.getText().toString();
+                data[22] = et29.getText().toString();
+
+                data[28] = et210.getText().toString();
+                data[29] = et211.getText().toString();
+                data[30] = et212.getText().toString();
+
+
+//                data[5] = sp2.getSelectedItem().toString();
+//                data[6] = sp3.getSelectedItem().toString();
+                data[45] = et311.getText().toString();
+                data[46] = et312.getText().toString();
+                data[47] = et32.getText().toString();
+                data[48] = et33.getText().toString();
+
+                String url = ServerIp+"BankHallInsert?place="+data[0]+"&has_selfhelp_equip="+data[1]
+                        +"&has_business_location="+data[2]+"&cash_num="+data[3]+"&detail_position="+data[4]
+                        +"&glass_wall="+data[5]+"&door_tail="+data[6]+"&door_standard="+data[7]+"&casharea_wind="+data[8]
+                        +"&casharea_wind_strength="+data[9]+"&counter_structure="+data[10]+"&counter_standard="+data[11]
+                        +data[12]+"&counter_num="+data[13]+"&cash_wall="+data[14]+"&glass_standard="+data[15]
+                        +data[16]+"&glass_report="+data[17]+"&glass_area="+data[18]+"&glass_frame="+data[19]
+                        +"&cashier_slot="+data[20]+data[21]+data[22]+"&camera_clear="+data[23]+"&access_info_time="
+                        +data[24]+"&video_has_net="+data[25]+"&video_is_normal="+data[26]+"&video_time="+data[27]
+                        +"&video_num="+data[28]+data[29]+data[30]+"&playback_clear="+data[31]+"&hall_out_blind="+data[32]
+                        +"&hall_blind="+data[33]+"&hall_power="+data[34]+"&btn_hidden="+data[35]+"&btn_normal="+data[36]
+                        +"&btn_net="+data[37]+"&police_monitor_defense="+data[38]+"&custom_tallback="+data[39]
+                        +"&fire_equip_standard="+data[40]+"&teller_self_defense="+data[41]+"&hall_light="+data[42]
+                        +"&hall_plans="+data[43]+"&hall_rehearse="+data[44]+"&hid_danger_method="+data[45]
+                        +"&method="+data[46]+"&check_man="+data[47]+"&check_unit="+data[48];
                 Log.i("TAG",url);
                 if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
                     Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
@@ -352,63 +370,67 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
             case R.id.rb3:data[2] = "有";break;
             case R.id.rb4:data[2] = "无";break;
 
-            case R.id.rb11:data[9] = "防弹玻璃";break;
-            case R.id.rb12:data[9] = "防砸玻璃";break;
-            case R.id.rb13:data[9] = "加装金属防护栏";break;
-            case R.id.rb21:data[10] = "是";break;
-            case R.id.rb22:data[10] = "否";break;
-            case R.id.rb31:data[11] = "是";break;
-            case R.id.rb32:data[11] = "否";break;
-            case R.id.rb41:data[12] = "是";break;
-            case R.id.rb42:data[12] = "否";break;
-            case R.id.rb51:data[13] = "是";break;
-            case R.id.rb52:data[13] = "否";break;
-            case R.id.rb61:data[14] = "是";break;
-            case R.id.rb62:data[14] = "否";break;
-            case R.id.rb71:data[18] = "是";break;
-            case R.id.rb72:data[18] = "否";break;
-            case R.id.rb81:data[21] = "是";break;
-            case R.id.rb82:data[21] = "否";break;
-            case R.id.rb91:data[23] = "是";break;
-            case R.id.rb92:data[23] = "否";break;
-            case R.id.rb101:data[27] = "是";break;
-            case R.id.rb102:data[27] = "否";break;
-            case R.id.rb111:data[28] = "是";break;
-            case R.id.rb112:data[28] = "否";break;
-            case R.id.rb121:data[29] = "是";break;
-            case R.id.rb122:data[29] = "否";break;
-            case R.id.rb131:data[30] = "是";break;
-            case R.id.rb132:data[30] = "否";break;
-            case R.id.rb141:data[31] = "是";break;
-            case R.id.rb142:data[31] = "否";break;
-            case R.id.rb151:data[35] = "是";break;
-            case R.id.rb152:data[35] = "否";break;
-            case R.id.rb161:data[36] = "是";break;
-            case R.id.rb162:data[36] = "否";break;
-            case R.id.rb171:data[37] = "是";break;
-            case R.id.rb172:data[37] = "否";break;
-            case R.id.rb181:data[38] = "是";break;
-            case R.id.rb182:data[38] = "否";break;
-            case R.id.rb191:data[39] = "是";break;
-            case R.id.rb192:data[39] = "否";break;
-            case R.id.rb201:data[40] = "是";break;
-            case R.id.rb202:data[40] = "否";break;
-            case R.id.rb211:data[41] = "是";break;
-            case R.id.rb212:data[41] = "否";break;
-            case R.id.rb221:data[42] = "是";break;
-            case R.id.rb222:data[42] = "否";break;
-            case R.id.rb231:data[43] = "是";break;
-            case R.id.rb232:data[43] = "否";break;
-            case R.id.rb241:data[44] = "是";break;
-            case R.id.rb242:data[44] = "否";break;
-            case R.id.rb251:data[45] = "是";break;
-            case R.id.rb252:data[45] = "否";break;
-            case R.id.rb261:data[46] = "是";break;
-            case R.id.rb262:data[46] = "否";break;
-            case R.id.rb271:data[47] = "有";break;
-            case R.id.rb272:data[47] = "无";break;
-            case R.id.rb281:data[48] = "有";break;
-            case R.id.rb282:data[48] = "无";break;
+            case R.id.rb11:data[5] = "防弹玻璃";break;
+            case R.id.rb12:data[5] = "防砸玻璃";break;
+            case R.id.rb13:data[5] = "加装金属防护栏";break;
+            case R.id.rb21:data[6] = "是";break;
+            case R.id.rb22:data[6] = "否";break;
+            case R.id.rb31:data[7] = "是";break;
+            case R.id.rb32:data[7] = "否";break;
+            case R.id.rb41:data[8] = "是";break;
+            case R.id.rb42:data[8] = "否";break;
+            case R.id.rb51:data[9] = "是";break;
+            case R.id.rb52:data[9] = "否";break;
+            case R.id.rb61:data[10] = "是";break;
+            case R.id.rb62:data[10] = "否";break;
+            case R.id.rb71:data[14] = "是";break;
+            case R.id.rb72:data[14] = "否";break;
+
+            case R.id.rb81:data[17] = "是";break;
+            case R.id.rb82:data[17] = "否";break;
+
+            case R.id.rb91:data[19] = "是";break;
+            case R.id.rb92:data[19] = "否";break;
+
+            case R.id.rb101:data[23] = "是";break;
+            case R.id.rb102:data[23] = "否";break;
+            case R.id.rb111:data[24] = "是";break;
+            case R.id.rb112:data[24] = "否";break;
+            case R.id.rb121:data[25] = "是";break;
+            case R.id.rb122:data[25] = "否";break;
+            case R.id.rb131:data[26] = "是";break;
+            case R.id.rb132:data[26] = "否";break;
+            case R.id.rb141:data[27] = "是";break;
+            case R.id.rb142:data[27] = "否";break;
+
+            case R.id.rb151:data[31] = "是";break;
+            case R.id.rb152:data[31] = "否";break;
+            case R.id.rb161:data[32] = "是";break;
+            case R.id.rb162:data[32] = "否";break;
+            case R.id.rb171:data[33] = "是";break;
+            case R.id.rb172:data[33] = "否";break;
+            case R.id.rb181:data[34] = "是";break;
+            case R.id.rb182:data[34] = "否";break;
+            case R.id.rb191:data[35] = "是";break;
+            case R.id.rb192:data[35] = "否";break;
+            case R.id.rb201:data[36] = "是";break;
+            case R.id.rb202:data[36] = "否";break;
+            case R.id.rb211:data[37] = "是";break;
+            case R.id.rb212:data[37] = "否";break;
+            case R.id.rb221:data[38] = "是";break;
+            case R.id.rb222:data[38] = "否";break;
+            case R.id.rb231:data[39] = "是";break;
+            case R.id.rb232:data[39] = "否";break;
+            case R.id.rb241:data[40] = "是";break;
+            case R.id.rb242:data[40] = "否";break;
+            case R.id.rb251:data[41] = "是";break;
+            case R.id.rb252:data[41] = "否";break;
+            case R.id.rb261:data[42] = "是";break;
+            case R.id.rb262:data[42] = "否";break;
+            case R.id.rb271:data[43] = "有";break;
+            case R.id.rb272:data[43] = "无";break;
+            case R.id.rb281:data[44] = "有";break;
+            case R.id.rb282:data[44] = "无";break;
         }
     }
     /*

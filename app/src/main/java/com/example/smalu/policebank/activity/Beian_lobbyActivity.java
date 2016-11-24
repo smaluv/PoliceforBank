@@ -279,7 +279,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_01= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "与外界出口门和锁具：" + beian_lobby2_01, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "与外界出口门和锁具：" + beian_lobby2_01, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_2= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_2);
@@ -294,7 +294,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_21= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "二层以下门窗：" + beian_lobby2_21, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "二层以下门窗：" + beian_lobby2_21, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_3= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_3);
@@ -309,7 +309,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_31= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "周边 围墙 防护：" + beian_lobby2_31, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "周边 围墙 防护：" + beian_lobby2_31, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_4= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_4);
@@ -324,7 +324,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_41= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "柜台建筑材料：" + beian_lobby2_41, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "柜台建筑材料：" + beian_lobby2_41, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_5= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_5);
@@ -339,7 +339,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_51= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "现金业务区出入防尾门：" + beian_lobby2_51, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "现金业务区出入防尾门：" + beian_lobby2_51, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_6= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_6);
@@ -354,7 +354,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_61= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "卫生间设置：" + beian_lobby2_61, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "卫生间设置：" + beian_lobby2_61, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_7= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_7);
@@ -369,7 +369,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_71= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "自卫器材：" + beian_lobby2_71, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "自卫器材：" + beian_lobby2_71, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_8= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_8);
@@ -384,7 +384,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_81= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "自动照明设备：" + beian_lobby2_81, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "自动照明设备：" + beian_lobby2_81, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_9= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_9);
@@ -399,7 +399,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_91= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "消防器材：" + beian_lobby2_91, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "消防器材：" + beian_lobby2_91, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_10= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_10);
@@ -414,7 +414,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_101= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "紧急报警装置：" + beian_lobby2_101, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "紧急报警装置：" + beian_lobby2_101, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby2_11= (RadioGroup) beian_lobby_2.findViewById(R.id.beian_lobby2_11);
@@ -429,7 +429,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby2_111= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "110联网情况：" + beian_lobby2_111, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "110联网情况：" + beian_lobby2_111, Toast.LENGTH_SHORT).show();
             }
         });
         //页面3
@@ -446,7 +446,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_11= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "场所与外界的出口及门口：" + beian_lobby3_11, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "场所与外界的出口及门口：" + beian_lobby3_11, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_2= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_2);
@@ -461,7 +461,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_21= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "现金业务：" + beian_lobby3_21, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "现金业务：" + beian_lobby3_21, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_4= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_4);
@@ -476,7 +476,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_41= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "非现金业务：" + beian_lobby3_41, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "非现金业务：" + beian_lobby3_41, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_5= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_5);
@@ -491,7 +491,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_51= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "场所内设置的自助设备：" + beian_lobby3_51, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "场所内设置的自助设备：" + beian_lobby3_51, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_6= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_6);
@@ -506,7 +506,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_61= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "场内人员活动区监控：" + beian_lobby3_61, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "场内人员活动区监控：" + beian_lobby3_61, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_7= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_7);
@@ -521,7 +521,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_71= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "运钞交接区：" + beian_lobby3_71, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "运钞交接区：" + beian_lobby3_71, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_8= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_8);
@@ -536,7 +536,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_81= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "监控回放清晰情况：" + beian_lobby3_81, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "监控回放清晰情况：" + beian_lobby3_81, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_9= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_9);
@@ -551,7 +551,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_91= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "现金业务柜台连续记录声音复核装置：" + beian_lobby3_91, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "现金业务柜台连续记录声音复核装置：" + beian_lobby3_91, Toast.LENGTH_SHORT).show();
             }
         });
         beian_lobby3_10= (RadioGroup) beian_lobby_3.findViewById(R.id.beian_lobby3_10);
@@ -566,7 +566,7 @@ public class Beian_lobbyActivity extends AppCompatActivity implements DataCallBa
                 RadioButton rb = (RadioButton) Beian_lobbyActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_lobby3_101= String.valueOf(rb.getText());
-                Toast.makeText(Beian_lobbyActivity.this, "入侵报警、照明等设备联动：" + beian_lobby3_101, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_lobbyActivity.this, "入侵报警、照明等设备联动：" + beian_lobby3_101, Toast.LENGTH_SHORT).show();
             }
         });
 

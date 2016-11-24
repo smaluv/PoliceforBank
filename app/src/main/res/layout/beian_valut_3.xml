@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -199,7 +199,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -244,7 +244,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -289,7 +289,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -334,7 +334,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -379,7 +379,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -416,7 +416,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:text="守库室卫及其他设施:"/>
 
                 <RadioGroup
@@ -424,7 +424,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -469,7 +469,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -514,7 +514,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"

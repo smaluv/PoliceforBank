@@ -1,19 +1,23 @@
 package com.example.smalu.policebank.activity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
@@ -31,6 +35,7 @@ import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import static com.example.smalu.policebank.utils.CONTS.ServerIp;
@@ -52,8 +57,8 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
     private ImageView tit_iv;
 
     private View view1,view2,view3;
-    private Spinner sp2_changsuo,sp8_changsuo,sp10_changsuo,sp11_changsuo;
-    private EditText et1,et3,et4,et5,et6,et7,et9;
+    private Spinner sp8_changsuo;
+    private EditText et1,et3,et4,et5,et6,et7,et9,et_date1,et_date2,et_date3;
     private List<String> spinnerList,spinnerList2;
     private ArrayAdapter<String> spinner_adapter,spinner_adapter2;
     private String view_data = "";
@@ -146,10 +151,10 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
     }
 
     private void initPag1(View view){
-        sp2_changsuo = (Spinner) view.findViewById(R.id.sp2_changsuo);
+//        sp2_changsuo = (Spinner) view.findViewById(R.id.sp2_changsuo);
         sp8_changsuo = (Spinner) view.findViewById(R.id.sp8_changsuo);
-        sp10_changsuo = (Spinner) view.findViewById(R.id.sp10_changsuo);
-        sp11_changsuo = (Spinner) view.findViewById(R.id.sp11_changsuo);
+//        sp10_changsuo = (Spinner) view.findViewById(R.id.sp10_changsuo);
+//        sp11_changsuo = (Spinner) view.findViewById(R.id.sp11_changsuo);
 
         et1 = (EditText) view.findViewById(R.id.et1);
         et3 = (EditText) view.findViewById(R.id.et3);
@@ -158,6 +163,66 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
         et6 = (EditText) view.findViewById(R.id.et6);
         et7 = (EditText) view.findViewById(R.id.et7);
         et9 = (EditText) view.findViewById(R.id.et9);
+        et_date1 = (EditText) view.findViewById(R.id.et_date1);
+        et_date2 = (EditText) view.findViewById(R.id.et_date2);
+        et_date3 = (EditText) view.findViewById(R.id.et_date3);
+
+        et_date1.setInputType(InputType.TYPE_NULL);
+        et_date2.setInputType(InputType.TYPE_NULL);
+        et_date3.setInputType(InputType.TYPE_NULL);
+
+        et_date1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    Calendar calendar = Calendar.getInstance();
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Jiancha_yewukuActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                            Jiancha_yewukuActivity.this.et_date1.setText(year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
+                        }
+                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    datePickerDialog.show();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        et_date2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    Calendar calendar = Calendar.getInstance();
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Jiancha_yewukuActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                            Jiancha_yewukuActivity.this.et_date2.setText(year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
+                        }
+                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    datePickerDialog.show();
+                    return true;
+                }
+                return false;
+            }
+        });
+        et_date3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    Calendar calendar = Calendar.getInstance();
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Jiancha_yewukuActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                            Jiancha_yewukuActivity.this.et_date3.setText(year + "-" + (monthOfYear+1) + "-" + dayOfMonth);
+                        }
+                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    datePickerDialog.show();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         spinnerList = new ArrayList<String>();
         for (int i =1;i<30;i++){
@@ -171,11 +236,13 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
 
         spinner_adapter = new ArrayAdapter<String>(Jiancha_yewukuActivity.this,android.R.layout.simple_spinner_item,spinnerList);
         spinner_adapter2 = new ArrayAdapter<String>(Jiancha_yewukuActivity.this,android.R.layout.simple_spinner_item,spinnerList2);
-        sp2_changsuo.setAdapter(spinner_adapter);
-        sp10_changsuo.setAdapter(spinner_adapter);
-        sp11_changsuo.setAdapter(spinner_adapter);
+//        sp2_changsuo.setAdapter(spinner_adapter);
+//        sp10_changsuo.setAdapter(spinner_adapter);
+//        sp11_changsuo.setAdapter(spinner_adapter);
         sp8_changsuo.setAdapter(spinner_adapter2);
     }
+
+
     private void initPag2(View view){
         rg1 = (RadioGroup) view.findViewById(R.id.rg1);
         rg2 = (RadioGroup) view.findViewById(R.id.rg2);
@@ -296,7 +363,7 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
             @Override
             public void onClick(View view) {
                 data[0] = et1.getText().toString();
-                data[1] = sp2_changsuo.getSelectedItem().toString();
+                data[1] = et_date1.getText().toString();
                 data[2] = et3.getText().toString();
                 data[3] = et4.getText().toString();
                 data[4] = et5.getText().toString();
@@ -304,8 +371,8 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
                 data[6] = et7.getText().toString();
                 data[7] = sp8_changsuo.getSelectedItem().toString();
                 data[8] = et9.getText().toString();
-                data[9] = sp10_changsuo.getSelectedItem().toString();
-                data[10] = sp11_changsuo.getSelectedItem().toString();
+                data[9] = et_date2.getText().toString();
+                data[10] = et_date3.getText().toString();
                 data[62] = et311.getText().toString();
                 data[63] = et312.getText().toString();
                 data[64] = et32.getText().toString();

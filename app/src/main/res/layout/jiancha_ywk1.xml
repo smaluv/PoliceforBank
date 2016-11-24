@@ -46,8 +46,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <Spinner
-                android:id="@+id/sp2_changsuo"
+            <EditText
+                android:inputType="none"
+                android:hint="请选择日期"
+                android:id="@+id/et_date1"
                 android:layout_height="40dp"
                 android:layout_width="match_parent"/>
         </TableRow>
@@ -201,8 +203,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"/>
 
-            <Spinner
-                android:id="@+id/sp10_changsuo"
+            <EditText
+                android:inputType="none"
+                android:id="@+id/et_date2"
+                android:hint="请选择日期"
                 android:layout_height="40dp"
                 android:layout_width="match_parent"/>
         </TableRow>
@@ -218,8 +222,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"/>
 
-            <Spinner
-                android:id="@+id/sp11_changsuo"
+            <EditText
+                android:inputType="none"
+                android:hint="请选择日期"
+                android:id="@+id/et_date3"
                 android:layout_height="40dp"
                 android:layout_width="match_parent"/>
         </TableRow>

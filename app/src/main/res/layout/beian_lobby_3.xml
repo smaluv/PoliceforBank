@@ -192,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:text="场所内设置的自助设备:"/>
 
                 <RadioGroup
@@ -237,7 +237,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorIconGray"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:text="场内人员活动区监控:"/>
 
                 <RadioGroup
@@ -335,7 +335,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:contentDescription="属性"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"

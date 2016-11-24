@@ -20,6 +20,7 @@ import java.util.List;
 public class BeianActivity extends Activity {
 
     private Button beianValut,beianLobby,beianEquipment;
+    private ImageView  bback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,13 @@ public class BeianActivity extends Activity {
             public void onClick(View v) {
                 Intent intent =new Intent(BeianActivity.this,Beian_equipmentActivity.class);
                 startActivity(intent);
+            }
+        });
+        bback=(ImageView)findViewById(R.id.bback);
+        bback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

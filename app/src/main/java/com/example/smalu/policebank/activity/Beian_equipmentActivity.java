@@ -201,7 +201,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_equipment_auto11=rb.getText().toString();
-                Toast.makeText(Beian_equipmentActivity.this, "出入口装填区安装控制装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "出入口装填区安装控制装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -215,7 +215,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_bank22= String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "现金安装入侵设备并联网：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "现金安装入侵设备并联网：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_bank3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -228,7 +228,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_bank33= String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "远程报警、图像、声音等信息传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "远程报警、图像、声音等信息传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_bank4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -241,7 +241,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_equipment_bank44= String.valueOf(rb.getText());
-                Toast.makeText(Beian_equipmentActivity.this, "自助银行门前及运钞车停放区域安装监控设施：" + beian_equipment_bank44, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "自助银行门前及运钞车停放区域安装监控设施：" + beian_equipment_bank44, Toast.LENGTH_SHORT).show();
             }
         });
         //界面2
@@ -262,7 +262,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 //更新文本内容，以符合选中项
                 beian_equipment_auto11= String.valueOf(rb.getText());
-                Toast.makeText(Beian_equipmentActivity.this, "安装防砸等探测装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "安装防砸等探测装置：" + beian_equipment_auto11, Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -276,7 +276,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_auto22=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "安装数字监控装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "安装数字监控装置：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_auto3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -289,7 +289,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_auto33=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "安装报警联网功能：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "安装报警联网功能：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_auto4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -302,7 +302,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_auto44=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "远程报警传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "远程报警传输：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_auto5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -315,7 +315,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_auto55=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "对操作人员面部监控：" + rb.getText(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "对操作人员面部监控：" + rb.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         beian_equipment_auto6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -328,7 +328,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 RadioButton rb = (RadioButton) Beian_equipmentActivity.this.findViewById(radioButtonId);
                 beian_equipment_auto66=String.valueOf(rb.getText());
                 //更新文本内容，以符合选中项
-                Toast.makeText(Beian_equipmentActivity.this, "回放图片清晰：" + beian_equipment_auto66, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Beian_equipmentActivity.this, "回放图片清晰：" + beian_equipment_auto66, Toast.LENGTH_SHORT).show();
             }
         });
 
