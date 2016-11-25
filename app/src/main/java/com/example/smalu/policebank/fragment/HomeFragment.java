@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     private Intent intent;
     private ImageView beian,jiancha,pinggu,zhenggai;
     private  Context context;
+    private  String username;
 
     public HomeFragment(){}
     public HomeFragment(Context context){
@@ -36,6 +38,9 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment,container,false);
 //        jiancha=(ImageView)view.findViewById(R.id.jiancha);
+//        Bundle bundle = getArguments();
+//        username=bundle.getString("username1");
+//        Log.d("username",username);
         beian=(ImageView)view.findViewById(R.id.beian);
         beian.setOnClickListener(new View.OnClickListener() {
             @Override

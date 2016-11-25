@@ -8,7 +8,17 @@ public class Userinfo {
 
     private String msg;
     private String state;
-        public String getMsg() {
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getMsg() {
             return msg;
         }
 

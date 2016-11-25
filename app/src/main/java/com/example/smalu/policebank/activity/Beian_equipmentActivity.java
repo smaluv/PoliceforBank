@@ -71,9 +71,10 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
             beian_equipment_defend_person_tel,   //责任人联系电话
             beian_vault_2_finishTime,      //完工时间
             beian_vault_2_startTime,    //开工时间
-            beian_vault_2_openTime;     //开业时间
+            beian_vault_2_openTime,     //开业时间
+            beian_equipment_datePicker;   //填报时间
     private Button beian_equipment_information_btn;
-    private DatePicker beian_equipment_datePicker;   //填报时间
+//    private DatePicker beian_equipment_datePicker;   //填报时间
     private  TextView beianequipment_submit;
     private String datepictime,beian_equipment_Radioxiaofang3;
     private int timestage;//记录金库的建设时间判断码
@@ -158,7 +159,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         mPager.setCurrentItem(0);
         mPager.setOnPageChangeListener(new MyOnPageChangeListener());
 
-        beian_equipment_datePicker=(DatePicker)beian_equipment_1.findViewById(R.id.beian_equipment_datePicker);
+        beian_equipment_datePicker=(EditText) beian_equipment_1.findViewById(R.id.beian_equipment_datePicker);
         beian_vault_2_finishTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_finishTime);
         beian_vault_2_startTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_startTime);
         beian_vault_2_openTime=(EditText)beian_equipment_1.findViewById(R.id.beian_vault_2_openTime);
@@ -181,7 +182,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
         beian_equipment_RadioProject=(RadioGroup)beian_equipment_1.findViewById(R.id.beian_equipment_RadioProject);
         beian_equipment_Radioxiaofang=(RadioGroup)beian_equipment_1.findViewById(R.id.beian_equipment_Radioxiaofang);
         beian_equipment_information_btn=(Button)beian_equipment_1.findViewById(R.id.beian_equipment_information_btn);
-        beian_equipment_datePicker=(DatePicker)beian_equipment_1.findViewById(R.id.beian_equipment_datePicker);
+        beian_equipment_datePicker=(EditText) beian_equipment_1.findViewById(R.id.beian_equipment_datePicker);
 
 
        //界面3
@@ -332,27 +333,27 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
             }
         });
 
-        //获取DatePicker时间
-        // 获取日历对象
-        calendar = Calendar.getInstance();
-        // 获取当前对应的年、月、日的信息
-        year = calendar.get(Calendar.YEAR);
-        month = calendar.get(Calendar.MONTH);
-        int monthtime=month+1;
-        day = calendar.get(Calendar.DAY_OF_MONTH);
-        datepictime=year + "-" + monthtime + "-" + day;
-//        Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
-//         dataPicker初始化
-        beian_equipment_datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
-            @Override
-            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Beian_equipmentActivity.this.year=year;
-                Beian_equipmentActivity.this.month=monthOfYear+1;
-                Beian_equipmentActivity.this.day=dayOfMonth;
-                datepictime=year + "-" + month + "-" + day;
-                Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
-            }
-        });
+//        //获取DatePicker时间
+//        // 获取日历对象
+//        calendar = Calendar.getInstance();
+//        // 获取当前对应的年、月、日的信息
+//        year = calendar.get(Calendar.YEAR);
+//        month = calendar.get(Calendar.MONTH);
+//        int monthtime=month+1;
+//        day = calendar.get(Calendar.DAY_OF_MONTH);
+//        datepictime=year + "-" + monthtime + "-" + day;
+////        Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
+////         dataPicker初始化
+//        beian_equipment_datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
+//            @Override
+//            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                Beian_equipmentActivity.this.year=year;
+//                Beian_equipmentActivity.this.month=monthOfYear+1;
+//                Beian_equipmentActivity.this.day=dayOfMonth;
+//                datepictime=year + "-" + month + "-" + day;
+//                Toast.makeText(Beian_equipmentActivity.this,datepictime,Toast.LENGTH_LONG).show();
+//            }
+//        });
         //获取RadioGroup值
         beian_equipment_RadioAuto.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -438,7 +439,7 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                             "&startdate=" + beian_vault_2_startTime.getText().toString() +
                             "&completedate=" + beian_vault_2_finishTime.getText().toString() +
                             "&kaiyedate=" + beian_vault_2_openTime.getText().toString() +
-                            "&rtime=" + datepictime //界面1
+                            "&rtime=" + beian_equipment_datePicker.getText().toString() //界面1
                             + "&barsize=" + beian_equipment_auto11 +
                             "&barwidth=" + beian_equipment_auto22 +
                             "&barheight=" + beian_equipment_auto33 +
@@ -514,6 +515,18 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
                 timestage=1;
             }
         });
+        beian_equipment_datePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //实例化对象
+                DatePickerFragment datePickerFragment = new DatePickerFragment();
+                //调用show方法弹出对话框
+                // 第一个参数为FragmentManager对象
+                // 第二个为调用该方法的fragment的标签
+                datePickerFragment.show(getSupportFragmentManager(), "date_picker");
+                timestage=4;
+            }
+        });
     }
     /**
      * 初始化动画
@@ -540,6 +553,8 @@ public class Beian_equipmentActivity extends AppCompatActivity implements DataCa
             beian_vault_2_finishTime.setText(data);
         }else if(timestage==3){
             beian_vault_2_openTime.setText(data);
+        }else  if(timestage==4){
+            beian_equipment_datePicker.setText(data);
         }
     }
 

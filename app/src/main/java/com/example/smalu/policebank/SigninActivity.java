@@ -19,6 +19,8 @@ import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.bean.Userinfo;
 
 
+import java.util.List;
+
 import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 
 /**
@@ -100,6 +102,7 @@ public class SigninActivity extends Activity implements View.OnClickListener{
                                     Toast.makeText(SigninActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                                     Bundle bundle = new Bundle();
                                     bundle.putString("username",text1);
+
                                     Intent intent = new Intent(SigninActivity.this,MainActivity.class);
                                     intent.putExtras(bundle);
                                     startActivity(intent);

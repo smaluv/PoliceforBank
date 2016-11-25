@@ -67,7 +67,8 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
             beian_valut_eare,//地址
             beian_valut2_defendpeople,//保卫责任人
             beian_valut2_defendtel,//保卫联系电话
-            beian_valut3_eare;//金库面积
+            beian_valut3_eare,//金库面积
+            beian_valut_datepicker; //填报时间
     private RadioGroup beian_valut2_defendproject,//工程属性
             beian_valut2_isxiaofang,//消防是否达标
             beian_valut3_1,
@@ -95,7 +96,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
             beian_valut3_101="达标",
             beian_valut3_111="达标",
             beian_valut3_122="达标";
-    private DatePicker beian_valut_datepicker;
+//    private DatePicker beian_valut_datepicker;
     private Button testbutton2;
     private String datepictime;
     private int timestage;//记录金库的建设时间判断码
@@ -143,7 +144,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
         beian_valut_num=(EditText)beian_valut_1.findViewById(R.id.beian_valut_num);
         beian_valut_belowoffice=(EditText)beian_valut_1.findViewById(R.id.beian_valut_belowoffice);
         beian_valut_eare=(EditText)beian_valut_1.findViewById(R.id.beian_valut_eare);
-        beian_valut_datepicker=(DatePicker)beian_valut_1.findViewById(R.id.beian_valut_datepicker);
+        beian_valut_datepicker=(EditText) beian_valut_1.findViewById(R.id.beian_valut_datepicker);
         beian_vault_2_finishTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_finishTime);
         beian_vault_2_startTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_startTime);
         beian_vault_2_openTime=(EditText)beian_valut_2.findViewById(R.id.beian_vault_2_openTime);
@@ -151,24 +152,24 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
 
         //获取DatePicker时间
         // 获取日历对象
-        calendar = Calendar.getInstance();
-        // 获取当前对应的年、月、日的信息
-        year = calendar.get(Calendar.YEAR);
-        month = calendar.get(Calendar.MONTH);
-        int monthtime=month+1;
-        day = calendar.get(Calendar.DAY_OF_MONTH);
-        datepictime=year + "-" + monthtime + "-" + day;
-//         dataPicker初始化
-        beian_valut_datepicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
-            @Override
-            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Beian_valutActivity.this.year=year;
-                Beian_valutActivity.this.month=monthOfYear+1;
-                Beian_valutActivity.this.day=dayOfMonth;
-                datepictime=year + "-" + month + "-" + day;
-                Toast.makeText(Beian_valutActivity.this,datepictime,Toast.LENGTH_LONG).show();
-            }
-        });
+//        calendar = Calendar.getInstance();
+//        // 获取当前对应的年、月、日的信息
+//        year = calendar.get(Calendar.YEAR);
+//        month = calendar.get(Calendar.MONTH);
+//        int monthtime=month+1;
+//        day = calendar.get(Calendar.DAY_OF_MONTH);
+//        datepictime=year + "-" + monthtime + "-" + day;
+////         dataPicker初始化
+//        beian_valut_datepicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
+//            @Override
+//            public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                Beian_valutActivity.this.year=year;
+//                Beian_valutActivity.this.month=monthOfYear+1;
+//                Beian_valutActivity.this.day=dayOfMonth;
+//                datepictime=year + "-" + month + "-" + day;
+//                Toast.makeText(Beian_valutActivity.this,datepictime,Toast.LENGTH_LONG).show();
+//            }
+//        });
         //界面2
         beian_valut2_defendpeople=(EditText)beian_valut_2.findViewById(R.id.beian_valut2_defendpeople);
         beian_valut2_defendtel=(EditText)beian_valut_2.findViewById(R.id.beian_valut2_defendtel);
@@ -371,7 +372,7 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                             "&rnum=" + beian_valut_num.getText().toString() +
                             "&belongto=" + beian_valut_belowoffice.getText().toString() +
                             "&addr=" + beian_valut_eare.getText().toString() +
-                            "&rtime=" + datepictime +
+                            "&rtime=" + beian_valut_datepicker.getText().toString() +
                             "&guard=" + beian_valut2_defendpeople.getText().toString()
                             + "&phone=" + beian_valut2_defendtel.getText().toString() +
                             "&ischecked=" + beian_valut2_isxiaofang1 +
@@ -490,6 +491,18 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
                 timestage=1;
             }
         });
+        beian_valut_datepicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //实例化对象
+                DatePickerFragment datePickerFragment = new DatePickerFragment();
+                //调用show方法弹出对话框
+                // 第一个参数为FragmentManager对象
+                // 第二个为调用该方法的fragment的标签
+                datePickerFragment.show(getSupportFragmentManager(), "date_picker");
+                timestage=4;
+            }
+        });
     }
     /**
      * 初始化动画
@@ -516,6 +529,8 @@ public class Beian_valutActivity extends AppCompatActivity implements DataCallBa
             beian_vault_2_finishTime.setText(data);
         }else if(timestage==3){
             beian_vault_2_openTime.setText(data);
+        }else if(timestage==4){
+            beian_valut_datepicker.setText(data);
         }
     }
 
