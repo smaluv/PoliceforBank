@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tabDeal.setSelected(true);
                 if(f1==null){
                     f1 = new HomeFragment(this);
+                    Bundle bundle = this.getIntent().getExtras();
+                    f1.setArguments(bundle);
                     transaction.add(R.id.fragment_container,f1);
                 }else{
                     transaction.show(f1);
@@ -118,9 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tabUser.setSelected(true);
                 if(f3==null){
                     f3 = new MyFragment();
-                    Bundle bundle = this.getIntent().getExtras();
-                    f3.setArguments(bundle);
-
+//                    Bundle bundle = this.getIntent().getExtras();
+//                    f3.setArguments(bundle);
                     transaction.add(R.id.fragment_container,f3);
                 }else{
                     transaction.show(f3);

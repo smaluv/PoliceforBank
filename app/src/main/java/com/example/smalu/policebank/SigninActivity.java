@@ -17,9 +17,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.bean.Userinfo;
+import com.example.smalu.policebank.modle.UserData;
 
-
-import java.util.List;
 
 import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 
@@ -65,7 +64,7 @@ public class SigninActivity extends Activity implements View.OnClickListener{
                 text2 = et2.getText().toString();
                 String url = ServerIp+"login?phone="+text1+"&pwd="+text2;
                 Log.i("TAG",url);
-               //ServerIp+"login?phone="+text1+"&pwd="+text2,
+                //ServerIp+"login?phone="+text1+"&pwd="+text2,
 
 //                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url,null,
 //                        new Response.Listener<JSONObject>(){
@@ -87,24 +86,23 @@ public class SigninActivity extends Activity implements View.OnClickListener{
 //                mQueue.add(jsonObjectRequest);
 ////
 
-
-    StringRequest stringRequest = new StringRequest(url,
+                StringRequest stringRequest = new StringRequest(url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-//                                Log.d("TAG", response);
                                 Userinfo userinfo = JSON.parseObject(response,Userinfo.class);
                                 String s = userinfo.getState().toString();
-//                                Log.i("TAG",s);
                                 if (s.equals("0")){
                                     Toast.makeText(SigninActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
                                 }else if(s.equals("1")){
                                     Toast.makeText(SigninActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
-                                    Bundle bundle = new Bundle();
-                                    bundle.putString("username",text1);
-
+                                    //                    Bundle bundle = new Bundle();
+                                    UserData ud = (UserData) getApplication();
+                                    ud.setUsername(text1);
+                                    Log.i("TAG",ud.getUsername());
+                                    //                    bundle.putString("username",text1);
                                     Intent intent = new Intent(SigninActivity.this,MainActivity.class);
-                                    intent.putExtras(bundle);
+                                    //                    intent.putExtras(bundle);
                                     startActivity(intent);
                                     finish();
                                 }

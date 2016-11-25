@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.R;
+import com.example.smalu.policebank.modle.UserData;
 
 import static com.example.smalu.policebank.utils.CONTS.ServerIp;
 
@@ -102,6 +103,8 @@ public class PingguActivity extends Activity{
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                UserData ud = (UserData) getApplication();
+                String username = ud.getUsername();
                 String data[] = {et1.getText().toString(),et2.getText().toString(),et3.getText().toString(),
                         et4.getText().toString(),et5.getText().toString(),et6.getText().toString(),
                         et7.getText().toString(),et8.getText().toString(),et9.getText().toString(),
@@ -116,7 +119,7 @@ public class PingguActivity extends Activity{
                         et34.getText().toString(),et35.getText().toString(),et36.getText().toString(),
                         et37.getText().toString(),et38.getText().toString(),et39.getText().toString(),
                         et40.getText().toString(),et41.getText().toString(),et42.getText().toString(),
-                        et_check1.getText().toString(),et_check2.getText().toString()};
+                        et_check1.getText().toString(),et_check2.getText().toString(),username};
                 String url = ServerIp+"EvaluateInsert?item_equip_proj="+data[0]+"&item_equip_prob="+data[1]+"&item_equip_score="+data[2]+
                         "&tech_equip_proj="+data[3]+"&tech_equip_prob="+data[4]+"&tech_equip_score="+data[5]+"&en_pre_proj="+data[6]+"&en_pre_prob="+data[7]
                         +"&en_pre_score="+data[8]+"&tech_pre_proj="+data[9]+"&tech_pre_prob="+data[10]+"&tech_pre_score="+data[11]+"&loc_pre_proj="+data[12]
@@ -125,7 +128,7 @@ public class PingguActivity extends Activity{
                         +"&fire_control_prob="+data[25]+"&fire_control_score="+data[26]+"&compu_safe_proj="+data[27]+"&compu_safe_prob="+data[28]+"&compu_safe_score="+data[29]
                         +"&date_safe_proj="+data[30]+"&date_safe_prob="+data[31]+"&date_safe_score="+data[32]+"&gun_safe_proj="+data[33]+"&gun_safe_prob="+data[34]+"&gun_safe_score="+data[35]
                         +"&case_proj="+data[36]+"&case_prob="+data[37]+"&case_score="+data[38]+"&safe_defent_proj="+data[39]+"&safe_defent_prob="+data[40]+"&safe_defent_score="+data[41]
-                        +"&assess_member="+data[42]+"&assess_leader="+data[43];
+                        +"&assess_member="+data[42]+"&assess_leader="+data[43]+"&username="+data[44];
 
                 Log.i("TAG",url);
                 StringRequest stringRequest = new StringRequest(url,

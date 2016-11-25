@@ -38,6 +38,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
+import com.example.smalu.policebank.modle.UserData;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -75,7 +76,7 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
     private Button btn;
     private RadioGroup rg1,rg2,rg3,rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12,rg13,rg14,rg15,
             rg16,rg17,rg18,rg19,rg20,rg21,rg22,rg23,rg24;
-    private String data [] = new String[31];
+    private String data [] = new String[32];
 
     private EditText et311,et312,et32,et33;
     private RequestQueue mQueue;
@@ -255,6 +256,8 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                UserData ud = (UserData) getApplication();
+                String username = ud.getUsername();
                 data[0] = et_date.getText().toString();
                 data[1] = et1.getText().toString();
                 data[2] = et2.getText().toString();
@@ -262,17 +265,18 @@ public class Jiancha_autoActivity extends AppCompatActivity implements RadioGrou
                 data[28] = et312.getText().toString();
                 data[29] = et32.getText().toString();
                 data[30] = et33.getText().toString();
+                data[31] = username;
                 for(int i =0;i<data.length;i++){
                     view_data = view_data+data[i];
                 }
 //                Toast.makeText(Jiancha_autoActivity.this,view_data,Toast.LENGTH_SHORT).show();
 
                 //需要修改HTTP地址
-                    String url = new String(ServerIp+"SelfServiceInsert?place="+data[1]+"&position="+data[2]+"&date="+data[0]+"&siren="+data[3]+data[4]+data[5]+data[6]+"&access_control="+data[7]+data[8]+"&usp_power="+data[9]+ data[10]+
-                            "&video_monitor="+data[11]+data[12]+data[13]+data[14]+"&steal_shake="+data[15]+data[16]+"&infrared_siren="+data[17]+data[18]+"&talkback="+data[19]+data[20]+
-                            "&selfhelp_machine="+data[21]+data[22]+"&fire_equip="+data[23]+data[24]+"&emergen_light="+data[25]+data[26]+"&hid_danger_method="+data[27]+"&method="
-                            +data[28]+"&check_man="+data[29]+"&check_unit="+data[30]);
-                    Log.i("TAG",url);
+                String url = ServerIp+"SelfServiceInsert?place="+data[1]+"&position="+data[2]+"&date="+data[0]+"&siren="+data[3]+data[4]+data[5]+data[6]+"&access_control="+data[7]+data[8]+"&usp_power="+data[9]+ data[10]+
+                        "&video_monitor="+data[11]+data[12]+data[13]+data[14]+"&steal_shake="+data[15]+data[16]+"&infrared_siren="+data[17]+data[18]+"&talkback="+data[19]+data[20]+
+                        "&selfhelp_machine="+data[21]+data[22]+"&fire_equip="+data[23]+data[24]+"&emergen_light="+data[25]+data[26]+"&hid_danger_method="+data[27]+"&method="
+                        +data[28]+"&check_man="+data[29]+"&check_unit="+data[30]+"&username="+data[31];
+                Log.i("TAG",url);
                 if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
                     Toast.makeText(Jiancha_autoActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
                 }else {

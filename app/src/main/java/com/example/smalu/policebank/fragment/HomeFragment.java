@@ -26,11 +26,10 @@ public class HomeFragment  extends Fragment implements View.OnClickListener{
     private Intent intent;
     private ImageView beian,jiancha,pinggu,zhenggai;
     private  Context context;
-    private  String username;
 
     public HomeFragment(){}
     public HomeFragment(Context context){
-            this.context=context;
+        this.context=context;
     }
 
     @Nullable

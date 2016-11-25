@@ -35,6 +35,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
+import com.example.smalu.policebank.modle.UserData;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -72,7 +73,7 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
     private EditText et21,et22,et23,et24,et25,et26,et27,et28,et29,et210,et211,et212;
     private RadioGroup rg21,rg22,rg23,rg24,rg25,rg26,rg27,rg28,rg29,rg210,rg211,rg212,rg213,rg214,rg215,
             rg216,rg217,rg218,rg219,rg220,rg221,rg222,rg223,rg224,rg225,rg226,rg227,rg228;
-    private String[] data = new String[49];
+    private String[] data = new String[50];
 
     private EditText et311,et312, et32, et33;
     private RequestQueue mQueue;
@@ -285,6 +286,8 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
         et312 = (EditText) view.findViewById(R.id.et12);
         et32 = (EditText) view.findViewById(R.id.et2);
         et33 = (EditText) view.findViewById(R.id.et3);
+        UserData ud = (UserData) getApplication();
+        final String username = ud.getUsername();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -316,6 +319,7 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
                 data[46] = et312.getText().toString();
                 data[47] = et32.getText().toString();
                 data[48] = et33.getText().toString();
+                data[49] = username;
 
                 String url = ServerIp+"BankHallInsert?place="+data[0]+"&has_selfhelp_equip="+data[1]
                         +"&has_business_location="+data[2]+"&cash_num="+data[3]+"&detail_position="+data[4]
@@ -330,35 +334,35 @@ public class Jiancha_yingyeActivity extends AppCompatActivity implements RadioGr
                         +"&btn_net="+data[37]+"&police_monitor_defense="+data[38]+"&custom_tallback="+data[39]
                         +"&fire_equip_standard="+data[40]+"&teller_self_defense="+data[41]+"&hall_light="+data[42]
                         +"&hall_plans="+data[43]+"&hall_rehearse="+data[44]+"&hid_danger_method="+data[45]
-                        +"&method="+data[46]+"&check_man="+data[47]+"&check_unit="+data[48];
+                        +"&method="+data[46]+"&check_man="+data[47]+"&check_unit="+data[48]+"&username="+data[49];
                 Log.i("TAG",url);
                 if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
                     Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
                 }else{
-                StringRequest stringRequest = new StringRequest(url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("TAG", response);
-                                Toast.makeText(Jiancha_yingyeActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
-                                finish();
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("TAG", error.getMessage(), error);
-                        Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败",Toast.LENGTH_SHORT).show();
+                    StringRequest stringRequest = new StringRequest(url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.d("TAG", response);
+                                    Toast.makeText(Jiancha_yingyeActivity.this,"信息插入成功",Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.e("TAG", error.getMessage(), error);
+                            Toast.makeText(Jiancha_yingyeActivity.this,"信息插入失败",Toast.LENGTH_SHORT).show();
 
-                    }
-                });
-                mQueue.add(stringRequest);
+                        }
+                    });
+                    mQueue.add(stringRequest);
 //                for (int i = 0; i < data.length; i++) {
 //                    view_data = view_data + data[i];
 //                }
 //                Toast.makeText(Jiancha_yingyeActivity.this, view_data, Toast.LENGTH_SHORT).show();
 //                view_data = "";
                 }
-                }
+            }
         });
     }
 
@@ -441,68 +445,68 @@ for(int l=0;l<listAdapter.getCount();l++){
   View view = listAdapter.getView(l, null, null);
      */
 
-        /**
-         * 头标点击监听
-         */
-        public class MyOnClickListener implements View.OnClickListener {
-            private int index = 0;
+    /**
+     * 头标点击监听
+     */
+    public class MyOnClickListener implements View.OnClickListener {
+        private int index = 0;
 
-            public MyOnClickListener(int i) {
-                index = i;
-            }
-
-            @Override
-            public void onClick(View v) {
-                mPager.setCurrentItem(index);
-            }
+        public MyOnClickListener(int i) {
+            index = i;
         }
 
-        /**
-         * 页卡切换监听
-         */
-        public class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
-
-            int one = offset * 2 + bmpW;// 页卡1 -> 页卡2 偏移量
-            int two = one * 2;// 页卡1 -> 页卡3 偏移量
-
-            @Override
-            public void onPageSelected(int arg0) {
-                Animation animation = null;
-                switch (arg0) {
-                    case 0:
-                        if (currIndex == 1) {
-                            animation = new TranslateAnimation(one, 0, 0, 0);
-                        } else if (currIndex == 2) {
-                            animation = new TranslateAnimation(two, 0, 0, 0);
-                        }
-                        break;
-                    case 1:
-                        if (currIndex == 0) {
-                            animation = new TranslateAnimation(offset, one, 0, 0);
-                        } else if (currIndex == 2) {
-                            animation = new TranslateAnimation(two, one, 0, 0);
-                        }
-                        break;
-                    case 2:
-                        if (currIndex == 0) {
-                            animation = new TranslateAnimation(offset, two, 0, 0);
-                        } else if (currIndex == 1) {
-                            animation = new TranslateAnimation(one, two, 0, 0);
-                        }
-                        break;
-                }
-                currIndex = arg0;
-                animation.setFillAfter(true);// True:图片停在动画结束位置
-                animation.setDuration(300);
-                cursor.startAnimation(animation);
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
+        @Override
+        public void onClick(View v) {
+            mPager.setCurrentItem(index);
         }
+    }
+
+    /**
+     * 页卡切换监听
+     */
+    public class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
+
+        int one = offset * 2 + bmpW;// 页卡1 -> 页卡2 偏移量
+        int two = one * 2;// 页卡1 -> 页卡3 偏移量
+
+        @Override
+        public void onPageSelected(int arg0) {
+            Animation animation = null;
+            switch (arg0) {
+                case 0:
+                    if (currIndex == 1) {
+                        animation = new TranslateAnimation(one, 0, 0, 0);
+                    } else if (currIndex == 2) {
+                        animation = new TranslateAnimation(two, 0, 0, 0);
+                    }
+                    break;
+                case 1:
+                    if (currIndex == 0) {
+                        animation = new TranslateAnimation(offset, one, 0, 0);
+                    } else if (currIndex == 2) {
+                        animation = new TranslateAnimation(two, one, 0, 0);
+                    }
+                    break;
+                case 2:
+                    if (currIndex == 0) {
+                        animation = new TranslateAnimation(offset, two, 0, 0);
+                    } else if (currIndex == 1) {
+                        animation = new TranslateAnimation(one, two, 0, 0);
+                    }
+                    break;
+            }
+            currIndex = arg0;
+            animation.setFillAfter(true);// True:图片停在动画结束位置
+            animation.setDuration(300);
+            cursor.startAnimation(animation);
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+        }
+    }
 }

@@ -33,6 +33,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.smalu.policebank.MainActivity;
 import com.example.smalu.policebank.R;
 import com.example.smalu.policebank.adapter.viewPagerAdapter;
+import com.example.smalu.policebank.modle.UserData;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -67,7 +68,7 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
     private RadioGroup rg1,rg2,rg3,rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12,rg13,rg14,rg15,rg16,rg17,rg18,rg19,rg20,
             rg21,rg22,rg23,rg24,rg25,rg26,rg27,rg28,rg29,rg30,rg31,rg32,rg33,rg34,rg35,rg36,rg37,rg38,rg39,rg40,
             rg41,rg42,rg43,rg44,rg45,rg46,rg47,rg48,rg49,rg50,rg51;
-    private String data [] = new String[66];
+    private String data [] = new String[67];
 
     private EditText et311,et312,et32,et33;
     private RequestQueue mQueue;
@@ -359,6 +360,8 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
         et312 = (EditText) view.findViewById(R.id.et12);
         et32 = (EditText) view.findViewById(R.id.et2);
         et33 = (EditText) view.findViewById(R.id.et3);
+        UserData ud = (UserData) getApplication();
+        final String username = ud.getUsername();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -377,7 +380,9 @@ public class Jiancha_yewukuActivity extends AppCompatActivity implements RadioGr
                 data[63] = et312.getText().toString();
                 data[64] = et32.getText().toString();
                 data[65] = et33.getText().toString();
-                String url = ServerIp+"BankLibraryCheckInsert?belong_unit="+data[0]+"&date="+data[1]+"&address="+data[2]+"&defend_head="+data[3]+"&tel="+data[4]+"&item_unit="+data[5]+"&tech_unit="+data[6]+"&cate="+data[7]+"&area="+data[8]+"&start_date="+data[9]+"&finish_date="+data[10]+"&req1="+data[11]+"&req2="+data[12]+"&req3="+data[13]+"&req4="+data[14]+"&req5="+data[15]+"&req6="+data[16]+"&req7="+data[17]+"&req8="+data[18]+"&req9="+data[19]+"&req10="+data[20]+"&req11="+data[21]+"&req12="+data[22]+"&req13="+data[23]+"&req14="+data[24]+"&req15="+data[25]+"&req16="+data[26]+"&req17="+data[27]+"&req18="+data[28]+"&req19="+data[29]+"&req20="+data[30]+"&req21="+data[31]+"&req22="+data[32]+"&req23="+data[33]+"&req24="+data[34]+"&req25="+data[35]+"&req26="+data[36]+"&req27="+data[37]+"&req28="+data[38]+"&req29="+data[39]+"&req30="+data[40]+"&req31="+data[41]+"&req32="+data[42]+"&req33="+data[43]+"&req34="+data[44]+"&req35="+data[45]+"&req36="+data[46]+"&req37="+data[47]+"&req38="+data[48]+"&req39="+data[49]+"&req40="+data[50]+"&req41"+data[51]+"&req42="+data[52]+"&req43="+data[53]+"&req44="+data[54]+"&req45="+data[55]+"&req46="+data[56]+"&req47="+data[57]+"&req48="+data[58]+"&req49="+data[59]+"&req50="+data[60]+"&req51="+data[61]+"&hid_danger_method="+data[62]+"&method="+data[63]+"&check_unit="+data[64]+"&check_man="+data[65];
+                data[66] = username;
+                String url = ServerIp+"BankLibraryCheckInsert?belong_unit="+data[0]+"&date="+data[1]+"&address="+data[2]+"&defend_head="+data[3]+"&tel="+data[4]+"&item_unit="+data[5]+"&tech_unit="+data[6]+"&cate="+data[7]+"&area="+data[8]+"&start_date="+data[9]+"&finish_date="+data[10]+"&req1="+data[11]+"&req2="+data[12]+"&req3="+data[13]+"&req4="+data[14]+"&req5="+data[15]+"&req6="+data[16]+"&req7="+data[17]+"&req8="+data[18]+"&req9="+data[19]+"&req10="+data[20]+"&req11="+data[21]+"&req12="+data[22]+"&req13="+data[23]+"&req14="+data[24]+"&req15="+data[25]+"&req16="+data[26]+"&req17="+data[27]+"&req18="+data[28]+"&req19="+data[29]+"&req20="+data[30]+"&req21="+data[31]+"&req22="+data[32]+"&req23="+data[33]+"&req24="+data[34]+"&req25="+data[35]+"&req26="+data[36]+"&req27="+data[37]+"&req28="+data[38]+"&req29="+data[39]+"&req30="+data[40]+"&req31="+data[41]+"&req32="+data[42]+"&req33="+data[43]+"&req34="+data[44]+"&req35="+data[45]+"&req36="+data[46]+"&req37="+data[47]+"&req38="+data[48]+"&req39="+data[49]+"&req40="+data[50]+"&req41"+data[51]+"&req42="+data[52]+"&req43="+data[53]+"&req44="+data[54]+"&req45="+data[55]+"&req46="+data[56]+"&req47="+data[57]+"&req48="+data[58]+"&req49="+data[59]+"&req50="+data[60]+"&req51="+data[61]+"&hid_danger_method="+data[62]+"&method="+data[63]+"&check_unit="+data[64]+"&check_man="+data[65]+"&username="+data[66];
+                Log.i("TAG",url);
                 if(et32.getText().toString().equals("")||et33.getText().toString().equals("")){
                     Toast.makeText(Jiancha_yewukuActivity.this,"信息插入失败，请检查输入数据",Toast.LENGTH_SHORT).show();
                 }else {

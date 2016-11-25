@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.example.smalu.policebank.RegisterActivity;
 import com.example.smalu.policebank.SigninActivity;
 import com.example.smalu.policebank.activity.My_MessageActivity;
 import com.example.smalu.policebank.activity.Zhenggai_Activity;
+import com.example.smalu.policebank.modle.UserData;
 
 
 /**
@@ -36,8 +38,12 @@ public class MyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.my_fragment,container,false);
         tv = (TextView) view.findViewById(R.id.tv1);
-        Bundle bundle = getArguments();
-        tv.setText(bundle.getString("username"));
+//        Bundle bundle = getArguments();
+//        tv.setText(bundle.getString("username"));
+        //设置MyFragment中的用户名为登陆用户名
+        UserData ud = (UserData) getActivity().getApplication();
+        tv.setText(ud.getUsername());
+
         text_mycheck=(TextView)view.findViewById(R.id.text_mycheck);
         text_mycheck.setOnClickListener(new View.OnClickListener() {
             @Override
